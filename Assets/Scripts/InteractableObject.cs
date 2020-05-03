@@ -10,4 +10,8 @@ public class InteractableObject : MonoBehaviour
 
     public string[] options;
     public bool[] endingTriggers;
+
+    private void addToInventory(){
+        
+    }
 }
