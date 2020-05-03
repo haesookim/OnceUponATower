@@ -11,6 +11,7 @@ public class InteractableObject : MonoBehaviour
     // for initializing interactions
     public string interactionText;
 
+    public bool hasOptions;
     public string[] options;
     public int[] endingTriggers;
     public bool[] inventoryTriggers;

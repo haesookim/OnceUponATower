@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     // Canvas Text interaction
     public Canvas dialogue;
     public Text informationText;
+    public Text[] options = new Text[2]; // TODO: This needs to change variably
+    public Image highlight;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -21,15 +23,18 @@ public class PlayerInteraction : MonoBehaviour
 
     private Door currentDoor;
 
+    //for inventory
+    public PlayerInventory inventory;
+
     void Start(){
         dialogue = GameObject.Find("DialogueCanvas").GetComponent<Canvas>();
+        inventory = gameObject.GetComponent<PlayerInventory>();
     }
 
     // Enter and Exit Interactable Objects
     // Must be tagged as "interactableObject" or "NPC"
     private void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "interactableObject"){
-                    Debug.Log("entered");
             optionNumber = 0;
             dialogueActive = true;
 
@@ -47,7 +52,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col){
         if (col.tag == "interactableObject"){
-                    Debug.Log("exited");
             dialogueActive = false;
         } else if (col.tag == "NPC"){
             NPCActive = false;
@@ -69,20 +73,32 @@ public class PlayerInteraction : MonoBehaviour
             dialogue.gameObject.SetActive(true);
 
             informationText.text = currentObj.interactionText;
+            if (currentObj.hasOptions){
+                for (int i = 0; i<currentObj.options.Length; i++){
+                    options[i].text = currentObj.options[i];
+                }
+            } else{
+                //Hide?
+            }
 
             // Key bindings for dialogue UI
             if (Input.GetKeyDown(KeyCode.UpArrow)){
-				optionNumber = (optionNumber + 2) % 2; // TODO: Fix according to count of options
+				optionNumber = (optionNumber + 1) % 2; // TODO: Fix according to count of options
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow)){
 				optionNumber = (optionNumber + 1) % 2; // TODO: Fix according to count of options
 			}
+            highlight.transform.position = options[optionNumber].transform.position;
+
+
             if (Input.GetKeyDown(KeyCode.Return))
 			{
 				//select option
                 if (currentObj.endingTriggers[optionNumber] != 0){
-                    // trigger Ending
+                    TriggerEnding(currentObj.endingTriggers[optionNumber]);
                 } else if (currentObj.inventoryTriggers[optionNumber]){
+                    inventory.addItem(currentObj);
+                    Destroy(currentObj.gameObject);
                     // add to Inventory
                 }
 			}
