@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    // for inventory
+    public string itemName;
+    //public sprite itemSprite;
+    
+    // for initializing interactions
     public string interactionText;
-
-    //public bool showOptions;
-
-    //public sprite itemSprite = ;
 
     public string[] options;
     public int[] endingTriggers;

@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
-{
+{   
+    // Canvas Text interaction
     public Canvas dialogue;
+    public Text informationText;
+
     private bool dialogueActive;
     private bool NPCActive;
 
@@ -25,6 +29,7 @@ public class PlayerInteraction : MonoBehaviour
     // Must be tagged as "interactableObject" or "NPC"
     private void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "interactableObject"){
+                    Debug.Log("entered");
             optionNumber = 0;
             dialogueActive = true;
 
@@ -40,8 +45,9 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private void onTriggerExit2D(Collider2D col){
+    private void OnTriggerExit2D(Collider2D col){
         if (col.tag == "interactableObject"){
+                    Debug.Log("exited");
             dialogueActive = false;
         } else if (col.tag == "NPC"){
             NPCActive = false;
@@ -61,6 +67,8 @@ public class PlayerInteraction : MonoBehaviour
     void Update(){
         if (dialogueActive){
             dialogue.gameObject.SetActive(true);
+
+            informationText.text = currentObj.interactionText;
 
             // Key bindings for dialogue UI
             if (Input.GetKeyDown(KeyCode.UpArrow)){
@@ -92,7 +100,7 @@ public class PlayerInteraction : MonoBehaviour
         if (doorActive){
             if (Input.GetKeyDown(KeyCode.Return))
 			{
-				Debug.Log(currentDoor.getDestination()); // This should be the coordinates for the moved location
+				this.transform.position = currentDoor.getDestination(); // This should be the coordinates for the moved location
 			}
         }
     }

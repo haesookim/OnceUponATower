@@ -21,4 +21,12 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Inventory Full!");
         }
     }
+
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.I)){
+            for (int i = 0; i< currentInventoryCount; i++){
+                Debug.Log(inventory[i].itemName);
+            }
+        }
+    }
 }
