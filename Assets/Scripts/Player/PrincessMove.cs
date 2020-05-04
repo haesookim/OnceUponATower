@@ -18,10 +18,16 @@ public class PrincessMove : MonoBehaviour
 
 	private Animator animator;
 
+	// Freeze rotation
+	Rigidbody2D rb;
+
 
 	void Start()
 	{
 		animator = GetComponent<Animator>();
+		rb = GetComponent<Rigidbody2D>();
+
+		rb.freezeRotation = true;
 
 	}
 
