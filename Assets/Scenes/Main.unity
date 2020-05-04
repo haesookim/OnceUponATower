@@ -1109,7 +1109,7 @@ MonoBehaviour:
   hasOptions: 1
   options:
   - "\uB9D0\uC744 \uAC74\uB2E4."
-  endingTriggers: 01000000
+  endingTriggers: 03000000
   inventoryTriggers: 
 --- !u!61 &779007261
 BoxCollider2D:
