@@ -22,6 +22,10 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public bool contains(string itemName){
+        return true;
+    }
+
     void Update(){
         if (Input.GetKeyDown(KeyCode.I)){
             for (int i = 0; i< currentInventoryCount; i++){

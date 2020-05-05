@@ -13,7 +13,7 @@ public class InteractableObject : MonoBehaviour
 
     public bool hasOptions;
     public string[] options;
-    public int[] endingTriggers;
-    public bool[] inventoryTriggers;
+    public int[] endingTriggers = new int[2];
+    public bool[] inventoryTriggers = new bool[2];
 
 }
