@@ -19,7 +19,7 @@ public class InteractableObject : MonoBehaviour
     // list of action text responses in accordance to options
     public string[] actionText;
 
-    public void selectOption(int optionNo){
-
+    public virtual string selectOption(int optionNo){
+        return actionText[optionNo];
     }
 }
