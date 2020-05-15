@@ -34,6 +34,7 @@ public class PlayerInteraction : MonoBehaviour
         dialogueCanvas = GameObject.Find("interactionCanvas").GetComponent<Canvas>();
         inventoryCanvas = GameObject.Find("inventoryCanvas").GetComponent<Canvas>();
         doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
+        
         inventory = gameObject.GetComponent<PlayerInventory>();
     }
 

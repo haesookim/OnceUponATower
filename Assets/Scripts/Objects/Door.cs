@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
+    //In-map position where door is located
     public Vector3 position;
+
+    // Room where door is located
+    public string positionName;
     public Door[] goalPosition;
 
     public string[] locationText;
 
-    //use for future location reference
-    public string positionName;
 
     void Start(){
         position = gameObject.GetComponent<Transform>().position;
