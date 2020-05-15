@@ -6,20 +6,23 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour
 {
     public Vector3 position;
-    public Door goalPosition;
+    public Door[] goalPosition;
 
-    public Text locationText;
+    public string[] locationText;
 
     //use for future location reference
     public string positionName;
 
     void Start(){
-        locationText = GameObject.Find("LocationText").GetComponent<Text>();
         position = gameObject.GetComponent<Transform>().position;
+
+        // assign current 
+        for (int i = 0; i<goalPosition.Length; i++){
+            locationText[i] = goalPosition[i].positionName;
+        }
     }
 
-    public Vector3 getDestination(){
-        locationText.text = this.positionName;
-        return goalPosition.position;
+    public Vector3 getDestination(Door selectedDoor){
+        return selectedDoor.position;
     }
 }

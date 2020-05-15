@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
-    public int numOfLines;
-    public string[] lines;
+    public string infoA;
 
-    public int endingTrigger;
-    //public bool inventoryTriggers;
+    // list of provided options
+    public string[] options;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // list of action text responses in accordance to options
+    public string[] actionText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void selectOption(int optionNo){
+
     }
 }

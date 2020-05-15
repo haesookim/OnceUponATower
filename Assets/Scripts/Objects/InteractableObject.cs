@@ -6,14 +6,20 @@ public class InteractableObject : MonoBehaviour
 {
     // for inventory
     public string itemName;
+
     //public sprite itemSprite;
     
     // for initializing interactions
-    public string interactionText;
+    public string infoA;
+    public string infoB;
 
-    public bool hasOptions;
+    // list of provided options
     public string[] options;
-    public int[] endingTriggers = new int[2];
-    public bool[] inventoryTriggers = new bool[2];
 
+    // list of action text responses in accordance to options
+    public string[] actionText;
+
+    public void selectOption(int optionNo){
+
+    }
 }

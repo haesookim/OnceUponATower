@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int inventorySize = 10;
+    public int inventorySize = 13;
     public InteractableObject[] inventory;
     public int currentInventoryCount;
+
+    public bool inventoryActive;
 
     void Start(){
         inventory = new InteractableObject[inventorySize];
@@ -22,15 +24,19 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    // check for item
     public bool contains(string itemName){
-        return true;
+        for (int i = 0; i<currentInventoryCount; i++){
+            if (inventory[currentInventoryCount].itemName == itemName){
+                return true;
+            }
+        }
+        return false;
     }
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.I)){
-            for (int i = 0; i< currentInventoryCount; i++){
-                Debug.Log(inventory[i].itemName);
-            }
+            inventoryActive = !inventoryActive; // Toggle inventory status
         }
     }
 }
