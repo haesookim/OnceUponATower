@@ -7,8 +7,6 @@ public class PlayerInteraction : MonoBehaviour
 {   
     // Canvas Text interaction
     public Canvas dialogueCanvas;
-    public Text informationText;
-    public Image highlight;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -24,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     private Door currentDoor;
 
     //for inventory
-    public PlayerInventory inventory;
+    [SerializeField] private PlayerInventory inventory;
 
     public Canvas inventoryCanvas;
     private int selectedOption = 0;
@@ -47,6 +45,10 @@ public class PlayerInteraction : MonoBehaviour
             dialogueCanvas.gameObject.SetActive(true);
 
             currentObj = col.gameObject.GetComponent<InteractableObject>();
+
+            GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
+            GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
+            GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
         } else if (col.tag == "NPC"){
             dialogueActive = true;
             dialogueCanvas.gameObject.SetActive(true);
@@ -58,7 +60,10 @@ public class PlayerInteraction : MonoBehaviour
 
         if (col.tag == "door"){
             doorActive = true;
+            doorCanvas.gameObject.SetActive(true);
             currentDoor = col.gameObject.GetComponent<Door>();
+
+            GameObject.Find("DoorName").GetComponent<Text>().text = currentDoor.positionName;
         }
     }
 
@@ -74,6 +79,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (col.tag == "door"){
             doorActive = false;
+            doorCanvas.gameObject.SetActive(false);
         }
     }
 
@@ -85,7 +91,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update(){
         if (dialogueActive){
-            informationText.text = currentObj.infoA;
+            //informationText.text = currentObj.infoA;
             int coefficient = currentObj.options.Length;
             
             // Key bindings for dialogue UI
@@ -104,8 +110,8 @@ public class PlayerInteraction : MonoBehaviour
 			}
 
             if (Input.GetKeyDown(KeyCode.Q)){
-                // put item into Inventory
                 inventory.addItem(currentObj);
+                Destroy(currentObj.gameObject);
             }
         }
 

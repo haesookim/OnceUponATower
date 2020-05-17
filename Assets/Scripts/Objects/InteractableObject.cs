@@ -15,14 +15,16 @@ public class InteractableObject : MonoBehaviour
     public string infoB;
 
     // list of provided options
-    public string[] options;
+    public string[] options = {};
 
     // list of action text responses in accordance to options
-    public string[] actionText;
+    public string[] actionText = {};
 
     void Start(){
-        itemSprite = GetComponent<SpriteRenderer>().sprite;
+        //this code is not working right now
+        itemSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
+
     public virtual string selectOption(int optionNo){
         return actionText[optionNo];
     }

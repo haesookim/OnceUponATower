@@ -49,7 +49,7 @@ public class PrincessMove : MonoBehaviour
 		coroutineActive = true;
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 
 		if (canMove)

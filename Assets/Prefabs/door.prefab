@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  goalPosition: {fileID: 0}
-  locationText: {fileID: 0}
   positionName: 
+  goalPosition:
+  - {fileID: 0}
+  locationText:
+  - 0
 --- !u!61 &5859758646844298619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,5 +125,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.05, y: 3.59}
+  m_Size: {x: 1.1357937, y: 3.59}
   m_EdgeRadius: 0
