@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tx: {fileID: 0}
+  typeVelocity: 0.03
 --- !u!4 &643565101
 Transform:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tx: {fileID: 911659758}
+  typeVelocity: 0.04
 --- !u!1 &911659757
 GameObject:
   m_ObjectHideFlags: 0
