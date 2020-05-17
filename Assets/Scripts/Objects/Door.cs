@@ -25,6 +25,8 @@ public class Door : MonoBehaviour
     }
 
     public Vector3 getDestination(Door selectedDoor){
-        return selectedDoor.position;
+        Vector3 alteredPosition = selectedDoor.position;
+        alteredPosition.y -= 2f;
+        return alteredPosition;
     }
 }
