@@ -15,7 +15,6 @@ public class InteractableObject : MonoBehaviour
     public string infoB;
 
     public bool hasOptions;
-    public int optionCount;
 
     // list of provided options
     public string[] options = {};

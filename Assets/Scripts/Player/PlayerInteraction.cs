@@ -8,6 +8,7 @@ public class PlayerInteraction : MonoBehaviour
     // Canvas Text interaction
     public Canvas dialogueCanvas;
     public GameObject optionItem;
+    public GameObject parent;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -34,6 +35,7 @@ public class PlayerInteraction : MonoBehaviour
         inventoryCanvas = GameObject.Find("inventoryCanvas").GetComponent<Canvas>();
         doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
         
+        
         inventory = gameObject.GetComponent<PlayerInventory>();
     }
 
@@ -52,11 +54,12 @@ public class PlayerInteraction : MonoBehaviour
             GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
 
             if (currentObj.hasOptions){
-                GameObject parent = GameObject.Find("OptionsParent");
                 parent.SetActive(true);
-                for (int i = 1; i < currentObj.optionCount; i++){
-                    GameObject newOption = Instantiate(optionItem);
-                    optionItem.transform.SetParent(parent.transform);
+                parent.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = currentObj.options[0];
+                for (int i =1; i <currentObj.options.Length; i++){
+                    GameObject newOption = Instantiate(optionItem, parent.transform);
+                    optionItem.transform.GetChild(0).GetComponent<Text>().text = currentObj.options[i];
+                    optionItem.transform.SetParent(parent.transform, false);
                 }
             }
         } else if (col.tag == "NPC"){
@@ -83,10 +86,9 @@ public class PlayerInteraction : MonoBehaviour
             dialogueCanvas.gameObject.SetActive(false);
 
             if (currentObj.hasOptions){
-                GameObject parent = GameObject.Find("OptionsParent");
                 parent.SetActive(false);
-                for (int i = 1; i < currentObj.optionCount; i++){
-                    Destroy(parent.transform.GetChild(i));
+                for (int i = 1; i < currentObj.options.Length; i++){
+                    Destroy(parent.transform.GetChild(i).gameObject);
                 }
             }
 
@@ -113,7 +115,7 @@ public class PlayerInteraction : MonoBehaviour
             int coefficient = currentObj.options.Length;
             
             // Key bindings for dialogue UI
-            if (coefficient > 0){
+            if (currentObj.hasOptions){
                 if (Input.GetKeyDown(KeyCode.UpArrow)){
                     selectedOption = (selectedOption + coefficient - 1)%coefficient;
                 }
@@ -124,8 +126,10 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
 			{
-				currentObj.selectOption(selectedOption); // code in individual Objects
-			}
+                GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
+                GameObject.Find("infoB").GetComponent<Text>().text = "";
+                parent.SetActive(false);
+            }
 
             if (Input.GetKeyDown(KeyCode.Q)){
                 inventory.addItem(currentObj);
