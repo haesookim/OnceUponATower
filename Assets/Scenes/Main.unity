@@ -9922,6 +9922,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
+      propertyPath: goalPosition.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
       propertyPath: goalPosition.Array.data[0]
       value: 
       objectReference: {fileID: 68040959}
