@@ -10,6 +10,7 @@ public class tinkerbellInteraction : InteractableObject
         itemName = "팅커벨";
         infoA="placeholder";
         infoB="데리고 간다";
+        hasOptions = false;
     }
 
     // Update is called once per frame

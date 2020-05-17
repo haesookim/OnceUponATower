@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
 {   
     // Canvas Text interaction
     public Canvas dialogueCanvas;
+    public GameObject optionItem;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -49,6 +50,15 @@ public class PlayerInteraction : MonoBehaviour
             GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
             GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
             GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
+
+            if (currentObj.hasOptions){
+                GameObject parent = GameObject.Find("OptionsParent");
+                parent.SetActive(true);
+                for (int i = 1; i < currentObj.optionCount; i++){
+                    GameObject newOption = Instantiate(optionItem);
+                    optionItem.transform.SetParent(parent.transform);
+                }
+            }
         } else if (col.tag == "NPC"){
             dialogueActive = true;
             dialogueCanvas.gameObject.SetActive(true);
@@ -71,6 +81,14 @@ public class PlayerInteraction : MonoBehaviour
         if (col.tag == "interactableObject"){
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
+
+            if (currentObj.hasOptions){
+                GameObject parent = GameObject.Find("OptionsParent");
+                parent.SetActive(false);
+                for (int i = 1; i < currentObj.optionCount; i++){
+                    Destroy(parent.transform.GetChild(i));
+                }
+            }
 
         } else if (col.tag == "NPC"){
             dialogueActive = false;
