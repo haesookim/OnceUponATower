@@ -8,7 +8,7 @@ public class PlayerInteraction : MonoBehaviour
     // Canvas Text interaction
     public Canvas dialogueCanvas;
     public GameObject optionItem;
-    public GameObject parent;
+    public GameObject optionsParent;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -18,7 +18,7 @@ public class PlayerInteraction : MonoBehaviour
 
     // for moving across Rooms
     public Canvas doorCanvas;
-
+    public GameObject doorParent;
     private bool doorActive;
 
     private Door currentDoor;
@@ -54,12 +54,10 @@ public class PlayerInteraction : MonoBehaviour
             GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
 
             if (currentObj.hasOptions){
-                parent.SetActive(true);
-                parent.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = currentObj.options[0];
-                for (int i =1; i <currentObj.options.Length; i++){
-                    GameObject newOption = Instantiate(optionItem, parent.transform);
-                    optionItem.transform.GetChild(0).GetComponent<Text>().text = currentObj.options[i];
-                    optionItem.transform.SetParent(parent.transform, false);
+                for (int i = 0; i <currentObj.options.Length; i++){
+                    GameObject newOption = Instantiate(optionItem, optionsParent.transform);
+                    newOption.transform.GetChild(0).GetComponent<Text>().text = currentObj.options[i];
+                    newOption.transform.SetParent(optionsParent.transform, false);
                 }
             }
         } else if (col.tag == "NPC"){
@@ -77,6 +75,12 @@ public class PlayerInteraction : MonoBehaviour
             currentDoor = col.gameObject.GetComponent<Door>();
 
             GameObject.Find("DoorName").GetComponent<Text>().text = currentDoor.positionName;
+            
+            for (int i = 0; i < currentDoor.goalPosition.Length ; i++){
+                GameObject newOption = Instantiate(optionItem, doorParent.transform);
+                newOption.transform.GetChild(0).GetComponent<Text>().text = currentDoor.goalPosition[i].positionName;
+                newOption.transform.SetParent(doorParent.transform, false);
+            }
         }
     }
 
@@ -86,9 +90,8 @@ public class PlayerInteraction : MonoBehaviour
             dialogueCanvas.gameObject.SetActive(false);
 
             if (currentObj.hasOptions){
-                parent.SetActive(false);
-                for (int i = 1; i < currentObj.options.Length; i++){
-                    Destroy(parent.transform.GetChild(i).gameObject);
+                for (int i = 0; i < currentObj.options.Length; i++){
+                    Destroy(optionsParent.transform.GetChild(i).gameObject);
                 }
             }
 
@@ -100,6 +103,9 @@ public class PlayerInteraction : MonoBehaviour
         if (col.tag == "door"){
             doorActive = false;
             doorCanvas.gameObject.SetActive(false);
+            for (int i = 0; i < currentDoor.goalPosition.Length; i++){
+                Destroy(doorParent.transform.GetChild(i).gameObject);
+            }
         }
     }
 
@@ -128,7 +134,7 @@ public class PlayerInteraction : MonoBehaviour
 			{
                 GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
                 GameObject.Find("infoB").GetComponent<Text>().text = "";
-                parent.SetActive(false);
+                optionsParent.SetActive(false);
             }
 
             if (Input.GetKeyDown(KeyCode.Q)){
