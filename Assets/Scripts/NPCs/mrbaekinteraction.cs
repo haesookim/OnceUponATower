@@ -27,18 +27,7 @@ public class mrbaekinteraction : NPCInteraction
 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-      if (PlayerInv.inventory.ContainsKey("트러플 오일")){
-        options.append{"트러플 오일을 건낸다."};
-        Player.TriggerEnding(3);
-        //animation
-      }
 
-
-
-    }
 
 
 }
