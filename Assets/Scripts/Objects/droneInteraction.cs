@@ -24,9 +24,8 @@ public class droneInteraction : InteractableObject
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(Player.actionConditions);
-        // if (Player.actionConditions[0]){
-        //     actionText[0] = "여기서는 날릴 수 없다";
-        // }
+        if (Player.actionConditions[1]){
+            actionText[0] = "여기서는 날릴 수 없다";
+        }
     }
 }
