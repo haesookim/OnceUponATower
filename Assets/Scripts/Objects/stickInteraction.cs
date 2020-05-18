@@ -12,7 +12,8 @@ public class stickInteraction : InteractableObject
         infoB="챙긴다";
 
         hasOptions = true;
-        options = new string[]{"부순다"};   
+        options = new string[]{"부순다"}; 
+        actionText = new string[]{"막대는 단단해서 부서지지 않는다"};  
     }
 
     // Update is called once per frame
