@@ -8,6 +8,9 @@ TagManager:
   - door
   - dragon
   - NPC
+  - NPC_dwarf
+  - NPC_portrait
+  - thing
   layers:
   - Default
   - TransparentFX
