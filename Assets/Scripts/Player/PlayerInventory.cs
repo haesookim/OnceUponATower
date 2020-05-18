@@ -8,7 +8,7 @@ public class PlayerInventory : MonoBehaviour
 {
     private int inventorySize = 13;
     public GameObject InventoryParent;
-    private Dictionary<string, string> inventory = new Dictionary<string, string>();
+    public Dictionary<string, string> inventory = new Dictionary<string, string>();
     public Sprite[] inventoryImage;
     public Image[] inventoryUIImage;
     public int currentInventoryCount;

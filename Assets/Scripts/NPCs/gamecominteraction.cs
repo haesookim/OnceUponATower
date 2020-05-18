@@ -14,9 +14,7 @@ public class gamecominteraction : NPCInteraction
         infoA = "고사양 게이밍 컴퓨터.";
 
         hasOptions = true;
-        options = new string[]{"구동한다."};
-
-
+        options = new List<string>{"구동한다."};
     }
 
     public override string selectOption(int optionNo){

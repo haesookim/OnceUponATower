@@ -9,10 +9,10 @@ public class NPCInteraction : MonoBehaviour
 
     public bool hasOptions;
     // list of provided options
-    public string[] options;
+    public List<string> options;
 
     // list of action text responses in accordance to options
-    public string[] actionText;
+    public List<string> actionText;
 
     public virtual string selectOption(int optionNo){
         return actionText[optionNo];

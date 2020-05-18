@@ -76,7 +76,7 @@ public class PlayerInteraction : MonoBehaviour
                 GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
 
                 if (currentNPC.hasOptions){
-                    for (int i = 0; i <currentNPC.options.Length; i++){
+                    for (int i = 0; i <currentNPC.options.Count; i++){
                         GameObject newOption = Instantiate(optionItem, optionsParent.transform);
                         newOption.transform.GetChild(0).GetComponent<Text>().text = currentNPC.options[i];
                         newOption.transform.SetParent(optionsParent.transform, false);

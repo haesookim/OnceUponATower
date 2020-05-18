@@ -11,7 +11,7 @@ public class escapeBookInteraction : NPCInteraction
         infoA = "탈출의 상식이 가득 적혀있는 책이다.";
 
         hasOptions = true;
-        options = new string[]{"읽는다."};
+        options = new List<string>{"읽는다."};
     }
 
     public override string selectOption(int optionNo){
