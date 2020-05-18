@@ -22,7 +22,10 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas doorCanvas;
     public GameObject doorParent;
     private bool doorActive;
-    public bool teleported = false;
+    
+    public GameObject doorBox;
+    public GameObject doorSelector;
+        public bool teleported = false;
 
     private Door currentDoor;
 
@@ -230,20 +233,25 @@ public class PlayerInteraction : MonoBehaviour
 
 
         if (doorActive){
+            Vector3 selectorPos = doorSelector.transform.position;
             int coefficient = currentDoor.goalPosition.Length;
 
             if (Input.GetKeyDown(KeyCode.UpArrow)){
                 selectedDoor = (selectedDoor + coefficient - 1)%coefficient;
+                selectorPos.y = doorParent.transform.GetChild(selectedOption).transform.position.y;
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow)){
                 selectedDoor = (selectedDoor + 1)%coefficient;
+                selectorPos.y = doorParent.transform.GetChild(selectedOption).transform.position.y;
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
 			{   
                 teleported = true;
 				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]); // This should be the coordinates for the moved location
+                selectorPos.y = doorParent.transform.position.y;
 			}
+           doorSelector.transform.position = selectorPos;
         }
     }
 }
