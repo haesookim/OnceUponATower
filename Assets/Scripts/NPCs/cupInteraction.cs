@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class cupInteraction : NPCInteraction
 {
-    public GameObject PlayerObject;
-    public PlayerInteraction Player;
-    public PlayerInventory Inventory;
-    // Start is called before the first frame update
-
     public bool[] itemsAdded = new bool[]{false, false, false};
-    public int[] itemsIndex = new int[]{-1, -1, -1};
     void Start()
     {
         NPCName = "컵";
@@ -31,7 +25,6 @@ public class cupInteraction : NPCInteraction
             options.Add("사과즙을 마신다");
             actionText.Add("");
 
-            itemsIndex[0] = options.IndexOf("사과즙을 마신다");
             itemsAdded[0] = true;
         }
         if (Inventory.contains("독극물") && !itemsAdded[1]){
@@ -39,7 +32,6 @@ public class cupInteraction : NPCInteraction
 
             actionText.Add("몸이 작아졌다.");
 
-            itemsIndex[1] = options.IndexOf("독극물을 마신다");
             itemsAdded[1] = true;
         }
         if (Inventory.contains("스테로이드") && !itemsAdded[2]){
@@ -47,21 +39,20 @@ public class cupInteraction : NPCInteraction
 
             actionText.Add("힘이 나는 기분이다");
 
-            itemsIndex[2] = options.IndexOf("스테로이드를 마신다");
             itemsAdded[2] = true;
         }
     }
 
     public override string selectOption(int optionNo){
-        if (optionNo == itemsIndex[0]){ // is applejuice
+        if (optionNo == options.IndexOf("사과즙을 마신다")){ // is applejuice
             Player.TriggerEnding(15);
             return null;
-        } else if (optionNo == itemsIndex[1]){ // is poison
+        } else if (optionNo == options.IndexOf("독극물을 마신다")){ // is poison
             Player.actionConditions[6] = true;
 
             //change sprite to tiny princess
             PlayerObject.GetComponent<SpriteRenderer>().size *= 0.5f;
-        } else if(optionNo == itemsIndex[2]){ // is steroid
+        } else if(optionNo == options.IndexOf("스테로이드를 마신다")){ // is steroid
         
         }
         return actionText[optionNo];
