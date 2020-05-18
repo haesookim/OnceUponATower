@@ -2160,9 +2160,10 @@ GameObject:
   - component: {fileID: 634736982}
   - component: {fileID: 634736984}
   - component: {fileID: 634736983}
+  - component: {fileID: 634736985}
   m_Layer: 0
   m_Name: portrait
-  m_TagString: NPC
+  m_TagString: NPC_portrait
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2205,7 +2206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 5}
+  m_Size: {x: 1.4318411, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &634736984
 SpriteRenderer:
@@ -2257,6 +2258,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &634736985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634736981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23b9d23ed5d3421395191cc8b1e538a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: 
+  infoA: 
+  hasOptions: 0
+  options: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
+  actionText: []
+  steroidSprite: {fileID: 21300000, guid: 18a085a3b3da74d5fa8f7a7814fa5f12, type: 3}
 --- !u!1 &664973693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,6 +2478,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_music_to_0fhallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.17048788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7948179
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5962,7 +5994,7 @@ GameObject:
   - component: {fileID: 1132401887}
   m_Layer: 0
   m_Name: dwarf
-  m_TagString: NPC
+  m_TagString: NPC_dwarf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

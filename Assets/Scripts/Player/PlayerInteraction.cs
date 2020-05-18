@@ -71,7 +71,7 @@ public class PlayerInteraction : MonoBehaviour
                         newOption.transform.SetParent(optionsParent.transform, false);
                     }
                 }
-            } else if (col.tag =="NPC"){
+            } else if (col.tag =="NPC") {
                 NPCActive = true;
                 currentNPC = col.gameObject.GetComponent<NPCInteraction>();
                 GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
@@ -85,9 +85,14 @@ public class PlayerInteraction : MonoBehaviour
                         newOption.transform.SetParent(optionsParent.transform, false);
                     }
                 }
-            }
-
-        } else if(col.tag == "dragon"){
+            } 
+        } else if (col.tag == "NPC_portrait"){
+                dialogueActive = true;
+                NPCActive = true;
+                currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+                GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
+        } 
+         else if(col.tag == "dragon"){
             TriggerEnding(6);
         }
 
@@ -108,7 +113,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D col){
-        if (col.tag == "interactableObject" || col.tag == "NPC"){
+        if (col.tag == "interactableObject" || col.tag == "NPC" || col.tag =="NPC_portrait"){
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
@@ -144,17 +149,20 @@ public class PlayerInteraction : MonoBehaviour
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
+                    } 
+                    
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        string temp = currentNPC.selectOption(selectedOption);
+                        GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
+                        //TODO: Add Ending conditions here?
+
+                        GameObject.Find("infoB").GetComponent<Text>().text = "";
+                        optionsParent.SetActive(false);
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Return))
-                {
-                    GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.selectOption(selectedOption); // code in individual Objects
-                    //TODO: Add Ending conditions here?
-
-                    GameObject.Find("infoB").GetComponent<Text>().text = "";
-                    optionsParent.SetActive(false);
-                }
+               
             } else {
                 // Key bindings for dialogue UI
                 if (currentObj.hasOptions){
