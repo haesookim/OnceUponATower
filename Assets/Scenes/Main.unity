@@ -132,10 +132,9 @@ GameObject:
   - component: {fileID: 9307198}
   - component: {fileID: 9307199}
   - component: {fileID: 9307200}
-  - component: {fileID: 9307202}
   m_Layer: 0
   m_Name: "\uCC29\uC999\uAE30"
-  m_TagString: interactableObject
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,18 +229,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0384971, y: 2.1891131}
   m_EdgeRadius: 0
---- !u!114 &9307202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9307197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d61f44b92ac244f53b4b4dae75070a6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &15442172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,7 +553,7 @@ GameObject:
   - component: {fileID: 77905636}
   m_Layer: 0
   m_Name: "\uAC8C\uC774\uBC0D-\uCEF4\uD4E8\uD130"
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1508,7 +1495,7 @@ GameObject:
   - component: {fileID: 468513131}
   m_Layer: 0
   m_Name: matches
-  m_TagString: Untagged
+  m_TagString: interactableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,9 +1868,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 570785350}
-  - component: {fileID: 570785352}
   - component: {fileID: 570785351}
   - component: {fileID: 570785353}
+  - component: {fileID: 570785354}
   m_Layer: 0
   m_Name: apple
   m_TagString: interactableObject
@@ -1955,27 +1942,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &570785352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570785349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24a3db7456444c8da7e8e365c2f4e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: apple
-  itemSprite: {fileID: 0}
-  infoA: 
-  infoB: 
-  hasOptions: 0
-  options:
-  - "\uCC59\uAE34\uB2E4"
-  - "\uBA39\uB294\uB2E4"
-  actionText: []
 --- !u!61 &570785353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2002,6 +1968,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8458487, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &570785354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570785349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 725531a98549a4bcfa9db80d0257eef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
+  infoA: 
+  infoB: 
+  hasOptions: 0
+  options: []
+  actionText: []
 --- !u!1001 &576164093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2201,7 +2186,7 @@ GameObject:
   - component: {fileID: 634736983}
   m_Layer: 0
   m_Name: portrait
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2811,7 +2796,7 @@ GameObject:
   - component: {fileID: 779007261}
   m_Layer: 0
   m_Name: "\uBC31\uC885\uC6D0"
-  m_TagString: interactableObject
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,7 +2904,7 @@ GameObject:
   - component: {fileID: 790609792}
   m_Layer: 0
   m_Name: "\uD56D\uC544\uB9AC"
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3789,7 +3774,7 @@ GameObject:
   - component: {fileID: 880801142}
   m_Layer: 0
   m_Name: mirror
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4439,10 +4424,11 @@ GameObject:
   m_Component:
   - component: {fileID: 982637234}
   - component: {fileID: 982637236}
+  - component: {fileID: 982637237}
   - component: {fileID: 982637235}
   m_Layer: 0
   m_Name: stick
-  m_TagString: Untagged
+  m_TagString: interactableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4470,7 +4456,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 982637233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24a3db7456444c8da7e8e365c2f4e0d, type: 3}
+  m_Script: {fileID: 11500000, guid: cb9ed94b8b5854196b59a8c5f2e19be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
@@ -4530,6 +4516,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &982637237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982637233}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 2}
+    newSize: {x: 1.5, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &992971261
 GameObject:
   m_ObjectHideFlags: 0
@@ -5569,7 +5581,7 @@ GameObject:
   - component: {fileID: 1118200952}
   m_Layer: 0
   m_Name: "\uCEF4\uD4E8\uD130"
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6874,7 +6886,7 @@ GameObject:
   - component: {fileID: 1339708646}
   m_Layer: 0
   m_Name: smalldoor
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8100,7 +8112,7 @@ GameObject:
   - component: {fileID: 1609040703}
   m_Layer: 0
   m_Name: drone
-  m_TagString: Untagged
+  m_TagString: interactableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9575,7 +9587,7 @@ GameObject:
   - component: {fileID: 1926996661}
   m_Layer: 0
   m_Name: window
-  m_TagString: interactableObject
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9763,7 +9775,7 @@ GameObject:
   - component: {fileID: 1963701217}
   m_Layer: 0
   m_Name: dogfood
-  m_TagString: Untagged
+  m_TagString: interactableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9976,7 +9988,7 @@ GameObject:
   - component: {fileID: 1982988093}
   m_Layer: 0
   m_Name: dragon
-  m_TagString: interactableObject
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
