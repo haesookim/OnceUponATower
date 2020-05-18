@@ -15,7 +15,7 @@ public class compressorInteraction : NPCInteraction
         infoA="돌로 만든 착즙기다.";
 
         hasOptions = true;
-        options = new List<string>{"살펴 본다"};
+        options = new List<string>{"살펴본다"};
 
         Player = PlayerObject.GetComponent<PlayerInteraction>();
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
