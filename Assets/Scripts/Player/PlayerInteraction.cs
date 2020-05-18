@@ -30,6 +30,9 @@ public class PlayerInteraction : MonoBehaviour
     private int selectedOption = 0;
     private int selectedDoor = 0;
 
+    //conditions checker;
+    public Dictionary<int, bool> actionConditions;
+
     void Start(){
         dialogueCanvas = GameObject.Find("interactionCanvas").GetComponent<Canvas>();
         inventoryCanvas = GameObject.Find("inventoryCanvas").GetComponent<Canvas>();
@@ -37,6 +40,8 @@ public class PlayerInteraction : MonoBehaviour
         
         
         inventory = gameObject.GetComponent<PlayerInventory>();
+
+        actionConditions.Add(1, false);
     }
 
     // Enter and Exit Interactable Objects
