@@ -47,29 +47,38 @@ public class PlayerInteraction : MonoBehaviour
     // Enter and Exit Interactable Objects
     // Must be tagged as "interactableObject" or "NPC"
     private void OnTriggerEnter2D(Collider2D col){
-        if (col.tag == "interactableObject"){
+        if (col.tag == "interactableObject" || col.tag == "NPC"){
             selectedOption = 0;
             dialogueActive = true;
             dialogueCanvas.gameObject.SetActive(true);
 
-            currentObj = col.gameObject.GetComponent<InteractableObject>();
+            if (col.tag == "interactableObject"){
+                currentObj = col.gameObject.GetComponent<InteractableObject>(); 
+                GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
+                GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
+                GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
 
-            GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
-            GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
-            GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
+                if (currentObj.hasOptions){
+                    for (int i = 0; i <currentObj.options.Length; i++){
+                        GameObject newOption = Instantiate(optionItem, optionsParent.transform);
+                        newOption.transform.GetChild(0).GetComponent<Text>().text = currentObj.options[i];
+                        newOption.transform.SetParent(optionsParent.transform, false);
+                    }
+                }
+            } else if (col.tag =="NPC"){
+                currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+                GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
+                GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
 
-            if (currentObj.hasOptions){
-                for (int i = 0; i <currentObj.options.Length; i++){
-                    GameObject newOption = Instantiate(optionItem, optionsParent.transform);
-                    newOption.transform.GetChild(0).GetComponent<Text>().text = currentObj.options[i];
-                    newOption.transform.SetParent(optionsParent.transform, false);
+                if (currentNPC.hasOptions){
+                    for (int i = 0; i <currentNPC.options.Length; i++){
+                        GameObject newOption = Instantiate(optionItem, optionsParent.transform);
+                        newOption.transform.GetChild(0).GetComponent<Text>().text = currentNPC.options[i];
+                        newOption.transform.SetParent(optionsParent.transform, false);
+                    }
                 }
             }
-        } else if (col.tag == "NPC"){
-            dialogueActive = true;
-            dialogueCanvas.gameObject.SetActive(true);
 
-            currentNPC = col.gameObject.GetComponent<NPCInteraction>();
         } else if(col.tag == "dragon"){
             TriggerEnding(6);
         }
@@ -90,19 +99,19 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D col){
-        if (col.tag == "interactableObject"){
+        if (col.tag == "interactableObject" || col.tag == "NPC"){
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
-            if (currentObj.hasOptions){
+            if (col.tag=="interactableObject" && currentObj.hasOptions){
                 for (int i = 0; i < currentObj.options.Length; i++){
                     Destroy(optionsParent.transform.GetChild(i).gameObject);
                 }
+            } else if (col.tag == "NPC" && currentNPC.hasOptions){
+                for (int i = 0; i < currentNPC.options.Length; i++){
+                    Destroy(optionsParent.transform.GetChild(i).gameObject);
+                }
             }
-
-        } else if (col.tag == "NPC"){
-            dialogueActive = false;
-            dialogueCanvas.gameObject.SetActive(false);
         }
 
         if (col.tag == "door"){

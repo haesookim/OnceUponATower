@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
+    public string NPCName;
     public string infoA;
 
+    public bool hasOptions;
     // list of provided options
     public string[] options;
 
