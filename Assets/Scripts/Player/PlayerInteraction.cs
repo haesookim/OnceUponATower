@@ -31,7 +31,12 @@ public class PlayerInteraction : MonoBehaviour
     private int selectedDoor = 0;
 
     //conditions checker;
-    public Dictionary<int, bool> actionConditions;
+    public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
+        {1, false}, 
+        {2, false},
+        {3, false},
+        {6, false}
+        };
 
     void Start(){
         dialogueCanvas = GameObject.Find("interactionCanvas").GetComponent<Canvas>();
@@ -41,7 +46,6 @@ public class PlayerInteraction : MonoBehaviour
         
         inventory = gameObject.GetComponent<PlayerInventory>();
 
-        actionConditions.Add(1, false);
     }
 
     // Enter and Exit Interactable Objects
