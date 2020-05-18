@@ -11338,7 +11338,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
-<<<<<<< HEAD
 --- !u!114 &1982988096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11359,8 +11358,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   actionText: []
-=======
->>>>>>> 5c75dd91337e03be91708d83585a4996e6f518ad
 --- !u!114 &2035129923 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
