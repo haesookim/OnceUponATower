@@ -665,8 +665,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   actionText: []
-  PlayerObject: {fileID: 0}
 --- !u!1 &109088754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,8 +2096,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   actionText: []
-  PlayerObject: {fileID: 0}
 --- !u!4 &620826028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
@@ -5278,6 +5282,9 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   actionText: []
 --- !u!1001 &1096469830
 PrefabInstance:
@@ -5788,8 +5795,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   actionText: []
-  PlayerObject: {fileID: 0}
 --- !u!1 &1123688318
 GameObject:
   m_ObjectHideFlags: 0
@@ -8181,10 +8190,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
-  actionText: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  actionText: []
   itemsAdded: 000000
 --- !u!1 &1539274577
 GameObject:
@@ -9282,8 +9291,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   actionText: []
-  PlayerObject: {fileID: 0}
 --- !u!1 &1700574231
 GameObject:
   m_ObjectHideFlags: 0
@@ -10158,10 +10169,10 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
-  actionText: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  actionText: []
 --- !u!61 &1926996661
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class cupInteraction : NPCInteraction
 {
-    public GameObject PlayerObject;
-    public PlayerInteraction Player;
-    public PlayerInventory Inventory;
-    // Start is called before the first frame update
-
     public bool[] itemsAdded = new bool[]{false, false, false};
     void Start()
     {

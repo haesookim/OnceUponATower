@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class windowInteraction : NPCInteraction
 {
-    public GameObject PlayerObject;
-    public PlayerInteraction Player;
-    public PlayerInventory Inventory;
     private bool[] optionsAdded = new bool[]{false, false};
     // Start is called before the first frame update
     void Start()

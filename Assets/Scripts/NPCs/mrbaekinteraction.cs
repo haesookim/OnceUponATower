@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class mrbaekinteraction : NPCInteraction
 {
-  public GameObject PlayerObject;
-  private PlayerInteraction Player;
-  private PlayerInventory PlayerInv;
+
+  private bool truffleOil = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,7 @@ public class mrbaekinteraction : NPCInteraction
         hasOptions = true;
         options = new List<string>{"말을 건다."};
 
-        PlayerInv = PlayerObject.GetComponent<PlayerInventory>();
+        Inventory = PlayerObject.GetComponent<PlayerInventory>();
 
         Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
@@ -24,10 +23,19 @@ public class mrbaekinteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
-      if (PlayerInv.inventory.ContainsKey("트러플 오일")){
-        //options.append{"트러플 오일을 건낸다."};
+      if (Inventory.contains("트러플 오일") && !truffleOil){
+        addOption("트러플 오일을 건넨다", "");
+      }
+    }
+
+    public override string selectOption(int optionNo){
+      if (optionNo == 0){
         Player.TriggerEnding(3);
+      }
+      else if (optionNo ==1){
+        Player.TriggerEnding(13);
         //animation
       }
+      return null;
     }
 }

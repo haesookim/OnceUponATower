@@ -11,6 +11,10 @@ public class NPCInteraction : MonoBehaviour
     // list of provided options
     public List<string> options;
 
+    public GameObject PlayerObject;
+    public PlayerInteraction Player;
+    public PlayerInventory Inventory;
+
     // list of action text responses in accordance to options
     public List<string> actionText;
 
