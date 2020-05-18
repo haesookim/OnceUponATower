@@ -20,6 +20,7 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas doorCanvas;
     public GameObject doorParent;
     private bool doorActive;
+    public bool teleported = false;
 
     private Door currentDoor;
 
@@ -88,6 +89,7 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         if (col.tag == "door"){
+            selectedDoor = 0;
             doorActive = true;
             doorCanvas.gameObject.SetActive(true);
             currentDoor = col.gameObject.GetComponent<Door>();
@@ -107,21 +109,18 @@ public class PlayerInteraction : MonoBehaviour
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
-            if (col.tag=="interactableObject" && currentObj.hasOptions){
-                for (int i = 0; i < currentObj.options.Length; i++){
-                    Destroy(optionsParent.transform.GetChild(i).gameObject);
-                }
-            } else if (col.tag == "NPC" && currentNPC.hasOptions){
-                for (int i = 0; i < currentNPC.options.Length; i++){
+            if (col.tag=="interactableObject" && currentObj.hasOptions ||col.tag == "NPC" && currentNPC.hasOptions){
+                for (int i = 0; i < optionsParent.transform.childCount; i++){
                     Destroy(optionsParent.transform.GetChild(i).gameObject);
                 }
             }
         }
 
         if (col.tag == "door"){
+            Debug.Log("ran");
             doorActive = false;
             doorCanvas.gameObject.SetActive(false);
-            for (int i = 0; i < currentDoor.goalPosition.Length; i++){
+            for (int i = 0; i < doorParent.transform.childCount; i++){
                 Destroy(doorParent.transform.GetChild(i).gameObject);
             }
         }
@@ -179,7 +178,8 @@ public class PlayerInteraction : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
-			{
+			{   
+                teleported = true;
 				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]); // This should be the coordinates for the moved location
 			}
         }
