@@ -9,14 +9,13 @@ public class PlayerInventory : MonoBehaviour
     private int inventorySize = 13;
     public GameObject InventoryParent;
     public Dictionary<string, string> inventory = new Dictionary<string, string>();
-    public Sprite[] inventoryImage;
+    public Dictionary<string, Sprite> inventoryImage = new Dictionary<string, Sprite>();
     public Image[] inventoryUIImage;
     public int currentInventoryCount;
 
-    //public bool inventoryActive;
+    public bool inventoryUpdate = false;
 
     void Start(){
-        inventoryImage = new Sprite[inventorySize];
         inventoryUIImage = new Image[inventorySize];
         currentInventoryCount = 0;
 
@@ -25,14 +24,37 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    void Update(){
+        if (inventoryUpdate){
+            int i = 0;
+            foreach(KeyValuePair<string, string> entry in inventory){
+                inventoryUIImage[i].sprite = inventoryImage[entry.Key];
+            }
+            inventoryUpdate = false;
+        }
+    }
+
     public void addItem(InteractableObject item){
         if (currentInventoryCount < inventorySize){
             inventory.Add(item.itemName, item.infoA);
-            inventoryImage[currentInventoryCount] = item.itemSprite;
-            inventoryUIImage[currentInventoryCount].sprite = item.itemSprite;
+            inventoryImage.Add(item.itemName, item.itemSprite);
+            inventoryUpdate = true;
         } else {
             Debug.Log("Inventory Full!");
         }
+    }
+    
+    public void removeItem(string itemName){
+        if (inventory.ContainsKey(itemName)){
+            inventory.Remove(itemName);
+            inventoryImage.Remove(itemName);
+            inventoryUpdate = true;
+        }
+    }
+    public void replaceItem(string itemName, string infoA, Sprite image){
+        inventory.Add(itemName, infoA);
+        inventoryImage.Add(itemName, image);
+        inventoryUpdate = true;
     }
     // check for item
     public bool contains(string itemName){
