@@ -117,7 +117,6 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         if (col.tag == "door"){
-            Debug.Log("ran");
             doorActive = false;
             doorCanvas.gameObject.SetActive(false);
             for (int i = 0; i < doorParent.transform.childCount; i++){

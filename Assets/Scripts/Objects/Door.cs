@@ -12,12 +12,12 @@ public class Door : MonoBehaviour
     public string positionName;
     public Door[] goalPosition;
 
-    public string[] locationText;
+    private string[] locationText;
 
 
     void Start(){
         position = gameObject.GetComponent<Transform>().position;
-
+        locationText = new string[goalPosition.Length];
         // assign current 
         for (int i = 0; i<goalPosition.Length; i++){
             locationText[i] = goalPosition[i].positionName;

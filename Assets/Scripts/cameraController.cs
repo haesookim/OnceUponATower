@@ -16,7 +16,6 @@ public class cameraController : MonoBehaviour
     void Update()
     {   
         Vector3 newPos = this.transform.position;
-        newPos.y = player.transform.position.y + 1.6f;
         float positionOffset = this.transform.position.x - player.transform.position.x;
 
         if (positionOffset>offset){
@@ -25,6 +24,11 @@ public class cameraController : MonoBehaviour
             newPos.x = player.transform.position.x -offset;
         }
 
+        if (player.GetComponent<PlayerInteraction>().teleported){
+            //newPos.x = player.transform.position.x;
+            newPos.y = player.transform.position.y + 1.6f;
+            player.GetComponent<PlayerInteraction>().teleported = false;
+        }
         this.transform.position = newPos;
     }
 }
