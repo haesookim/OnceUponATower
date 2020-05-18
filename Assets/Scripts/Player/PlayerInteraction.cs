@@ -58,6 +58,7 @@ public class PlayerInteraction : MonoBehaviour
             dialogueCanvas.gameObject.SetActive(true);
 
             if (col.tag == "interactableObject"){
+                NPCActive = false;
                 currentObj = col.gameObject.GetComponent<InteractableObject>(); 
                 GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
                 GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
@@ -71,9 +72,11 @@ public class PlayerInteraction : MonoBehaviour
                     }
                 }
             } else if (col.tag =="NPC"){
+                NPCActive = true;
                 currentNPC = col.gameObject.GetComponent<NPCInteraction>();
                 GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
                 GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
+                GameObject.Find("infoB").GetComponent<Text>().text = "";
 
                 if (currentNPC.hasOptions){
                     for (int i = 0; i <currentNPC.options.Count; i++){
@@ -133,38 +136,51 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update(){
         if (dialogueActive){
-            //informationText.text = currentObj.infoA;
-            int coefficient = currentObj.options.Length;
-            
-            // Key bindings for dialogue UI
-            if (currentObj.hasOptions){
-                if (Input.GetKeyDown(KeyCode.UpArrow)){
-                    selectedOption = (selectedOption + coefficient - 1)%coefficient;
+            if (NPCActive){
+                if (currentNPC.hasOptions){
+                    int coefficient = currentNPC.options.Count;
+                    if (Input.GetKeyDown(KeyCode.UpArrow)){
+                        selectedOption = (selectedOption + coefficient - 1)%coefficient;
+                    }
+                    if (Input.GetKeyDown(KeyCode.DownArrow)){
+                        selectedOption = (selectedOption + 1)%coefficient;
+                    }
                 }
-                if (Input.GetKeyDown(KeyCode.DownArrow)){
-                    selectedOption = (selectedOption + 1)%coefficient;
+
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.selectOption(selectedOption); // code in individual Objects
+                    //TODO: Add Ending conditions here?
+
+                    GameObject.Find("infoB").GetComponent<Text>().text = "";
+                    optionsParent.SetActive(false);
                 }
-            }
+            } else {
+                // Key bindings for dialogue UI
+                if (currentObj.hasOptions){
+                    int coefficient = currentObj.options.Length;
+                    if (Input.GetKeyDown(KeyCode.UpArrow)){
+                        selectedOption = (selectedOption + coefficient - 1)%coefficient;
+                    }
+                    if (Input.GetKeyDown(KeyCode.DownArrow)){
+                        selectedOption = (selectedOption + 1)%coefficient;
+                    }
+                }
 
-            if (Input.GetKeyDown(KeyCode.Return))
-			{
-                GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
-                GameObject.Find("infoB").GetComponent<Text>().text = "";
-                optionsParent.SetActive(false);
-            }
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
+                    GameObject.Find("infoB").GetComponent<Text>().text = "";
+                    optionsParent.SetActive(false);
+                }
 
-            if (Input.GetKeyDown(KeyCode.Q)){
-                inventory.addItem(currentObj);
-                Destroy(currentObj.gameObject);
+                if (Input.GetKeyDown(KeyCode.Q)){
+                    inventory.addItem(currentObj);
+                    Destroy(currentObj.gameObject);
+                }
             }
         }
 
-        if (NPCActive){
-            if (Input.GetKeyDown(KeyCode.Return))
-			{
-				dialogueActive = true;
-			}
-        }
 
         if (doorActive){
             int coefficient = currentDoor.goalPosition.Length;

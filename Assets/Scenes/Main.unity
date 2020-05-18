@@ -5546,8 +5546,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!114 &1098446233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8182,11 +8182,10 @@ MonoBehaviour:
   hasOptions: 0
   options: []
   actionText: []
-  PlayerObject: {fileID: 0}
+  PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   itemsAdded: 000000
-  itemsIndex: ffffffffffffffffffffffff
 --- !u!1 &1539274577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10160,6 +10159,9 @@ MonoBehaviour:
   hasOptions: 0
   options: []
   actionText: []
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
 --- !u!61 &1926996661
 BoxCollider2D:
   m_ObjectHideFlags: 0

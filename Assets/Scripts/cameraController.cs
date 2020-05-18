@@ -13,7 +13,7 @@ public class cameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {   
         Vector3 newPos = this.transform.position;
         float positionOffset = this.transform.position.x - player.transform.position.x;

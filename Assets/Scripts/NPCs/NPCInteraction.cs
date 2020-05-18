@@ -17,4 +17,9 @@ public class NPCInteraction : MonoBehaviour
     public virtual string selectOption(int optionNo){
         return actionText[optionNo];
     }
+
+    public void addOption(string newOption, string newActionText){
+        options.Add(newOption);
+        actionText.Add(newActionText);
+    }
 }

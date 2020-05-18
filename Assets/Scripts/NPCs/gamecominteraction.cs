@@ -15,6 +15,8 @@ public class gamecominteraction : NPCInteraction
 
         hasOptions = true;
         options = new List<string>{"구동한다."};
+
+        Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 
     public override string selectOption(int optionNo){
