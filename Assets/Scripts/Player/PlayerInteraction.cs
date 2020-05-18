@@ -87,13 +87,31 @@ public class PlayerInteraction : MonoBehaviour
                 }
             } 
         } else if (col.tag == "NPC_portrait"){
-                dialogueActive = true;
-                NPCActive = true;
-                currentNPC = col.gameObject.GetComponent<NPCInteraction>();
-                GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
+            dialogueActive = true;
+            NPCActive = true;
+            currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+            GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
         } 
          else if(col.tag == "dragon"){
-            TriggerEnding(6);
+            dialogueActive = true;
+            NPCActive = true;
+            currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+
+            GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
+            GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
+            GameObject.Find("infoB").GetComponent<Text>().text = "";
+
+            if (currentNPC.hasOptions){
+                for (int i = 0; i <currentNPC.options.Count; i++){
+                    GameObject newOption = Instantiate(optionItem, optionsParent.transform);
+                    newOption.transform.GetChild(0).GetComponent<Text>().text = currentNPC.options[i];
+                    newOption.transform.SetParent(optionsParent.transform, false);
+                }
+            }
+
+            if (!actionConditions[2]){
+                gameObject.GetComponent<PrincessMove>().enabled = false;
+            }
         }
 
         if (col.tag == "door"){
@@ -113,7 +131,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D col){
-        if (col.tag == "interactableObject" || col.tag == "NPC" || col.tag =="NPC_portrait"){
+        if (col.tag == "interactableObject" || col.tag == "NPC" || col.tag =="NPC_portrait" || col.tag=="dragon"){
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
