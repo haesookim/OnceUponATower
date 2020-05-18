@@ -2918,7 +2918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: 175}
+  m_AnchoredPosition: {x: -89.5, y: 175}
   m_SizeDelta: {x: 21.64, y: 21.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777554908
@@ -4124,7 +4124,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
-  PlayerObject: {fileID: 0}
+  PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   actionText: []
@@ -5729,6 +5729,8 @@ MonoBehaviour:
   optionSelector: {fileID: 378947349}
   doorCanvas: {fileID: 2132764557}
   doorParent: {fileID: 1114231510}
+  doorBox: {fileID: 98247084}
+  doorSelector: {fileID: 777554906}
   teleported: 0
   inventory: {fileID: 1098446233}
   inventoryCanvas: {fileID: 1021084604}
@@ -11669,7 +11671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2132764555
 MonoBehaviour:
   m_ObjectHideFlags: 0

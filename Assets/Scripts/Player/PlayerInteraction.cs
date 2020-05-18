@@ -238,11 +238,11 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow)){
                 selectedDoor = (selectedDoor + coefficient - 1)%coefficient;
-                selectorPos.y = doorParent.transform.GetChild(selectedOption).transform.position.y;
+                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow)){
                 selectedDoor = (selectedDoor + 1)%coefficient;
-                selectorPos.y = doorParent.transform.GetChild(selectedOption).transform.position.y;
+                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
