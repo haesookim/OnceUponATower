@@ -163,63 +163,82 @@ public class PlayerInteraction : MonoBehaviour
         EndingCanvas.gameObject.SetActive(true);
         gameObject.GetComponent<PrincessMove>().enabled = false;
         dialogueCanvas.gameObject.SetActive(false);
+        inventoryCanvas.gameObject.SetActive(false);
 
 
         //endingText.text="Ending number "+ endingNo+ " triggered\n";
         // move to scene No. of ending
         if(endingNo==1){
-          ending = "아니… 당연히 독사과죠…";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          아니… 당연히 독사과죠…";
         }
         else if(endingNo==2){
-          ending = "공주는 승부욕이 강하다. 마스터 티어를 찍으려면 성을 떠날 수 없다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          공주는 승부욕이 강하다. 마스터 티어를 찍으려면 성을 떠날 수 없다.";
         }
         else if(endingNo==3){
-          ending = "백주부가 뿌린 설탕이 코에 들어갔다. 호흡곤란으로 그만….";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          백주부가 뿌린 설탕이 코에 들어갔다. 호흡곤란으로 그만….";
         }
         else if(endingNo==4){
-          ending = "앗, 욕쟁이 할머니었다. 공주는 마상을 입고 죽었다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 욕쟁이 할머니었다. 공주는 마상을 입고 죽었다.";
         }
         else if(endingNo==5){
-          ending = "앗, 드론 파편이 공주의 미간에 꽂혔다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 드론 파편이 공주의 미간에 꽂혔다.";
         }
         else if(endingNo==6){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==7){
-          ending = "공주는 어이가 없어서 죽었다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          공주는 어이가 없어서 죽었다.";
         }
         else if(endingNo==8){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==9){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==10){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==11){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==12){
-          ending = "잘 모르는 사람은 따라가면 안돼요…";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          잘 모르는 사람은 따라가면 안돼요…";
         }
         else if(endingNo==13){
-          ending = "공주는 진정한 천국이 무엇인지 알게 되었다. 탈출 안 해~";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          공주는 진정한 천국이 무엇인지 알게 되었다. 탈출 안 해~";
         }
         else if(endingNo==14){
-          ending = "공주의 SOS 신호를 포착한 QN64-1행성의 특공대가 공주를 구출했다. 공주는 그렇게 태양계를 벗어났다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          공주의 SOS 신호를 포착한 QN64-1행성의 특공대가 공주를 구출했다. 공주는 그렇게 태양계를 벗어났다.";
         }
         else if(endingNo==15){
-          ending = "앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          앗, 미정.";
         }
         else if(endingNo==16){
-          ending = "엄지공주는 정말 작고 가벼워요!";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          엄지공주는 정말 작고 가벼워요!";
         }
         else if(endingNo==17){
-          ending = "제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
         }
         else if(endingNo==18){
-          ending = "거대해진 맥시무스가 용을 물리쳤다. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
+          ending = "Ending NO."+ endingNo.ToString() +@"
+          거대해진 맥시무스가 용을 물리쳤다. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
         }
         Debug.Log("Ending number" + endingNo + "triggered");
 
