@@ -31,6 +31,10 @@ public class PlayerInteraction : MonoBehaviour
     private int selectedOption = 0;
     private int selectedDoor = 0;
 
+    public Canvas EndingCanvas;
+    public string ending;
+
+
     //conditions checker;
     public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
         {1, false},
@@ -43,6 +47,7 @@ public class PlayerInteraction : MonoBehaviour
         dialogueCanvas = GameObject.Find("interactionCanvas").GetComponent<Canvas>();
         inventoryCanvas = GameObject.Find("inventoryCanvas").GetComponent<Canvas>();
         doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
+        EndingCanvas = GameObject.Find("EndingCanvas").GetComponent<Canvas>();
 
 
         inventory = gameObject.GetComponent<PlayerInventory>();
@@ -152,7 +157,8 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     public void TriggerEnding(int endingNo){
-        string ending;
+        EndingCanvas.gameObject.SetActive(true);
+
         //endingText.text="Ending number "+ endingNo+ " triggered\n";
         // move to scene No. of ending
         if(endingNo==1){
@@ -210,6 +216,8 @@ public class PlayerInteraction : MonoBehaviour
           ending = "거대해진 맥시무스가 용을 물리쳤다. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
         }
         Debug.Log("Ending number" + endingNo + "triggered");
+
+        GameObject.Find("EndingText").GetComponent<Text>().text = ending;
 
     }
 
