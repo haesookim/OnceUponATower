@@ -9,7 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas dialogueCanvas;
     public GameObject optionItem;
     public GameObject optionsParent;
-    public GameObject optionsBox;	
+    public GameObject optionsBox;
     public GameObject optionSelector;
 
     private bool dialogueActive;
@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas doorCanvas;
     public GameObject doorParent;
     private bool doorActive;
-    public GameObject doorBox;	
+    public GameObject doorBox;
     public GameObject doorSelector;
     public bool teleported = false;
 
@@ -161,6 +161,9 @@ public class PlayerInteraction : MonoBehaviour
     }
     public void TriggerEnding(int endingNo){
         EndingCanvas.gameObject.SetActive(true);
+        gameObject.GetComponent<PrincessMove>().enabled = false;
+        dialogueCanvas.gameObject.SetActive(false);
+
 
         //endingText.text="Ending number "+ endingNo+ " triggered\n";
         // move to scene No. of ending
@@ -238,8 +241,8 @@ public class PlayerInteraction : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
                         selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
-                    } 
-                    
+                    }
+
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
                         string temp = currentNPC.selectOption(selectedOption);
@@ -255,7 +258,7 @@ public class PlayerInteraction : MonoBehaviour
                     optionsBox.SetActive(false);
                 }
 
-               
+
             } else {
                 // Key bindings for dialogue UI
                 if (currentObj.hasOptions){
@@ -283,7 +286,7 @@ public class PlayerInteraction : MonoBehaviour
                     optionsBox.SetActive(false);
                 }
 
-                
+
 
                 if (Input.GetKeyDown(KeyCode.Q)){
                     inventory.addItem(currentObj);
@@ -307,7 +310,7 @@ public class PlayerInteraction : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
-			{   
+			{
                 teleported = true;
 				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]); // This should be the coordinates for the moved location
                 selectorPos.y = doorParent.transform.position.y;
