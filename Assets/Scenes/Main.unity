@@ -1217,7 +1217,7 @@ RectTransform:
   m_GameObject: {fileID: 378947349}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1442539491}
   m_RootOrder: 0
@@ -2988,7 +2988,7 @@ RectTransform:
   m_GameObject: {fileID: 777554906}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
   m_Children: []
   m_Father: {fileID: 98247085}
   m_RootOrder: 1
@@ -5802,11 +5802,17 @@ MonoBehaviour:
   optionItem: {fileID: 6163948767590107215, guid: d83ddfdf5b3a64cc685ef4f0b7cfdb89,
     type: 3}
   optionsParent: {fileID: 1244158601}
+  optionsBox: {fileID: 1442539490}
+  optionSelector: {fileID: 378947349}
   doorCanvas: {fileID: 2132764557}
   doorParent: {fileID: 1114231510}
+  doorBox: {fileID: 98247084}
+  doorSelector: {fileID: 777554906}
   teleported: 0
   inventory: {fileID: 1098446233}
   inventoryCanvas: {fileID: 1021084604}
+  EndingCanvas: {fileID: 0}
+  ending: 
 --- !u!61 &1098446231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6858,7 +6864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1225028034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8228,7 +8234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1442539491
 RectTransform:
   m_ObjectHideFlags: 0

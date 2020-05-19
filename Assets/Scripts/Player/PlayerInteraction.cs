@@ -9,6 +9,8 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas dialogueCanvas;
     public GameObject optionItem;
     public GameObject optionsParent;
+    public GameObject optionsBox;	
+    public GameObject optionSelector;
 
     private bool dialogueActive;
     private bool NPCActive;
@@ -20,6 +22,8 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas doorCanvas;
     public GameObject doorParent;
     private bool doorActive;
+    public GameObject doorBox;	
+    public GameObject doorSelector;
     public bool teleported = false;
 
     private Door currentDoor;
@@ -155,7 +159,6 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
     }
-
     public void TriggerEnding(int endingNo){
         EndingCanvas.gameObject.SetActive(true);
 
@@ -225,14 +228,18 @@ public class PlayerInteraction : MonoBehaviour
         if (dialogueActive){
             if (NPCActive){
                 if (currentNPC.hasOptions){
+                    optionsBox.SetActive(true);
                     int coefficient = currentNPC.options.Count;
+                    Vector3 selectorPos = optionSelector.transform.position;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
+                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
-                    }
-
+                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
+                    } 
+                    
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
                         string temp = currentNPC.selectOption(selectedOption);
@@ -240,29 +247,43 @@ public class PlayerInteraction : MonoBehaviour
                         //TODO: Add Ending conditions here?
 
                         GameObject.Find("infoB").GetComponent<Text>().text = "";
-                        optionsParent.SetActive(false);
+                        optionsBox.SetActive(false);
+                        selectorPos.y = optionsParent.transform.position.y;
                     }
+                    optionSelector.transform.position = selectorPos;
+                } else{
+                    optionsBox.SetActive(false);
                 }
 
-
+               
             } else {
                 // Key bindings for dialogue UI
                 if (currentObj.hasOptions){
+                    optionsBox.SetActive(true);
+                    Vector3 selectorPos = optionSelector.transform.position;
                     int coefficient = currentObj.options.Length;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
+                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
+                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
+
                     }
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
+                        GameObject.Find("infoB").GetComponent<Text>().text = "";
+                        selectorPos.y = optionsParent.transform.position.y;
+                        optionsBox.SetActive(false);
+                    }
+                    optionSelector.transform.position = selectorPos;
+                } else{
+                    optionsBox.SetActive(false);
                 }
 
-                if (Input.GetKeyDown(KeyCode.Return))
-                {
-                    GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
-                    GameObject.Find("infoB").GetComponent<Text>().text = "";
-                    optionsParent.SetActive(false);
-                }
+                
 
                 if (Input.GetKeyDown(KeyCode.Q)){
                     inventory.addItem(currentObj);
@@ -273,20 +294,25 @@ public class PlayerInteraction : MonoBehaviour
 
 
         if (doorActive){
+            Vector3 selectorPos = doorSelector.transform.position;
             int coefficient = currentDoor.goalPosition.Length;
 
             if (Input.GetKeyDown(KeyCode.UpArrow)){
                 selectedDoor = (selectedDoor + coefficient - 1)%coefficient;
+                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow)){
                 selectedDoor = (selectedDoor + 1)%coefficient;
+                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
-			{
+			{   
                 teleported = true;
 				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]); // This should be the coordinates for the moved location
+                selectorPos.y = doorParent.transform.position.y;
 			}
+           doorSelector.transform.position = selectorPos;
         }
     }
 }

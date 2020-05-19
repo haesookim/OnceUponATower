@@ -19,9 +19,9 @@ public class cameraController : MonoBehaviour
         float positionOffset = this.transform.position.x - player.transform.position.x;
 
         if (positionOffset>offset){
-            newPos.x = player.transform.position.x +offset;
+            newPos.x = player.transform.position.x+offset;
         } else if (positionOffset < -offset) {
-            newPos.x = player.transform.position.x -offset;
+            newPos.x = player.transform.position.x-offset;
         }
 
         if (player.GetComponent<PlayerInteraction>().teleported){
