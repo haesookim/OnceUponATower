@@ -19,6 +19,7 @@ public class NPCInteraction : MonoBehaviour
     public List<string> actionText;
 
     public virtual string selectOption(int optionNo){
+        Player.optionsBox.SetActive(false);
         return actionText[optionNo];
     }
 

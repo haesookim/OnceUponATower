@@ -13,11 +13,12 @@ public class appleinteraction : InteractableObject
 
         hasOptions = true;
         options = new string[]{"먹는다"};
+        Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    public override string selectOption(int optionNo){
+        Player.TriggerEnding(1);
+        return null;
     }
 }

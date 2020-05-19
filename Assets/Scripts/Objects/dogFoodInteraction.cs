@@ -15,10 +15,4 @@ public class dogFoodInteraction : InteractableObject
         options = new string[]{"먹는다"};
         actionText = new string[]{"placeholder"};
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

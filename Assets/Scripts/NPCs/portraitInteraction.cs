@@ -24,6 +24,7 @@ public class portraitInteraction : NPCInteraction
         GameObject.Find("ObjName").GetComponent<Text>().text = NPCName;
         Inventory.replaceItem("스테로이드", "수상한 초상화가 건내준 스테로이드다.", steroidSprite);
         hasOptions = false;
+        Player.optionsBox.SetActive(false);
         return actionText[optionNo];
     }
 }

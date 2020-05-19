@@ -70,6 +70,7 @@ public class potInteraction : NPCInteraction
             Inventory.replaceItem("독극물", "두꺼비가 내뱉은 독이다.", poisonSprite);
             collectedPoison = true;
         }
+        Player.optionsBox.SetActive(false);
         return actionText[optionNo];
     }
 }

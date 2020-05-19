@@ -44,6 +44,7 @@ public class cupInteraction : NPCInteraction
     }
 
     public override string selectOption(int optionNo){
+        Player.optionsBox.SetActive(false);
         if (optionNo == options.IndexOf("사과즙을 마신다")){ // is applejuice
             Player.TriggerEnding(15);
             return null;

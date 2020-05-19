@@ -17,14 +17,12 @@ public class smalldoorinteraction : NPCInteraction
     }
 
     public override string selectOption(int optionNo){
+      Player.optionsBox.SetActive(false);
         if (optionNo == 0){
           if(Player.actionConditions[6]){
             //animation 엄지공주가 문으로 들어가는
-
             Player.TriggerEnding(17);
-
           }
-
         }
         return null;
     }

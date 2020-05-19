@@ -99,7 +99,7 @@ public class PlayerInteraction : MonoBehaviour
             dialogueActive = true;
             NPCActive = true;
             currentNPC = col.gameObject.GetComponent<NPCInteraction>();
-            GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
+            //GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
         }
          else if(col.tag == "dragon"){
             dialogueActive = true;

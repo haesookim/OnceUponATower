@@ -24,6 +24,7 @@ public class ordinarycomputerinteraction : NPCInteraction
           Player.actionConditions[1] = true;
 
         }
+        Player.optionsBox.SetActive(false);
         return null;
     }
 

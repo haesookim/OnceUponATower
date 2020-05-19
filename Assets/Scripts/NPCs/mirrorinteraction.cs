@@ -33,6 +33,7 @@ public class mirrorinteraction : NPCInteraction
     }
 
     public override string selectOption(int optionNo){
+      Player.optionsBox.SetActive(false);
       if(optionNo==0){
         return actionText[optionNo];
       }
@@ -41,18 +42,13 @@ public class mirrorinteraction : NPCInteraction
         if(Inventory.contains("사과")){
           Player.actionConditions[3]=true;
           return actionText[optionNo];
-
         }
-
         else{
           Player.TriggerEnding(11);
           return null;
         }
-
       }
-
       return null;
-
     }
 
 

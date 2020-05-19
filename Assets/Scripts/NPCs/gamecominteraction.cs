@@ -18,6 +18,7 @@ public class gamecominteraction : NPCInteraction
     }
 
     public override string selectOption(int optionNo){
+        Player.optionsBox.SetActive(false);
         if (optionNo == 0){
           Player.TriggerEnding(2);
         }

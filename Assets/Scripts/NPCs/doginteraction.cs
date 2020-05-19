@@ -38,6 +38,7 @@ public class doginteraction : NPCInteraction
     }
 
     public override string selectOption(int optionNo){
+      Player.optionsBox.SetActive(false);
       if(optionNo ==0){
         return actionText[optionNo];
       }

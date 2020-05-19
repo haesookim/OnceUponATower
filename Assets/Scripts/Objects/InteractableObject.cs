@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
     // for inventory
+    public GameObject PlayerObject;
+    public PlayerInteraction Player;
+    
     public string itemName;
 
     public Sprite itemSprite;
@@ -28,6 +31,7 @@ public class InteractableObject : MonoBehaviour
     }
 
     public virtual string selectOption(int optionNo){
+        Player.optionsBox.SetActive(false);
         return actionText[optionNo];
     }
 }
