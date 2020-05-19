@@ -1074,10 +1074,25 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uB3C4\uC11C\uAD00"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
       value: door_lib_to_0fhallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16866255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7984686
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -1675,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1098446225}
+  interaction: {fileID: 0}
   offset: 6
 --- !u!20 &519420031
 Camera:
@@ -1959,6 +1975,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uBB34\uAE30\uACE0"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -2190,6 +2211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "2\uCE35 \uBCF5\uB3C4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -2589,6 +2615,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uC74C\uC545\uC2E4\uACFC \uAC24\uB7EC\uB9AC, \uCE74\uD398"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -2904,6 +2935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "\uC9C0\uD558\uAE08\uACE0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -3934,6 +3970,11 @@ PrefabInstance:
       propertyPath: goalPosition.Array.data[1]
       value: 
       objectReference: {fileID: 60900816}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: center
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -4696,6 +4737,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uC74C\uC545\uC2E4\uACFC \uAC24\uB7EC\uB9AC, \uCE74\uD398"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -5080,10 +5126,25 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uCC9C\uBB38\uB300"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
       value: door_observ_to_bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16866255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7984686
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5610,6 +5671,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "0\uCE35 \uBCF5\uB3C4"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: center
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -5817,6 +5883,7 @@ MonoBehaviour:
   doorBox: {fileID: 98247084}
   doorSelector: {fileID: 777554906}
   teleported: 0
+  currentDoor: {fileID: 0}
   inventory: {fileID: 1098446233}
   inventoryCanvas: {fileID: 1021084604}
   EndingCanvas: {fileID: 1225028036}
@@ -6662,10 +6729,25 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uCC3D\uACE0"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
       value: door_warehouse_to_kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.4906578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.8904648
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -7765,6 +7847,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "0\uCE35 \uBCF5\uB3C4"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -7843,6 +7930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "\uC8FC\uBC29\uACFC \uC2DD\uB2F9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8019,6 +8111,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "\uC5B4\uB450\uC6B4 \uC232 \uC18D"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -8112,6 +8209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "\uD640"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8733,6 +8835,11 @@ PrefabInstance:
       propertyPath: goalPosition.Array.data[1]
       value: 
       objectReference: {fileID: 68040959}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -9332,10 +9439,25 @@ PrefabInstance:
       propertyPath: goalPosition.Array.data[1]
       value: 
       objectReference: {fileID: 1788855553}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
       value: door_kitchen_to_hall/warehouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.26065862
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.61447644
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -9785,6 +9907,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "1\uCE35 \uBCF5\uB3C4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -10702,6 +10829,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "1\uCE35 \uBCF5\uB3C4"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -11228,6 +11360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "\uC758\uC0C1\uC2E4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -11909,6 +12046,11 @@ PrefabInstance:
       propertyPath: positionName
       value: "0\uCE35 \uBCF5\uB3C4"
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -11993,6 +12135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: positionName
       value: "\uD640"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}

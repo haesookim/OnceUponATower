@@ -46,7 +46,6 @@ public class doginteraction : NPCInteraction
         Inventory.removeItem("사료");
         Inventory.replaceItem("송로버섯","멍멍이가 송로버섯을 찾았다",mushroomSprite);
         return actionText[optionNo];
-
       }
       return null;
     }

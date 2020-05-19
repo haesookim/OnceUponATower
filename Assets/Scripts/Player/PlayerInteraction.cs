@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject doorSelector;
     public bool teleported = false;
 
-    private Door currentDoor;
+    public Door currentDoor;
 
     //for inventory
     [SerializeField] private PlayerInventory inventory;

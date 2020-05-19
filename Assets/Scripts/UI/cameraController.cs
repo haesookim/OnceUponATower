@@ -5,17 +5,20 @@ using UnityEngine;
 public class cameraController : MonoBehaviour
 {
     public GameObject player;
+    public PlayerInteraction interaction;
     public float offset;
+    private Vector3 velocity = Vector3.zero;
 
     void Start()
     {
-        
+        interaction = player.GetComponent<PlayerInteraction>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {   
         Vector3 newPos = this.transform.position;
+        
         float positionOffset = this.transform.position.x - player.transform.position.x;
 
         if (positionOffset>offset){
@@ -26,6 +29,12 @@ public class cameraController : MonoBehaviour
 
         if (player.GetComponent<PlayerInteraction>().teleported){
             //newPos.x = player.transform.position.x;
+            if (interaction.currentDoor.positionInfo == "left"){
+                newPos.x = player.transform.position.x - offset;
+            }
+            else if(interaction.currentDoor.positionInfo == "right"){
+                newPos.x = player.transform.position.x + offset;
+            }
             newPos.y = player.transform.position.y + 1.6f;
             player.GetComponent<PlayerInteraction>().teleported = false;
         }

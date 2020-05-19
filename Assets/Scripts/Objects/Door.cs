@@ -14,6 +14,8 @@ public class Door : MonoBehaviour
 
     private string[] locationText;
 
+    public string positionInfo;
+
 
     void Start(){
         position = gameObject.GetComponent<Transform>().position;
