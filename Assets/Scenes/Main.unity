@@ -1495,6 +1495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bbf1fdf2a1f4b87bf5a50235db1221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 6d9975c68558c4666a0731d1f986e411, type: 3}
   infoA: 
@@ -1931,6 +1933,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725531a98549a4bcfa9db80d0257eef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
   infoA: 
@@ -2849,6 +2853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba403014db1ae4d30a487f6884c37a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 0c932ca9a2f2d4e02bbe35dce297875c, type: 3}
   infoA: 
@@ -4807,6 +4813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ed94b8b5854196b59a8c5f2e19be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 0}
   infoA: 
@@ -9474,6 +9482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eab8e9b083f345999de4e6b720e8c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 4fc15239663d44f93b45d9fc4c799f07, type: 3}
   infoA: 
@@ -9481,7 +9491,6 @@ MonoBehaviour:
   hasOptions: 0
   options: []
   actionText: []
-  PlayerObject: {fileID: 1098446225}
 --- !u!1 &1621991066
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,6 +11464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b9cf669861640ccbdf3f6b3ad44ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 67ad781a770fc4b5e9908be0329989e0, type: 3}
   infoA: 

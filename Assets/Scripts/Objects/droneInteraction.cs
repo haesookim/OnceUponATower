@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class droneInteraction : InteractableObject
 {
-    public GameObject PlayerObject;
-    private PlayerInteraction Player;
     // Start is called before the first frame update
     void Start()
     {
