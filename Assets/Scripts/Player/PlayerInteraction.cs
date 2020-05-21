@@ -149,10 +149,13 @@ public class PlayerInteraction : MonoBehaviour
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
-            if (col.tag=="interactableObject" && currentObj.hasOptions){
-                for (int i = 0; i < optionsParent.transform.childCount; i++){
-                    Destroy(optionsParent.transform.GetChild(i).gameObject);
-                    currentObj.optionsVisible = true;
+            if (col.tag=="interactableObject"){
+                currentObj.active = false;
+                if(currentObj.hasOptions){
+                    for (int i = 0; i < optionsParent.transform.childCount; i++){
+                        Destroy(optionsParent.transform.GetChild(i).gameObject);
+                        currentObj.optionsVisible = true;
+                    }
                 }
             }
 
