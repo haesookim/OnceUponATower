@@ -21,20 +21,17 @@ public class doginteraction : NPCInteraction
 
     }
 
+
     // Update is called once per frame
     void Update()
     {
+      changeSprite();
       if (Inventory.contains("사료")){
         if(!optionsAdded[0]){
           addOption("사료를 먹인다","멍멍이가 송로버섯을 찾았다.");
           optionsAdded[0] = true;
-
-
         }
-
-
       }
-
     }
 
     public override string selectOption(int optionNo){

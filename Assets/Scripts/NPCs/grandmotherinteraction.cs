@@ -16,6 +16,10 @@ public class grandmotherinteraction : NPCInteraction
       Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 
+  void Update(){
+        changeSprite();
+    }
+
     public override string selectOption(int optionNo){
         Player.optionsBox.SetActive(false);
         if (optionNo == 0){

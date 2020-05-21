@@ -18,6 +18,9 @@ public class portraitInteraction : NPCInteraction
         options = new List<string>{" "};
         actionText = new List<string>{"『받으렴.』"};
     }
+    void Update(){
+        changeSprite();
+    }
 
     public override string selectOption(int optionNo){
         Player.dialogueCanvas.gameObject.SetActive(true);

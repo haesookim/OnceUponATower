@@ -15,6 +15,10 @@ public class escapeBookInteraction : NPCInteraction
         actionText = new List<string>{"모스 부호가 쓰여진 종이를 발견했다."};
     }
 
+    void Update(){
+        changeSprite();
+    }
+
     public override string selectOption(int optionNo){
         Player.optionsBox.SetActive(false);
         if (optionNo == 0){

@@ -30,9 +30,11 @@ public class potInteraction : NPCInteraction
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
+        changeSprite();
         if (Inventory.contains("막대기") && hitCount < 4){
             hasOptions = true;
         }

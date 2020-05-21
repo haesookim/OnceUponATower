@@ -20,6 +20,7 @@ public class dragonInteraction : NPCInteraction
 	}
 
 	void Update(){
+		changeSprite();
 		if (!isSleeping){ 
 			if (Player.actionConditions[2]){
 				isSleeping = true;

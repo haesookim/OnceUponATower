@@ -18,6 +18,9 @@ public class ordinarycomputerinteraction : NPCInteraction
         Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 
+    void Update(){
+        changeSprite();
+    }
 
     public override string selectOption(int optionNo){
         if (optionNo == 0){

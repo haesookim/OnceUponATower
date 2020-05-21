@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8102f7d0e60406f8a0dacb111d3189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -590,6 +592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4927a6aab9924e3e845de5710637754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -1168,12 +1172,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.16866255
+      value: 0.452322
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7984686
+      value: 0.59914017
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -2066,6 +2070,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_arm_to_1fhallway
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6286526
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.49180984
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2244,6 +2258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b684758602cea4c71849704d26e375ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -2491,6 +2507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23b9d23ed5d3421395191cc8b1e538a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -2709,12 +2727,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.17048788
+      value: 0.09382439
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7948179
+      value: 0.64149094
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -3252,6 +3270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b266585eddf4395af2f0f9b5ad5cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -3407,6 +3427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543336f7b3ba940bebe5a3d6ff9a8af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -4325,6 +4347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b1ecf3347ee473da53fe0d17a99ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -4831,12 +4855,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.28751707
+      value: 0.4025135
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.56075954
+      value: 0.42276382
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5220,12 +5244,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.16866255
+      value: 0.076664686
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7984686
+      value: 0.61447287
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5733,6 +5757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f65d2aa59c674457a43927d4561c842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -6355,6 +6381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7890e5ffd184545fbbc130e2b2dd4930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -6926,12 +6954,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.4906578
+      value: 0.6746521
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.8904648
+      value: 0.5224762
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8007,6 +8035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640f1275d8cc545688ffc5578b93c4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -8042,10 +8072,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_0fhallway_to_lib
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.35265827
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.43047714
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.54
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8125,6 +8165,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_kitchen_to_music
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.78196144
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5224802
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8404,6 +8454,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_hall_to_garden
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.8126526
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.61447144
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -9030,6 +9090,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_bed_to_stairs
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.17632914
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7831354
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9213,6 +9283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfc2c7ae04b946138e67a698f87532f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -9390,6 +9462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c067722f82eac4cf8a18dafea093d27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -9637,12 +9711,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.26065862
+      value: 0.5903081
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.61447644
+      value: 0.44581404
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -10130,6 +10204,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_1fhallway_to_cloth
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.68998384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5224743
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10570,6 +10654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde915ef4fe544da8cead8c070e09d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -11051,6 +11137,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_1fhallway_to_arm
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.7513156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.36914444
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11522,6 +11618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d40dfe3efc0d4f078ac636096f2ee09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -11582,6 +11680,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_cloth_to_1fhallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.29899168
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5378103
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -12097,6 +12205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf341ea044448cf8168878aa684e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeImage: {fileID: 0}
+  baseImage: {fileID: 0}
   NPCName: 
   infoA: 
   hasOptions: 0
@@ -12267,6 +12377,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_0fhallway_to_music
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.7589822
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.50714207
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}

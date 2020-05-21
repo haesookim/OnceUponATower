@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
+    public Sprite activeImage;
+    public Sprite baseImage;
+    public bool active;
     public string NPCName;
     public string infoA;
 
@@ -17,6 +20,18 @@ public class NPCInteraction : MonoBehaviour
 
     // list of action text responses in accordance to options
     public List<string> actionText;
+
+    void Start(){
+        baseImage = gameObject.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void changeSprite(){
+        if (active){
+            gameObject.GetComponent<SpriteRenderer>().sprite = activeImage;
+        } else{
+            gameObject.GetComponent<SpriteRenderer>().sprite = baseImage;
+        }
+    }
 
     public virtual string selectOption(int optionNo){
         Player.optionsBox.SetActive(false);

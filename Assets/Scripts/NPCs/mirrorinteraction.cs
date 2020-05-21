@@ -25,6 +25,7 @@ public class mirrorinteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
+      changeSprite();
       if(Inventory.contains("백설공주의 옷")){
         addOption("백설공주의 옷을 입는다","백설공주로 변신했다!");
         optionsAdded[0]=true;

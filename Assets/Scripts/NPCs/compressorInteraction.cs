@@ -22,9 +22,11 @@ public class compressorInteraction : NPCInteraction
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
+         changeSprite();
         if(Inventory.contains("사과") && !itemsAdded[0]){
             addOption("사과를 집어넣는다","사과즙을 획득했다");
             Debug.Log(actionText);
