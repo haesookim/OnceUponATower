@@ -178,60 +178,71 @@ public class PlayerInteraction : MonoBehaviour
           아니… 당연히 독사과죠…";
         }
         else if(endingNo==2){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          공주는 승부욕이 강하다. 마스터 티어를 찍으려면 성을 떠날 수 없다.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없답니다.";
         }
         else if(endingNo==3){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          백주부가 뿌린 설탕이 코에 들어갔다. 호흡곤란으로 그만….";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          『엣취!』 백주부가 뿌린 설탕이 코에 들어갔어요. 호흡곤란으로 그만…";
         }
         else if(endingNo==4){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 욕쟁이 할머니었다. 공주는 마상을 입고 죽었다.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          『옘병 땀병에 갈아버릴 쑥병에 걸려가지고 땀통이 끊어지면은 끝나는 거고 이 시베리아 벌판에서 얼어죽을 년 같으니! 십장생 같은 년!  옘병 땀병에 그냥, 땀통 끊어지면은 그냥 죽는 거야, 이 년아. 이런 개나리를 봤나! 야, 이 십장생아! 귤 까라 그래! 이 시베리아야! 에라이 썅화차야! 이 시베리아 벌판에서 귤이나 까라!』 ";
         }
         else if(endingNo==5){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 드론 파편이 공주의 미간에 꽂혔다.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          싸늘하다.. 드론이 미간에 날아와 꽂힌다...";
         }
         else if(endingNo==6){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
         }
         else if(endingNo==7){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          공주는 어이가 없어서 죽었다.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          팅커벨은 하늘의 별이 되었어요.
+          공주는 명복을 빌어줬어요.";
         }
         else if(endingNo==8){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          왕자와 공주는 무사히 성을 빠져나갔어요.
+          왕자는 와브바아 왕국의 황제가 되었고, 둘은 만백성의 축복 속에서 결혼을 했답니다.
+          공주는 억울했어요.
+          저새끼가 가로챘거든요.";
         }
         else if(endingNo==9){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          모든 공주들은 와브바아 왕국으로 향했어요.
+          『안녕히 계세요 여러분~! 우리는 이 세상의 모든 굴레와 속박을 벗어던지고 우리의 행복을 찾아 떠납니다.』
+          『여러분도 행복하세요~~~~~』";
         }
         else if(endingNo==10){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          착즙기에 손을 넣었어요. 『오늘은 내가 손가락 요리사~!』";
         }
         else if(endingNo==11){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          『거울아 거울아, 세상에서 누가 제일 예쁘니?』
+          『당연히 왕비님이 가장 아름다우시죠.』
+          『이 새끼가?!』
+          공주는 화딱지 나서 기절하고 말았어요.";
         }
         else if(endingNo==12){
           ending = "Ending NO."+ endingNo.ToString() +@"
           잘 모르는 사람은 따라가면 안돼요…";
         }
         else if(endingNo==13){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          공주는 진정한 천국이 무엇인지 알게 되었다. 탈출 안 해~";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          공주는 진정한 천국이 무엇인지 알게 되었어요. 탈출 안 해~";
         }
         else if(endingNo==14){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          공주의 SOS 신호를 포착한 QN64-1행성의 특공대가 공주를 구출했다. 공주는 그렇게 태양계를 벗어났다.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          공주의 SOS 신호를 포착한 어린왕자가 내려왔어요.
+          『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이야.』
+          공주는 그렇게 태양계를 벗어났어요.";
         }
         else if(endingNo==15){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          앗, 미정.";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          독극물인 걸 알고도 그렇게 죽이고 싶었어요?";
         }
         else if(endingNo==16){
           ending = "Ending NO."+ endingNo.ToString() +@"
@@ -242,8 +253,13 @@ public class PlayerInteraction : MonoBehaviour
           제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
         }
         else if(endingNo==18){
-          ending = "Ending NO."+ endingNo.ToString() +@"
-          거대해진 맥시무스가 용을 물리쳤다. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
+          ending = "Ending NO."+ endingNo.ToString() + @"
+          거대해진 맥시무스가 용을 물리쳤어요. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
+        }
+        else if(endingNo==18){
+          ending = "Ending NO." + endingNo.ToString() + @"
+          힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!
+          공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
         }
         Debug.Log("Ending number" + endingNo + "triggered");
 

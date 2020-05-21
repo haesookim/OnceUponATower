@@ -9,11 +9,11 @@ public class stickInteraction : InteractableObject
     {
         itemName = "막대기";
         infoA = "단단한 막대기다.";
-        infoB="챙긴다";
+        infoB="챙긴다.";
 
         hasOptions = true;
-        options = new string[]{"부순다"}; 
-        actionText = new string[]{"막대는 단단해서 부서지지 않는다"};  
+        options = new string[]{"부순다."}; 
+        actionText = new string[]{"부서졌다."};  
     }
 
     // Update is called once per frame

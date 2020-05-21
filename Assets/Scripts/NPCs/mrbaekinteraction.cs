@@ -24,7 +24,7 @@ public class mrbaekinteraction : NPCInteraction
     void Update()
     {
       if (Inventory.contains("트러플 오일") && !truffleOil){
-        addOption("트러플 오일을 건넨다", "");
+        addOption("트러플 오일을 건넨다.", "");
       }
     }
 

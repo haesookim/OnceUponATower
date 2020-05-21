@@ -13,7 +13,7 @@ public class dragonInteraction : NPCInteraction
 
 		hasOptions = true;
 
-		options = new List<string>{"용에게 맞선다"};
+		options = new List<string>{"용에게 맞선다."};
 
 		Player = PlayerObject.GetComponent<PlayerInteraction>();
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
@@ -31,7 +31,7 @@ public class dragonInteraction : NPCInteraction
 
 			if (Inventory.contains("사과즙")){
 				if(Inventory.contains("드론") && !conditionList[0]){
-					addOption("드론으로 사과즙을 뿌린다.", "드론을 어떻게 날리는지 모르겠다");
+					addOption("드론으로 사과즙을 뿌린다.", "드론을 어떻게 날리는지 모르겠다.");
 					conditionList[0]=true;
 				}
 				if (Inventory.contains("팅커벨") && !conditionList[1]){
@@ -47,7 +47,7 @@ public class dragonInteraction : NPCInteraction
 		if(optionNo == 0){
 			Player.TriggerEnding(6);
 			return null;
-		} else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다")){
+		} else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다.")){
 			if (Player.actionConditions[1]){
 				Player.TriggerEnding(5);
 				return null;
@@ -55,7 +55,7 @@ public class dragonInteraction : NPCInteraction
 				Player.TriggerEnding(6);
 				return actionText[optionNo];
 			}
-		} else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 부탁한다")){
+		} else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 부탁한다.")){
 			Player.TriggerEnding(7);
 			return null;
 		}

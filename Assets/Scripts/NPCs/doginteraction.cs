@@ -14,7 +14,7 @@ public class doginteraction : NPCInteraction
 
         hasOptions = true;
         options = new List<string>{"쓰다듬는다."};
-        actionText = new List<string>{"멍멍"};
+        actionText = new List<string>{ "『멍- 멍!』" };
 
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
         Player = PlayerObject.GetComponent<PlayerInteraction>();
@@ -44,7 +44,7 @@ public class doginteraction : NPCInteraction
       }
       if(optionNo ==1){
         Inventory.removeItem("사료");
-        Inventory.replaceItem("송로버섯","멍멍이가 송로버섯을 찾았다",mushroomSprite);
+        Inventory.replaceItem("송로버섯","멍멍이가 송로버섯을 찾았다.",mushroomSprite);
         return actionText[optionNo];
       }
       return null;

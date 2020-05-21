@@ -9,7 +9,7 @@ public class gamecominteraction : NPCInteraction
     {
 
         NPCName = "게이밍 컴퓨터";
-        infoA = "고사양 게이밍 컴퓨터.";
+        infoA = "고사양 게이밍 컴퓨터다.";
 
         hasOptions = true;
         options = new List<string>{"구동한다."};

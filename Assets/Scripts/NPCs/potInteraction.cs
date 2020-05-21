@@ -21,7 +21,7 @@ public class potInteraction : NPCInteraction
 
         hasOptions = false;
 
-        options = new List<string>{"친다"};
+        options = new List<string>{"친다."};
         actionText = new List<string>{"막대기로 항아리를 쳤다. 이 정도로는 부서지지 않는 것 같다."};
 
         originalPot = gameObject.GetComponent<SpriteRenderer>().sprite;
@@ -38,7 +38,7 @@ public class potInteraction : NPCInteraction
         }
         if (hitCount == 4){
             hasOptions = false;
-            options[0] = "살펴 본다";
+            options[0] = "살펴본다.";
             actionText[0] = "두꺼비가 독을 내뿜었다!";
 
             gameObject.GetComponent<SpriteRenderer>().sprite = brokenPot;

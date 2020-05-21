@@ -9,10 +9,10 @@ public class appleinteraction : InteractableObject
     {
         itemName = "사과";
         infoA = "탐스러운 사과다. 조금 수상하다.";
-        infoB = "챙긴다";
+        infoB = "챙긴다.";
 
         hasOptions = true;
-        options = new string[]{"먹는다"};
+        options = new string[]{"먹는다."};
         Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 

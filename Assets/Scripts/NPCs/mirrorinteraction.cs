@@ -9,11 +9,11 @@ public class mirrorinteraction : NPCInteraction
     void Start()
     {
       NPCName = "거울";
-      infoA = "먼지낀 작은 거울이다.";
+      infoA = "먼지 낀 작은 거울이다.";
 
       hasOptions = true;
 
-      options = new List<string>{"살펴본다"};
+      options = new List<string>{"살펴본다."};
       actionText = new List<string>{"아름다운 나의 모습이 비친다."};
 
 
@@ -26,7 +26,7 @@ public class mirrorinteraction : NPCInteraction
     void Update()
     {
       if(Inventory.contains("백설공주의 옷")){
-        addOption("백설공주의 옷을 입는다","백설공주로 변신했다!");
+        addOption("백설공주의 옷을 입는다.","백설공주로 변신했다!");
         optionsAdded[0]=true;
       }
 

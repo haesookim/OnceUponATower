@@ -8,8 +8,8 @@ public class matchesInteraction : InteractableObject
     void Start()
     {
         itemName = "성냥";
-        infoA = "placeholder";
-        infoB = "챙긴다";
+        infoA = "방수 잘 되는 성냥이다.";
+        infoB = "챙긴다.";
 
         hasOptions = false;
     }
