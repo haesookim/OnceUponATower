@@ -22,24 +22,19 @@ public class cupInteraction : NPCInteraction
     void Update()
     {
         if (Inventory.contains("사과즙") && !itemsAdded[0]){
-            options.Add("사과즙을 마신다.");
-            actionText.Add("");
-
+            addOption("사과즙을 마신다.", "");
             itemsAdded[0] = true;
+            hasOptions = true;
         }
         if (Inventory.contains("독극물") && !itemsAdded[1]){
-            options.Add("독극물을 마신다.");
-
-            actionText.Add("몸이 작아졌다.");
-
+            addOption("독극물을 마신다.", "몸이 작아졌다");
             itemsAdded[1] = true;
+            hasOptions = true;
         }
         if (Inventory.contains("스테로이드") && !itemsAdded[2]){
-            options.Add("스테로이드를 마신다.");
-
-            actionText.Add("힘이 나는 기분이다.");
-
+            addOption("스테로이드를 마신다.","힘이 나는 기분이다");
             itemsAdded[2] = true;
+            hasOptions = true;
         }
     }
 
@@ -54,7 +49,7 @@ public class cupInteraction : NPCInteraction
             //change sprite to tiny princess
             PlayerObject.GetComponent<SpriteRenderer>().size *= 0.5f;
         } else if(optionNo == options.IndexOf("스테로이드를 마신다.")){ // is steroid
-        
+            Player.actionConditions[7] = true;
         }
         return actionText[optionNo];
     }

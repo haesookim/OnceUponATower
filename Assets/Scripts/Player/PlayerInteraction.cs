@@ -43,7 +43,8 @@ public class PlayerInteraction : MonoBehaviour
         {1, false},
         {2, false},
         {3, false},
-        {6, false}
+        {6, false},
+        {7, false}
         };
 
     void Start(){
