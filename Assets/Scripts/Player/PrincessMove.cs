@@ -39,7 +39,6 @@ public class PrincessMove : MonoBehaviour
 		animator.SetFloat("DirX", vector.x);
 		audioSource.Play();
 
-
 		while (currentWalkCount < walkCount)
 		{
 

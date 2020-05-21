@@ -38,9 +38,6 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas EndingCanvas;
     public string ending;
 
-    private Vector3 baseSelectorPos = new Vector3(103, 141,0);
-    private Vector3 baseDoorPos = new Vector3(-89.5f, 195,0);
-
     //conditions checker;
     public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
         {1, false},
@@ -55,11 +52,7 @@ public class PlayerInteraction : MonoBehaviour
         doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
         EndingCanvas = GameObject.Find("EndingCanvas").GetComponent<Canvas>();
 
-
         inventory = gameObject.GetComponent<PlayerInventory>();
-
-        // baseSelectorPos = new Vector3(-89.5f, 195,0);
-        // baseDoorPos = new Vector3(103, 141,0);
 
         dialogueCanvas.gameObject.SetActive(false);
         doorCanvas.gameObject.SetActive(false);
@@ -245,22 +238,19 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log(baseSelectorPos);
         if (dialogueActive){
             if (NPCActive){
                 if (currentNPC.hasOptions){
                     optionsBox.SetActive(true);
                     int coefficient = currentNPC.options.Count;
-                    optionSelector.transform.position = baseSelectorPos;
-                    Vector3 selectorPos = baseSelectorPos;
+                    Vector3 selectorPos = optionSelector.transform.position;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
-                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
-                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     }
+                    selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
 
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
@@ -282,18 +272,15 @@ public class PlayerInteraction : MonoBehaviour
                 // Key bindings for dialogue UI
                 if (currentObj.hasOptions){
                     optionsBox.SetActive(true);
-                    optionSelector.transform.position = baseSelectorPos;
-                    Vector3 selectorPos = baseSelectorPos;
+                    Vector3 selectorPos = optionSelector.transform.position;
                     int coefficient = currentObj.options.Length;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
-                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)){
                         selectedOption = (selectedOption + 1)%coefficient;
-                        selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
-
                     }
+                    selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
                         GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
@@ -317,19 +304,16 @@ public class PlayerInteraction : MonoBehaviour
 
 
         if (doorActive){
-
-            doorSelector.transform.position = baseDoorPos;
-            Vector3 selectorPos = baseDoorPos;
+            Vector3 selectorPos = doorSelector.transform.position;
             int coefficient = currentDoor.goalPosition.Length;
 
             if (Input.GetKeyDown(KeyCode.UpArrow)){
                 selectedDoor = (selectedDoor + coefficient - 1)%coefficient;
-                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow)){
                 selectedDoor = (selectedDoor + 1)%coefficient;
-                selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
             }
+            selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
 
             if (Input.GetKeyDown(KeyCode.Return))
 			{
