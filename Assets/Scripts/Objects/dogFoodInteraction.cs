@@ -15,4 +15,8 @@ public class dogFoodInteraction : InteractableObject
         options = new string[]{"먹는다"};
         actionText = new string[]{"placeholder"};
     }
+
+    void Update(){
+        changeSprite();
+    }
 }

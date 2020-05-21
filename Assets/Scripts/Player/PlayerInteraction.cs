@@ -69,6 +69,7 @@ public class PlayerInteraction : MonoBehaviour
             if (col.tag == "interactableObject"){
                 NPCActive = false;
                 currentObj = col.gameObject.GetComponent<InteractableObject>();
+                currentObj.active = true;
                 GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
                 GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
                 GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
@@ -144,10 +145,14 @@ public class PlayerInteraction : MonoBehaviour
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
-            if (col.tag=="interactableObject" && currentObj.hasOptions ||col.tag == "NPC" && currentNPC.hasOptions){
+            if (col.tag=="interactableObject" && currentObj.hasOptions || col.tag == "NPC" && currentNPC.hasOptions){
                 for (int i = 0; i < optionsParent.transform.childCount; i++){
                     Destroy(optionsParent.transform.GetChild(i).gameObject);
                 }
+            }
+
+            if (col.tag=="interactableObject"){
+                currentObj.active = false;
             }
         }
 

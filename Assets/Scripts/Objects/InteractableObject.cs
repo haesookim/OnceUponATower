@@ -12,12 +12,14 @@ public class InteractableObject : MonoBehaviour
     public string itemName;
 
     public Sprite itemSprite;
+    public Sprite activeSprite;
+    public bool active = false;
     
     // for initializing interactions
     public string infoA;
     public string infoB;
 
-    public bool hasOptions;
+    public bool hasOptions = false;
 
     // list of provided options
     public string[] options = {};
@@ -28,6 +30,14 @@ public class InteractableObject : MonoBehaviour
     void Start(){
         //this code is not working right now
         itemSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void changeSprite(){
+        if(active){
+            gameObject.GetComponent<SpriteRenderer>().sprite = activeSprite;
+        } else{
+            gameObject.GetComponent<SpriteRenderer>().sprite = itemSprite;
+        }
     }
 
     public virtual string selectOption(int optionNo){

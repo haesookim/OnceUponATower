@@ -12,4 +12,8 @@ public class tinkerbellInteraction : InteractableObject
         hasOptions = false;
         
     }
+
+    void Update(){
+        changeSprite();
+    }
 }

@@ -17,6 +17,10 @@ public class appleinteraction : InteractableObject
     }
 
     // Update is called once per frame
+    void Update(){
+        changeSprite();
+    }
+    
     public override string selectOption(int optionNo){
         Player.TriggerEnding(1);
         return null;

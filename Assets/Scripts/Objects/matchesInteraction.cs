@@ -15,8 +15,7 @@ public class matchesInteraction : InteractableObject
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        changeSprite();
     }
 }

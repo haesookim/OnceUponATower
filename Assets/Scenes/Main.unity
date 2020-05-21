@@ -217,7 +217,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008740962, y: 0.1414969}
+  m_Offset: {x: 0.13757032, y: 0.1414969}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -228,7 +228,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0384971, y: 2.1891131}
+  m_Size: {x: 0.7458745, y: 5.1589637}
   m_EdgeRadius: 0
 --- !u!114 &9307201
 MonoBehaviour:
@@ -1595,6 +1595,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 6d9975c68558c4666a0731d1f986e411, type: 3}
+  activeSprite: {fileID: 21300000, guid: 7630ff72ee42d4a8d91827fde8e62973, type: 3}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
@@ -2034,6 +2036,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
+  activeSprite: {fileID: 0}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
@@ -2969,6 +2973,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 0c932ca9a2f2d4e02bbe35dce297875c, type: 3}
+  activeSprite: {fileID: 0}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
@@ -4944,6 +4950,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 0}
+  activeSprite: {fileID: 21300000, guid: a005745af1553458890bc10cb9beedbd, type: 3}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
@@ -8011,7 +8019,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   options: []
-  PlayerObject: {fileID: 0}
+  PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   actionText: []
@@ -9124,7 +9132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.043389183, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9135,7 +9143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 4}
+  m_Size: {x: 0.21322164, y: 3.2097902}
   m_EdgeRadius: 0
 --- !u!212 &1534736309
 SpriteRenderer:
@@ -9762,7 +9770,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0104904175, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9773,7 +9781,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.685318, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &1609040702
 SpriteRenderer:
@@ -9841,6 +9849,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 4fc15239663d44f93b45d9fc4c799f07, type: 3}
+  activeSprite: {fileID: 21300000, guid: 139550477bb1f45888e7bef5fdd33072, type: 3}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
@@ -10481,7 +10491,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12956867, y: 0}
+  m_Offset: {x: -0.08265267, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10492,7 +10502,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 4}
+  m_Size: {x: 0.43082687, y: 4}
   m_EdgeRadius: 0
 --- !u!212 &1676345208
 SpriteRenderer:
@@ -11838,6 +11848,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 67ad781a770fc4b5e9908be0329989e0, type: 3}
+  activeSprite: {fileID: 21300000, guid: e538a0faf78954476b181831f2b1a1b6, type: 3}
+  active: 0
   infoA: 
   infoB: 
   hasOptions: 0
