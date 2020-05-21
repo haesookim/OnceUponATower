@@ -14,12 +14,14 @@ public class InteractableObject : MonoBehaviour
     public Sprite itemSprite;
     public Sprite activeSprite;
     public bool active = false;
+
     
     // for initializing interactions
     public string infoA;
     public string infoB;
 
     public bool hasOptions = false;
+    public bool optionsVisible = true;
 
     // list of provided options
     public string[] options = {};

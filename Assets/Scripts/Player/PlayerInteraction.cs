@@ -148,15 +148,20 @@ public class PlayerInteraction : MonoBehaviour
             dialogueActive = false;
             dialogueCanvas.gameObject.SetActive(false);
 
-            if (col.tag=="interactableObject" && currentObj.hasOptions || col.tag == "NPC" && currentNPC.hasOptions){
+            if (col.tag=="interactableObject" && currentObj.hasOptions){
                 for (int i = 0; i < optionsParent.transform.childCount; i++){
                     Destroy(optionsParent.transform.GetChild(i).gameObject);
+                    currentObj.optionsVisible = true;
                 }
             }
 
-            if (col.tag=="interactableObject"){
-                currentObj.active = false;
+            if (col.tag == "NPC" && currentNPC.hasOptions){
+                for (int i = 0; i < optionsParent.transform.childCount; i++){
+                    Destroy(optionsParent.transform.GetChild(i).gameObject);
+                    currentNPC.optionsVisible = true;
+                }
             }
+
         }
 
         if (col.tag == "door"){
@@ -242,7 +247,7 @@ public class PlayerInteraction : MonoBehaviour
     void Update(){
         if (dialogueActive){
             if (NPCActive){
-                if (currentNPC.hasOptions){
+                if (currentNPC.hasOptions && currentNPC.optionsVisible){
                     optionsBox.SetActive(true);
                     int coefficient = currentNPC.options.Count;
                     Vector3 selectorPos = optionSelector.transform.position;
@@ -262,6 +267,7 @@ public class PlayerInteraction : MonoBehaviour
                         GameObject.Find("infoB").GetComponent<Text>().text = "";
                         optionsBox.SetActive(false);
                         selectorPos.y = optionsParent.transform.position.y;
+                        currentNPC.optionsVisible = false;
                     }
                     optionSelector.transform.position = selectorPos;
                 } else{
@@ -271,7 +277,7 @@ public class PlayerInteraction : MonoBehaviour
 
             } else {
                 // Key bindings for dialogue UI
-                if (currentObj.hasOptions){
+                if (currentObj.hasOptions && currentObj.optionsVisible){
                     optionsBox.SetActive(true);
                     Vector3 selectorPos = optionSelector.transform.position;
                     int coefficient = currentObj.options.Length;
@@ -284,10 +290,11 @@ public class PlayerInteraction : MonoBehaviour
                     selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
-                        GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption); // code in individual Objects
+                        GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption);
                         GameObject.Find("infoB").GetComponent<Text>().text = "";
                         selectorPos.y = optionsParent.transform.position.y;
                         optionsBox.SetActive(false);
+                        currentObj.optionsVisible = false;
                     }
                     optionSelector.transform.position = selectorPos;
                 } else{

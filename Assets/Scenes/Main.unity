@@ -2513,7 +2513,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   actionText: []
-  steroidSprite: {fileID: 21300000, guid: 18a085a3b3da74d5fa8f7a7814fa5f12, type: 3}
+  steroidSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
   hasSteroid: 0
 --- !u!1 &664973693
 GameObject:
@@ -11688,7 +11688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
