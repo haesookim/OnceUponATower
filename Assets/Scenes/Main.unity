@@ -1168,12 +1168,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.16866255
+      value: 0.48299026
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7984686
+      value: 0.5684738
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -2070,6 +2070,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_arm_to_1fhallway
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.64398575
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5224762
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2713,12 +2723,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.17048788
+      value: 0.040157318
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7948179
+      value: 0.5341568
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -3968,6 +3978,11 @@ PrefabInstance:
       propertyPath: goalPosition.Array.data[1]
       value: 
       objectReference: {fileID: 845394265}
+    - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: positionInfo
+      value: right
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
@@ -4060,7 +4075,7 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionInfo
-      value: center
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -4837,12 +4852,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.28751707
+      value: 0.42551422
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.56075954
+      value: 0.40743256
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5218,7 +5233,7 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionInfo
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5228,12 +5243,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.16866255
+      value: 0.076664686
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7984686
+      value: 0.61447287
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5769,7 +5784,7 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionInfo
-      value: center
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5984,6 +5999,8 @@ MonoBehaviour:
   inventoryCanvas: {fileID: 1021084604}
   EndingCanvas: {fileID: 1225028036}
   ending: 
+  baseSelectorPos: {x: 0, y: 0, z: 0}
+  baseDoorPos: {x: 0, y: 0, z: 0}
 --- !u!61 &1098446231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6934,12 +6951,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.4906578
+      value: 0.74365234
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.8904648
+      value: 0.3844757
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8050,6 +8067,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_0fhallway_to_lib
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.804981
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.3231454
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8133,6 +8160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_kitchen_to_music
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.78196156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.58381015
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -8413,6 +8450,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_hall_to_garden
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.8126526
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.6451416
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8558,7 +8605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1442539491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9031,12 +9078,22 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionInfo
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298618, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Name
       value: door_bed_to_stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.18399572
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.76780224
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -9451,7 +9508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1548848621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9645,12 +9702,12 @@ PrefabInstance:
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.26065862
+      value: 0.5519751
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.61447644
+      value: 0.52248013
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -10139,6 +10196,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_1fhallway_to_cloth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6899841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.3998103
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -11061,6 +11128,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_1fhallway_to_arm
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.7513156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.33847904
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11592,6 +11669,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door_cloth_to_1fhallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.31432486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.507144
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -12280,6 +12367,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_0fhallway_to_music
       objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.7973144
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859758646844298619, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.46114302
+      objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12445,7 +12542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2132764555
 MonoBehaviour:
   m_ObjectHideFlags: 0

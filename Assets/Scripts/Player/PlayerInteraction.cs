@@ -38,6 +38,8 @@ public class PlayerInteraction : MonoBehaviour
     public Canvas EndingCanvas;
     public string ending;
 
+    public Vector3 baseSelectorPos;
+    public Vector3 baseDoorPos;
 
     //conditions checker;
     public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
@@ -55,6 +57,12 @@ public class PlayerInteraction : MonoBehaviour
 
 
         inventory = gameObject.GetComponent<PlayerInventory>();
+
+        baseSelectorPos = optionSelector.transform.position;
+        baseDoorPos = doorSelector.transform.position;
+
+        dialogueCanvas.gameObject.SetActive(false);
+        doorCanvas.gameObject.SetActive(false);
 
     }
 
@@ -273,7 +281,8 @@ public class PlayerInteraction : MonoBehaviour
                 if (currentNPC.hasOptions){
                     optionsBox.SetActive(true);
                     int coefficient = currentNPC.options.Count;
-                    Vector3 selectorPos = optionSelector.transform.position;
+                    optionSelector.transform.position = baseSelectorPos;
+                    Vector3 selectorPos = baseSelectorPos;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
                         selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
@@ -303,7 +312,8 @@ public class PlayerInteraction : MonoBehaviour
                 // Key bindings for dialogue UI
                 if (currentObj.hasOptions){
                     optionsBox.SetActive(true);
-                    Vector3 selectorPos = optionSelector.transform.position;
+                    optionSelector.transform.position = baseSelectorPos;
+                    Vector3 selectorPos = baseSelectorPos;
                     int coefficient = currentObj.options.Length;
                     if (Input.GetKeyDown(KeyCode.UpArrow)){
                         selectedOption = (selectedOption + coefficient - 1)%coefficient;
@@ -337,7 +347,9 @@ public class PlayerInteraction : MonoBehaviour
 
 
         if (doorActive){
-            Vector3 selectorPos = doorSelector.transform.position;
+
+            doorSelector.transform.position = baseDoorPos;
+            Vector3 selectorPos = baseDoorPos;
             int coefficient = currentDoor.goalPosition.Length;
 
             if (Input.GetKeyDown(KeyCode.UpArrow)){
