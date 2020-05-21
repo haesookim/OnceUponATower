@@ -121,10 +121,9 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
 
-            Debug.Log(actionConditions[2]);
-
             if (!actionConditions[2]){
                 gameObject.GetComponent<PrincessMove>().enabled = false;
+                gameObject.GetComponent<Animator>().enabled = false;
             }
         }
 

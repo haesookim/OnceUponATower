@@ -515,7 +515,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.20614396, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -526,7 +526,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.02, y: 2}
+  m_Size: {x: 0.30144593, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &77905637
 SpriteRenderer:
@@ -6302,7 +6302,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.14112245, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6313,7 +6313,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1, y: 4}
+  m_Size: {x: 0.7321906, y: 4}
   m_EdgeRadius: 0
 --- !u!212 &1118200953
 SpriteRenderer:
@@ -8960,7 +8960,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalPosition.Array.data[0]
       value: 
-      objectReference: {fileID: 620826030}
+      objectReference: {fileID: 68040959}
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionName
@@ -8970,7 +8970,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalPosition.Array.data[1]
       value: 
-      objectReference: {fileID: 68040959}
+      objectReference: {fileID: 620826030}
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionInfo
