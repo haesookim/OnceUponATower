@@ -106,6 +106,7 @@ public class PlayerInteraction : MonoBehaviour
          else if(col.tag == "dragon"){
             dialogueActive = true;
             NPCActive = true;
+            dialogueCanvas.gameObject.SetActive(true);
             currentNPC = col.gameObject.GetComponent<NPCInteraction>();
 
             GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
@@ -119,6 +120,8 @@ public class PlayerInteraction : MonoBehaviour
                     newOption.transform.SetParent(optionsParent.transform, false);
                 }
             }
+
+            Debug.Log(actionConditions[2]);
 
             if (!actionConditions[2]){
                 gameObject.GetComponent<PrincessMove>().enabled = false;
@@ -256,7 +259,6 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         string temp = currentNPC.selectOption(selectedOption);
                         GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
-                        //TODO: Add Ending conditions here?
 
                         GameObject.Find("infoB").GetComponent<Text>().text = "";
                         optionsBox.SetActive(false);

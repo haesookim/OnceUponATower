@@ -22,7 +22,7 @@ public class ordinarycomputerinteraction : NPCInteraction
     public override string selectOption(int optionNo){
         if (optionNo == 0){
           Player.actionConditions[1] = true;
-
+          return actionText[0];
         }
         Player.optionsBox.SetActive(false);
         return null;

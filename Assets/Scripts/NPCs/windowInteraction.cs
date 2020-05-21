@@ -35,6 +35,7 @@ public class windowInteraction : NPCInteraction
         if (Inventory.contains("사과즙") && Inventory.contains("팅커벨")){
             if(!optionsAdded[1]){
                 addOption("팅커벨에게 사과즙을 뿌려달라고 부탁한다.", "");
+                optionsAdded[1] = true;
             }
         } 
     }
@@ -46,7 +47,7 @@ public class windowInteraction : NPCInteraction
         }
         else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다.")){
             if (Player.actionConditions[1]){
-                Player.TriggerEnding(5);
+                Player.actionConditions[2] = true;
                 return null;
             } else{
                 return actionText[optionNo];
