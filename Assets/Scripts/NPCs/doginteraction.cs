@@ -26,15 +26,10 @@ public class doginteraction : NPCInteraction
     {
       if (Inventory.contains("사료")){
         if(!optionsAdded[0]){
-          addOption("사료를 먹인다","멍멍이가 송로버섯을 찾았다.");
+          addOption("사료를 먹인다","");
           optionsAdded[0] = true;
-
-
         }
-
-
       }
-
     }
 
     public override string selectOption(int optionNo){
@@ -44,8 +39,10 @@ public class doginteraction : NPCInteraction
       }
       if(optionNo ==1){
         Inventory.removeItem("사료");
-        Inventory.replaceItem("송로버섯","멍멍이가 송로버섯을 찾았다.",mushroomSprite);
-        return actionText[optionNo];
+        Inventory.replaceItem("송로버섯","자연산 송로버섯이다. 멍멍이가 파주었다..",mushroomSprite);
+        options.RemoveAt(optionNo);
+        actionText.RemoveAt(optionNo);
+        return "멍멍이가 송로버섯을 찾았다.";
       }
       return null;
     }
