@@ -48,7 +48,7 @@ public class windowInteraction : NPCInteraction
         else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다.")){
             if (Player.actionConditions[1]){
                 Player.actionConditions[2] = true;
-                return "미정";
+                return "용이 코를 골며 잠들었다.";
             } else{
                 return actionText[optionNo];
             }
