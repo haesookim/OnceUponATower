@@ -36,7 +36,7 @@ public class dragonInteraction : NPCInteraction
 				}
 				if (Inventory.contains("팅커벨") && !conditionList[1]){
 					addOption("팅커벨에게 사과즙을 부탁한다.", "");
-					conditionList[0] = true;
+					conditionList[1] = true;
 				}
 			}
 		}
