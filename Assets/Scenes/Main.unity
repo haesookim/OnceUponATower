@@ -250,6 +250,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
   applejuiceSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
   truffleOilSprite: {fileID: 21300000, guid: 18a085a3b3da74d5fa8f7a7814fa5f12, type: 3}
@@ -599,6 +602,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!1 &98247084
 GameObject:
@@ -2513,7 +2519,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
-  activeSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
+  activeSprite: {fileID: 21300000, guid: 50998e877e1274fb5a0a1a8de0a0a38a, type: 3}
   active: 0
   infoA: 
   infoB: 
@@ -2744,6 +2750,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!4 &614393596 stripped
 Transform:
@@ -2992,6 +3001,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
   steroidSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
   hasSteroid: 0
@@ -3372,7 +3384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724282786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.53, y: -0.71, z: 0}
+  m_LocalPosition: {x: 4.73, y: -0.59, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 109088756}
@@ -3463,7 +3475,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 0c932ca9a2f2d4e02bbe35dce297875c, type: 3}
-  activeSprite: {fileID: 0}
+  activeSprite: {fileID: 21300000, guid: 97c35b4dfe69f4bd881033d0e1f7baef, type: 3}
   active: 0
   infoA: 
   infoB: 
@@ -3841,6 +3853,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!61 &779007261
 BoxCollider2D:
@@ -3997,6 +4012,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
   specialcondition: 0
   collectedPoison: 0
@@ -5007,6 +5025,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!4 &897026393 stripped
 Transform:
@@ -6356,7 +6377,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18739612, y: 2}
+  m_Size: {x: 0.18739612, y: 7}
   m_EdgeRadius: 0
 --- !u!212 &1087158948
 SpriteRenderer:
@@ -6442,6 +6463,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 4bed636d364c249c3a07341f79a17eb9, type: 3}
+  activeSprite: {fileID: 21300000, guid: 028988eff304a4ee18127c834c245de5, type: 3}
+  active: 0
   actionText: []
 --- !u!1001 &1096469830
 PrefabInstance:
@@ -7066,6 +7090,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!1 &1123688318
 GameObject:
@@ -9023,6 +9050,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!1001 &1363526992
 PrefabInstance:
@@ -10278,6 +10308,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
   itemsAdded: 000000
 --- !u!1 &1547981966
@@ -10383,6 +10416,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
   mushroomSprite: {fileID: 21300000, guid: 0ffd28010523a45efaa9d40a8d70d19c, type: 3}
 --- !u!61 &1547981970
@@ -11590,6 +11626,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!4 &1680439732 stripped
 Transform:
@@ -12667,6 +12706,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!61 &1926996661
 BoxCollider2D:
@@ -13229,6 +13271,9 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
   actionText: []
 --- !u!1 &1993361877
 GameObject:
@@ -13358,9 +13403,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2023438997}
   - component: {fileID: 2023438996}
+  - component: {fileID: 2023438999}
+  - component: {fileID: 2023438998}
   m_Layer: 0
   m_Name: snowwhite_cloth
-  m_TagString: Untagged
+  m_TagString: interactableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13429,6 +13476,56 @@ Transform:
   m_Father: {fileID: 1700574233}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2023438998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023438995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2.5}
+    newSize: {x: 1, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &2023438999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023438995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c2ea53e6b9243b4a0f30088c6326b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1098446225}
+  Player: {fileID: 0}
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: 9e969726026c2406abc89a3fb58bfe79, type: 3}
+  activeSprite: {fileID: 21300000, guid: 3cc98600c01a2470e9f10a33cf8c4367, type: 3}
+  active: 0
+  infoA: 
+  infoB: 
+  hasOptions: 0
+  optionsVisible: 1
+  options: []
+  actionText: []
 --- !u!114 &2035129923 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,

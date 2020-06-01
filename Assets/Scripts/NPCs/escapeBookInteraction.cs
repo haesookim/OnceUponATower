@@ -23,4 +23,8 @@ public class escapeBookInteraction : NPCInteraction
         }
         return null;
     }
+
+    void Update(){
+        changeSprite();
+    }
 }

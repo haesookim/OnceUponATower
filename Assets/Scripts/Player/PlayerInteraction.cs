@@ -225,15 +225,12 @@ public class PlayerInteraction : MonoBehaviour
 		}
 		else if (endingNo == 2)
 		{
-			ending = "Ending NO." + endingNo.ToString() + "\n공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없답니다.";
+			ending = "Ending NO." + endingNo.ToString() + "\n공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없어요.";
 		}
-		else if (endingNo == 3)
-		{
-			ending = "Ending NO." + endingNo.ToString() + "\n『엣취!』 백주부가 뿌린 설탕이 코에 들어갔어요. 호흡곤란으로 그만…";
-		}
+
 		else if (endingNo == 4)
 		{
-			ending = "Ending NO." + endingNo.ToString() + "\n『옘병 땀병에 갈아버릴 쑥병에 걸려가지고 땀통이 끊어지면은 끝나는 거고 이 시베리아 벌판에서 얼어죽을 년 같으니! 십장생 같은 년!  옘병 땀병에 그냥, 땀통 끊어지면은 그냥 죽는 거야, 이 년아. 이런 개나리를 봤나! 야, 이 십장생아! 귤 까라 그래! 이 시베리아야! 에라이 썅화차야! 이 시베리아 벌판에서 귤이나 까라!』 ";
+			ending = "Ending NO." + endingNo.ToString() + "\n어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
 		}
 		else if (endingNo == 5)
 		{
@@ -255,10 +252,7 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			ending = "Ending NO." + endingNo.ToString() + "\n모든 공주들은 와브바아 왕국으로 향했어요.\n『안녕히 계세요 여러분~! 우리는 이 세상의 모든 굴레와 속박을 벗어던지고 우리의 행복을 찾아 떠납니다.』\n『여러분도 행복하세요~~~~~』";
 		}
-		else if (endingNo == 10)
-		{
-			ending = "Ending NO." + endingNo.ToString() + "\n착즙기에 손을 넣었어요. 『오늘은 내가 손가락 요리사~!』";
-		}
+
 		else if (endingNo == 11)
 		{
 			ending = "Ending NO." + endingNo.ToString() + "\n『거울아 거울아, 세상에서 누가 제일 예쁘니?』\n『당연히 왕비님이 가장 아름다우시죠.』\n『이 새끼가?!』\n공주는 화딱지가 나서 기절하고 말았어요.";
@@ -273,11 +267,11 @@ public class PlayerInteraction : MonoBehaviour
 		}
 		else if (endingNo == 14)
 		{
-			ending = "Ending NO." + endingNo.ToString() + "\n 공주의 SOS 신호를 포착한 어린왕자가 내려왔어요.\n『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이야.』\n공주는 그렇게 태양계를 벗어났어요.";
+			ending = "Ending NO." + endingNo.ToString() + "\n『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이지.』 \n『너를 구하러 왔어. 이제 나와 함께 가자.』 \n\n공주의 SOS 신호를 포착한 어린왕자가 소행성 B612에서 지구로 내려왔어요.\n공주는 그렇게 태양계를 벗어났어요.";
 		}
 		else if (endingNo == 15)
 		{
-			ending = "Ending NO." + endingNo.ToString() + "\n독극물인 걸 알고도 그렇게 죽이고 싶었어요?";
+			ending = "Ending NO." + endingNo.ToString() + "\n독극물인 거 알았잖아요..!";
 		}
 		else if (endingNo == 16)
 		{
@@ -291,9 +285,17 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			ending = "Ending NO." + endingNo.ToString() + "\n거대해진 맥시무스가 용을 물리쳤어요. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
 		}
-		else if (endingNo == 18)
+		else if (endingNo == 19)
 		{
 			ending = "Ending NO." + endingNo.ToString() + "\n힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
+		}
+		else if (endingNo == 20)
+		{
+			ending = "Ending NO." + endingNo.ToString() + "\n공주는 잠에서 헤어나올 수 없었어요. 그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. 너무 달콤해.";
+		}
+		else if (endingNo == 21)
+		{
+			ending = "Ending NO." + endingNo.ToString() + "\n공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
 		Debug.Log("Ending number" + endingNo + "triggered");
 

@@ -16,6 +16,10 @@ public class NPCInteraction : MonoBehaviour
     public PlayerInteraction Player;
     public PlayerInventory Inventory;
 
+    public Sprite npcSprite;
+    public Sprite activeSprite;
+    public bool active = false;
+
     // list of action text responses in accordance to options
     public List<string> actionText;
 
@@ -28,4 +32,18 @@ public class NPCInteraction : MonoBehaviour
         options.Add(newOption);
         actionText.Add(newActionText);
     }
+
+    void Start(){
+        //this code is not working right now
+        npcSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void changeSprite(){
+        if(active){
+            gameObject.GetComponent<SpriteRenderer>().sprite = activeSprite;
+        } else{
+            gameObject.GetComponent<SpriteRenderer>().sprite = npcSprite;
+        }
+    }
+
 }
