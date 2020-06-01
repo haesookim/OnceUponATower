@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 	public GameObject optionsBox;
 	public GameObject optionSelector;
 
+	public Text doorText;
+
 	private bool dialogueActive;
 	private bool NPCActive;
 
@@ -400,7 +402,8 @@ public class PlayerInteraction : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Return))
 			{
 				teleported = true;
-				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]); // This should be the coordinates for the moved location
+				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]);
+				doorText.text = currentDoor.goalPosition[selectedDoor].positionName;
 				selectorPos.y = doorParent.transform.position.y;
 			}
 			doorSelector.transform.position = selectorPos;
