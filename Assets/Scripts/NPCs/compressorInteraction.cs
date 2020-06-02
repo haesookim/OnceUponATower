@@ -16,7 +16,7 @@ public class compressorInteraction : NPCInteraction
 
         hasOptions = true;
         options = new List<string>{"살펴본다."};
-        actionText = new List<string>{" "};
+        actionText = new List<string>{"작동이 되는 것 같다"};
 
         Player = PlayerObject.GetComponent<PlayerInteraction>();
         Inventory = PlayerObject.GetComponent<PlayerInventory>();
@@ -44,8 +44,7 @@ public class compressorInteraction : NPCInteraction
     public override string selectOption(int optionNo){
         Player.optionsBox.SetActive(false);
         if(optionNo == 0){
-            Player.TriggerEnding(10);
-            return null;
+            return actionText[0];
         } else if(optionNo == options.IndexOf("사과를 집어넣는다.")){
             Inventory.removeItem("사과");
             Inventory.replaceItem("사과즙", "사과를 갈아서 만든 즙이다.", applejuiceSprite);
