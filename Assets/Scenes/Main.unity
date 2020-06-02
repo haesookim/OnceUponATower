@@ -250,8 +250,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: a66dda87bc7534756afbef06ec2ff04b, type: 3}
+  activeSprite: {fileID: 21300000, guid: a47f85f0d61dc4dd8af092952fc3b141, type: 3}
   active: 0
   actionText: []
   applejuiceSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
@@ -602,8 +602,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: fccf55061c3b542049804b671fbbcdf0, type: 3}
+  activeSprite: {fileID: 21300000, guid: 9abe5daaa40464306beb537148109e10, type: 3}
   active: 0
   actionText: []
 --- !u!1 &98247084
@@ -2514,8 +2514,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 97e96602270e84d61aefaf86ed5edb48, type: 3}
+  activeSprite: {fileID: 21300000, guid: fc97bc03f8a734db2b835c978917fc2a, type: 3}
   active: 0
   actionText: []
 --- !u!4 &614393596 stripped
@@ -3003,8 +3003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 99.7}
-  m_SizeDelta: {x: 1066.3, y: 403.4}
+  m_AnchoredPosition: {x: 0, y: -37}
+  m_SizeDelta: {x: 1066.3, y: 312.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706659410
 MonoBehaviour:
@@ -3031,7 +3031,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3543,8 +3543,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 04e883e7cf0834e8d9a3e2992cb4291f, type: 3}
+  activeSprite: {fileID: 21300000, guid: 4f61f860e4ef44748b8e315f3e2d138f, type: 3}
   active: 0
   actionText: []
 --- !u!61 &779007261
@@ -4715,8 +4715,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 9552d91800a464ff081e8c584cf0aa73, type: 3}
+  activeSprite: {fileID: 21300000, guid: 7166f30f079f74e19860c2dd9f2bd7cb, type: 3}
   active: 0
   actionText: []
 --- !u!4 &897026393 stripped
@@ -5915,6 +5915,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1495575841}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1064721679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064721680}
+  - component: {fileID: 1064721682}
+  - component: {fileID: 1064721681}
+  m_Layer: 5
+  m_Name: EndingTitle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1064721680
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064721679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1225028037}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 231.1}
+  m_SizeDelta: {x: 947.4, y: 180.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1064721681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064721679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6886792, g: 0.54355496, b: 0.3216002, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 1b69d2229a52045cea58575997a17d10, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.3
+  m_Text: New Text
+--- !u!222 &1064721682
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064721679}
+  m_CullTransparentMesh: 0
 --- !u!1 &1087032334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6393,6 +6470,8 @@ MonoBehaviour:
   inventoryCanvas: {fileID: 1021084604}
   EndingCanvas: {fileID: 1225028036}
   ending: 
+  endingTitle: 
+  constCanvas: {fileID: 0}
 --- !u!61 &1098446231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6780,8 +6859,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: eb71e4857dd4f40d197a778abe037072, type: 3}
+  activeSprite: {fileID: 21300000, guid: f7d3c30a5647e4997b5530009a8bf1b4, type: 3}
   active: 0
   actionText: []
 --- !u!1 &1123688318
@@ -7811,6 +7890,7 @@ RectTransform:
   - {fileID: 1936148009}
   - {fileID: 706659409}
   - {fileID: 1993361878}
+  - {fileID: 1064721680}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8813,8 +8893,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 0fb1c790ff0704e97a25e8365ddd2a71, type: 3}
+  activeSprite: {fileID: 21300000, guid: 098faec40430e4db9ac6855b3abe966f, type: 3}
   active: 0
   actionText: []
 --- !u!1001 &1363526992
@@ -10071,8 +10151,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: f0a2e2ddcc5174155b4e2d5e61646ed6, type: 3}
+  activeSprite: {fileID: 21300000, guid: 9aff956e7d0e24dea92101d9da6a7385, type: 3}
   active: 0
   actionText: []
   itemsAdded: 000000
@@ -10179,8 +10259,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 64adb812bf0414742b079608ad120256, type: 3}
+  activeSprite: {fileID: 21300000, guid: d5cc99576c3ad4da9985c53d182908e8, type: 3}
   active: 0
   actionText: []
   mushroomSprite: {fileID: 21300000, guid: 0ffd28010523a45efaa9d40a8d70d19c, type: 3}
@@ -11389,8 +11469,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 715abc987982f48cc8c0ba59395352a5, type: 3}
+  activeSprite: {fileID: 21300000, guid: 548be22214dd6402590b5308e3cc0beb, type: 3}
   active: 0
   actionText: []
 --- !u!4 &1680439732 stripped
@@ -12721,8 +12801,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: 661fd151448a743108102cda7a8f7592, type: 3}
+  activeSprite: {fileID: 21300000, guid: fd5e87b999820464ea39ee2d6adfa597, type: 3}
   active: 0
   actionText: []
 --- !u!61 &1926996661
@@ -13363,8 +13443,8 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 0}
-  activeSprite: {fileID: 0}
+  npcSprite: {fileID: 21300000, guid: e4393c13dd9ae4714a870b6863de9a75, type: 3}
+  activeSprite: {fileID: 21300000, guid: fdd04b588ed81465ab270bd990047a29, type: 3}
   active: 0
   actionText: []
 --- !u!1 &1993361877

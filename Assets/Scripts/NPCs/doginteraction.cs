@@ -24,6 +24,7 @@ public class doginteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
+      changeSprite();
       if (Inventory.contains("사료")){
         if(!optionsAdded[0]){
           addOption("사료를 먹인다","");

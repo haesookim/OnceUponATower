@@ -39,6 +39,9 @@ public class PlayerInteraction : MonoBehaviour
 
 	public Canvas EndingCanvas;
 	public string ending;
+	public string endingTitle;
+
+	public Canvas constCanvas;
 
 	//conditions checker;
 	public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
@@ -55,6 +58,7 @@ public class PlayerInteraction : MonoBehaviour
 		inventoryCanvas = GameObject.Find("inventoryCanvas").GetComponent<Canvas>();
 		doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
 		EndingCanvas = GameObject.Find("EndingCanvas").GetComponent<Canvas>();
+		constCanvas = GameObject.Find("ConstCanvas").GetComponent<Canvas>();
 
 		inventory = gameObject.GetComponent<PlayerInventory>();
 
@@ -96,6 +100,7 @@ public class PlayerInteraction : MonoBehaviour
 			{
 				NPCActive = true;
 				currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+				currentNPC.active = true;
 				GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 				GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
 				GameObject.Find("infoB").GetComponent<Text>().text = "";
@@ -190,6 +195,7 @@ public class PlayerInteraction : MonoBehaviour
 
 			if (col.tag == "NPC" && currentNPC.hasOptions)
 			{
+				currentNPC.active = false;
 				for (int i = 0; i < optionsParent.transform.childCount; i++)
 				{
 					Destroy(optionsParent.transform.GetChild(i).gameObject);
@@ -215,91 +221,115 @@ public class PlayerInteraction : MonoBehaviour
 		gameObject.GetComponent<PrincessMove>().enabled = false;
 		dialogueCanvas.gameObject.SetActive(false);
 		inventoryCanvas.gameObject.SetActive(false);
+		//constCanvas.gameObject.SetActive(false);
+
+
 
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending
 		if (endingNo == 1)
 		{
-			ending = "Ending NO." + endingNo.ToString() + "\n아니… 당연히 독사과죠…";
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n독이 든 사과를 먹다";
+			ending = "아니… 당연히 독사과죠…";
 		}
 		else if (endingNo == 2)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n프로게이머의 꿈을 키우다";
 			ending = "Ending NO." + endingNo.ToString() + "\n공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없어요.";
 		}
 
 		else if (endingNo == 4)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n욕쟁이 할머니에게 호되게 혼나다";
 			ending = "Ending NO." + endingNo.ToString() + "\n어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
 		}
 		else if (endingNo == 5)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n드론의 파편에 급소를 찔리다";
 			ending = "Ending NO." + endingNo.ToString() + "\n싸늘하다.. 드론이 미간에 날아와 꽂힌다...";
 		}
 		else if (endingNo == 6)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n맛있는 통구이가 되다";
 			ending = "Ending NO." + endingNo.ToString() + "\n『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
 		}
 		else if (endingNo == 7)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n팅커벨의 거룩한 희생을 기억하다";
 			ending = "Ending NO." + endingNo.ToString() + "\n팅커벨은 하늘의 별이 되었어요.\n공주는 명복을 빌어줬어요.";
 		}
 		else if (endingNo == 8)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n왕자에게 황제 자리를 빼앗기다";
 			ending = "Ending NO." + endingNo.ToString() + "\n왕자와 공주는 무사히 성을 빠져나갔어요.\n왕자는 와브바아 왕국의 황제가 되었고, 둘은 만백성의 축복 속에서 결혼을 했답니다.\n공주는 억울했어요.\n저새끼가 가로챘거든요.";
 		}
 		else if (endingNo == 9)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n지하감옥에 갇혀있던 공주들을 탈출시키다";
 			ending = "Ending NO." + endingNo.ToString() + "\n모든 공주들은 와브바아 왕국으로 향했어요.\n『안녕히 계세요 여러분~! 우리는 이 세상의 모든 굴레와 속박을 벗어던지고 우리의 행복을 찾아 떠납니다.』\n『여러분도 행복하세요~~~~~』";
 		}
 
 		else if (endingNo == 11)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n솔직한 거울을 만나다";
 			ending = "Ending NO." + endingNo.ToString() + "\n『거울아 거울아, 세상에서 누가 제일 예쁘니?』\n『당연히 왕비님이 가장 아름다우시죠.』\n『이 새끼가?!』\n공주는 화딱지가 나서 기절하고 말았어요.";
 		}
 		else if (endingNo == 12)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n난쟁이의 선한 얼굴에 속아 넘어가다";
 			ending = "Ending NO." + endingNo.ToString() + "\n잘 모르는 사람은 따라가면 안돼요…";
 		}
 		else if (endingNo == 13)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n백종원의 트러플 오일 파스타를 맛보다";
 			ending = "Ending NO." + endingNo.ToString() + "\n공주는 진정한 천국이 무엇인지 알게 되었어요. 탈출 안 해~";
 		}
 		else if (endingNo == 14)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n어린왕자와 여생을 함께하다";
 			ending = "Ending NO." + endingNo.ToString() + "\n『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이지.』 \n『너를 구하러 왔어. 이제 나와 함께 가자.』 \n\n공주의 SOS 신호를 포착한 어린왕자가 소행성 B612에서 지구로 내려왔어요.\n공주는 그렇게 태양계를 벗어났어요.";
 		}
 		else if (endingNo == 15)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n독극물의 맛을 알게 되다";
 			ending = "Ending NO." + endingNo.ToString() + "\n독극물인 거 알았잖아요..!";
 		}
 		else if (endingNo == 16)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n인벤토리에 깔리다";
 			ending = "Ending NO." + endingNo.ToString() + "\n엄지공주는 정말 작고 가벼워요!";
 		}
 		else if (endingNo == 17)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n옛날 옛적 도와줬던 제비를 만나다";
 			ending = "Ending NO." + endingNo.ToString() + "\n제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
 		}
 		else if (endingNo == 18)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n맥시무스의 말발굽에 치이다";
 			ending = "Ending NO." + endingNo.ToString() + "\n거대해진 맥시무스가 용을 물리쳤어요. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
 		}
 		else if (endingNo == 19)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n스스로 탈출구를 마련하다";
 			ending = "Ending NO." + endingNo.ToString() + "\n힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
 		}
 		else if (endingNo == 20)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n흔들리지 않는 편안함을 맛보다";
 			ending = "Ending NO." + endingNo.ToString() + "\n공주는 잠에서 헤어나올 수 없었어요. 그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. 너무 달콤해.";
 		}
 		else if (endingNo == 21)
 		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n물레의 가시에 손을 찔리다";
 			ending = "Ending NO." + endingNo.ToString() + "\n공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
 		Debug.Log("Ending number" + endingNo + "triggered");
 
+
 		GameObject.Find("EndingText").GetComponent<Text>().text = ending;
+		GameObject.Find("EndingTitle").GetComponent<Text>().text = endingTitle;
 
 	}
 

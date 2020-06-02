@@ -27,5 +27,8 @@ public class ordinarycomputerinteraction : NPCInteraction
         Player.optionsBox.SetActive(false);
         return null;
     }
+    void Update(){
+        changeSprite();
+    }
 
 }

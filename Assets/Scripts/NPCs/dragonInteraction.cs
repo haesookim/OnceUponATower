@@ -20,7 +20,7 @@ public class dragonInteraction : NPCInteraction
 	}
 
 	void Update(){
-		if (!isSleeping){ 
+		if (!isSleeping){
 			if (Player.actionConditions[2]){
 				isSleeping = true;
 				gameObject.GetComponent<BoxCollider2D>().enabled = false;

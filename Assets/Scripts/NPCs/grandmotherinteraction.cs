@@ -23,6 +23,9 @@ public class grandmotherinteraction : NPCInteraction
         }
         return null;
     }
-
+    
+    void Update(){
+        changeSprite();
+    }
 
 }

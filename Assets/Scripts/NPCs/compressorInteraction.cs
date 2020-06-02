@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class compressorInteraction : NPCInteraction 
+public class compressorInteraction : NPCInteraction
 {
     // Start is called before the first frame update
     private bool[] itemsAdded = new bool[]{false, false};
@@ -25,6 +25,7 @@ public class compressorInteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
+        changeSprite();
         if(Inventory.contains("사과") && !itemsAdded[0]){
             addOption("사과를 집어넣는다.","");
             Debug.Log(actionText);

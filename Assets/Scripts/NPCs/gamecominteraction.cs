@@ -24,4 +24,7 @@ public class gamecominteraction : NPCInteraction
         }
         return null;
     }
+    void Update(){
+        changeSprite();
+    }
 }

@@ -30,6 +30,9 @@ public class smalldoorinteraction : NPCInteraction
         }
         return null;
     }
+    void Update(){
+        changeSprite();
+    }
 
 
 }

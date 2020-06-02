@@ -22,6 +22,7 @@ public class windowInteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
+        changeSprite();
         if (Inventory.contains("사과즙") && Inventory.contains("드론")){
             if(!optionsAdded[0]){
                 addOption("드론으로 사과즙을 뿌린다.", "드론을 어떻게 날리는지 모르겠다.");
@@ -37,7 +38,7 @@ public class windowInteraction : NPCInteraction
                 addOption("팅커벨에게 사과즙을 뿌려달라고 부탁한다.", "");
                 optionsAdded[1] = true;
             }
-        } 
+        }
     }
 
     public override string selectOption(int optionNo){

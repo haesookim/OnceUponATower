@@ -23,6 +23,7 @@ public class mrbaekinteraction : NPCInteraction
 	// Update is called once per frame
 	void Update()
 	{
+		changeSprite();
 		if (Inventory.contains("트러플 오일") && !truffleOil)
 		{
 			addOption("트러플 오일을 건넨다.", "");

@@ -21,6 +21,7 @@ public class cupInteraction : NPCInteraction
     // Update is called once per frame
     void Update()
     {
+        changeSprite();
         if (Inventory.contains("사과즙") && !itemsAdded[0]){
             addOption("사과즙을 마신다.", "");
             itemsAdded[0] = true;
