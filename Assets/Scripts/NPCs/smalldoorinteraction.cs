@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class smalldoorinteraction : NPCInteraction
 {
+    private bool isTinkerbell = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class smalldoorinteraction : NPCInteraction
         options = new List<string>{"들어간다."};
         actionText = new List<string>{"너무 작아 들어갈 수 없다."};
 
+        Inventory = PlayerObject.GetComponent<PlayerInventory>();
         Player = PlayerObject.GetComponent<PlayerInteraction>();
     }
 
@@ -28,10 +30,23 @@ public class smalldoorinteraction : NPCInteraction
             return actionText[optionNo];
           }
         }
+        else if(optionNo == options.IndexOf("팅커벨을 내보낸다.")){
+          Inventory.removeItem("팅커벨");
+          options.Remove("팅커벨을 내보낸다.");
+          return actionText[optionNo];
+
+        }
         return null;
     }
     void Update(){
         changeSprite();
+
+        if(Inventory.contains("팅커벨") && !isTinkerbell){
+          addOption("팅커벨을 내보낸다.", "팅커벨이 사라졌다. 곧 에버랜드 개장 시간이라고 한다.");
+          isTinkerbell = true;
+      }
+
+
     }
 
 
