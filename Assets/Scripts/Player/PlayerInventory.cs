@@ -72,7 +72,13 @@ public class PlayerInventory : MonoBehaviour
 
 		if (inventoryUpdate)
 		{
+
 			int i = 0;
+			for (int j = 0; j < inventorySize; i++)
+			{
+				inventoryUIImage[i].sprite = null;
+			}
+
 			foreach (KeyValuePair<string, string> entry in inventory)
 			{
 				inventoryUIImage[i].sprite = inventoryImage[entry.Key];
