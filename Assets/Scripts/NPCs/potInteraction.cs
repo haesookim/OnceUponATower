@@ -72,7 +72,6 @@ public class potInteraction : NPCInteraction
 
 	public override string selectOption(int optionNo)
 	{
-		Debug.Log(specialcondition);
 		if (optionNo == 0)
 		{
 			if (specialcondition)
