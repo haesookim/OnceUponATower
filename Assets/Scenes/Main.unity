@@ -8002,6 +8002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: light01
       objectReference: {fileID: 0}
+    - target: {fileID: 4514730783187404736, guid: dc9b5a58359fa413789265361bd4a00f,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 4933392838133974632, guid: dc9b5a58359fa413789265361bd4a00f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11691,13 +11696,16 @@ MonoBehaviour:
   hasOptions: 0
   optionsVisible: 1
   options: []
-  PlayerObject: {fileID: 0}
+  PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   npcSprite: {fileID: 21300000, guid: efb1dc06a3f644a0fa967b56e5a86591, type: 3}
   activeSprite: {fileID: 21300000, guid: 34baa5dd510a24a20b4df13b2a1f415c, type: 3}
   active: 0
   actionText: []
+  fire00A: {fileID: 21300000, guid: efb1dc06a3f644a0fa967b56e5a86591, type: 3}
+  fire00B: {fileID: 21300000, guid: 0ce24fa1551a74066a3d2a832392a888, type: 3}
+  fire00C: {fileID: 21300000, guid: 79d33a29eb6a140f78ebbb21985f341b, type: 3}
 --- !u!4 &1691679477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 228933510830762121, guid: fa3e14d64f60c462c93e4bb3ed51f6fb,
