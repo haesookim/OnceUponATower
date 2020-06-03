@@ -22,7 +22,9 @@ public class Fire01 : NPCInteraction
 
       fire00A = gameObject.GetComponent<SpriteRenderer>().sprite;
 
+
       Player = PlayerObject.GetComponent<PlayerInteraction>();
+      Inventory = PlayerObject.GetComponent<PlayerInventory>();
 
 
     }
