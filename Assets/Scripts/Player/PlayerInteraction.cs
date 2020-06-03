@@ -226,6 +226,9 @@ public class PlayerInteraction : MonoBehaviour
 		inventoryCanvas.gameObject.SetActive(false);
 		constCanvas.gameObject.SetActive(false);
 
+		GameData.DataToSave.endingsToSave[endingNo - 1] = true;
+		GameData.DataToSave.SaveGame();
+
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending
 		if (endingNo == 1)
@@ -335,6 +338,22 @@ public class PlayerInteraction : MonoBehaviour
 
 	void Update()
 	{
+		//Debug commands to check save functionality
+		if (Input.GetKeyDown(KeyCode.I))
+		{
+			string saveInfo = "Endings seen: [";
+			for (int i = 0; i < 21; i++)
+			{
+				saveInfo = saveInfo + ", " + GameData.DataToSave.endingsToSave[i];
+			}
+			saveInfo += "]";
+			Debug.Log(saveInfo);
+		}
+		if (Input.GetKeyDown(KeyCode.O))
+		{
+			GameData.DataToSave.ResetData();
+		}
+
 		if (dialogueActive)
 		{
 			if (NPCActive)
