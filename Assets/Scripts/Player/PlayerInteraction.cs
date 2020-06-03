@@ -193,13 +193,16 @@ public class PlayerInteraction : MonoBehaviour
 				}
 			}
 
-			if (col.tag == "NPC" && currentNPC.hasOptions)
+			if (col.tag == "NPC")
 			{
 				currentNPC.active = false;
-				for (int i = 0; i < optionsParent.transform.childCount; i++)
+				if (currentNPC.hasOptions)
 				{
-					Destroy(optionsParent.transform.GetChild(i).gameObject);
-					currentNPC.optionsVisible = true;
+					for (int i = 0; i < optionsParent.transform.childCount; i++)
+					{
+						Destroy(optionsParent.transform.GetChild(i).gameObject);
+						currentNPC.optionsVisible = true;
+					}
 				}
 			}
 
