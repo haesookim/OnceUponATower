@@ -6535,6 +6535,8 @@ MonoBehaviour:
   inventoryUIImage: []
   currentInventoryCount: 0
   highlight: {fileID: 527495745}
+  itemName: {fileID: 1751515165}
+  itemDesc: {fileID: 1934720053}
   inventoryUpdate: 0
   inventoryVisible: 0
   inventoryCanvas: {fileID: 1021084604}

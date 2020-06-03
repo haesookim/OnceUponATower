@@ -7,8 +7,8 @@ namespace GameData
 	public class EndingData
 	{
 
-		public bool[] endingSeen = new bool[23];
-		//public string[] endingTitles = new string["?"](23);
+		public bool[] endingSeen = new bool[21];
+		public string[] endingTitles = new string[23];
 	}
 }
 // } EndingGallery : MonoBehaviour
