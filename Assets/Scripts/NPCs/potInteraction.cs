@@ -45,16 +45,10 @@ public class potInteraction : NPCInteraction
 
 			gameObject.GetComponent<SpriteRenderer>().sprite = brokenPot;
 
-			if (!specialcondition)
-			{
-				infoA = "부서진 항아리다.";
-				hasOptions = false;
-			}
-			else
-			{
+
 				infoA = "부서진 항아리다. 두꺼비가 붙어 있다.";
 				hasOptions = true;
-			}
+			
 		}
 		if (Player.teleported && !collectedPoison)
 		{
