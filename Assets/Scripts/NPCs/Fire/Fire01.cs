@@ -39,6 +39,7 @@ public class Fire01 : NPCInteraction
         gameObject.GetComponent<SpriteRenderer>().sprite = fire00A;
 
         if(Inventory.contains("성냥")&& !optionsAdded[0]){
+          infoA = "꺼진 횃불이다.";
           hasOptions = true;
           addOption("불을 켠다.", "");
           optionsAdded[0]=true;
