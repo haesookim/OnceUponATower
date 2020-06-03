@@ -17,7 +17,7 @@ public class PrincessMove : MonoBehaviour
 	public bool coroutineActive = true;
 
 	private Animator animator;
-	private AudioSource audioSource;
+
 
 	// Freeze rotation
 	Rigidbody2D rb;
@@ -26,7 +26,7 @@ public class PrincessMove : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-		audioSource = GetComponent<AudioSource>();
+
 		rb = GetComponent<Rigidbody2D>();
 
 		rb.freezeRotation = true;
@@ -37,7 +37,7 @@ public class PrincessMove : MonoBehaviour
 	{
 		vector.Set(Input.GetAxis("Horizontal"), transform.position.y, transform.position.z);
 		animator.SetFloat("DirX", vector.x);
-		audioSource.Play();
+
 
 		while (currentWalkCount < walkCount)
 		{
@@ -49,7 +49,7 @@ public class PrincessMove : MonoBehaviour
 
 
 		}
-		audioSource.Stop();
+
 		currentWalkCount = 0;
 		coroutineActive = true;
 	}
