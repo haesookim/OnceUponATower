@@ -221,10 +221,7 @@ public class PlayerInteraction : MonoBehaviour
 		gameObject.GetComponent<PrincessMove>().enabled = false;
 		dialogueCanvas.gameObject.SetActive(false);
 		inventoryCanvas.gameObject.SetActive(false);
-		//constCanvas.gameObject.SetActive(false);
-
-
-
+		constCanvas.gameObject.SetActive(false);
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending
@@ -236,13 +233,13 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 2)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n프로게이머의 꿈을 키우다";
-			ending =  "공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없어요.";
+			ending = "공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없어요.";
 		}
 
 		else if (endingNo == 4)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n욕쟁이 할머니에게 호되게 혼나다";
-			ending =  "어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
+			ending = "어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
 		}
 		else if (endingNo == 5)
 		{
@@ -252,7 +249,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 6)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n맛있는 통구이가 되다";
-			ending =  "『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
+			ending = "『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
 		}
 		else if (endingNo == 7)
 		{
@@ -262,7 +259,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 8)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n왕자에게 황제 자리를 빼앗기다";
-			ending =  "왕자와 공주는 무사히 성을 빠져나갔어요.\n왕자는 와브바아 왕국의 황제가 되었고, 둘은 만백성의 축복 속에서 결혼을 했답니다.\n공주는 억울했어요.\n저새끼가 가로챘거든요.";
+			ending = "왕자와 공주는 무사히 성을 빠져나갔어요.\n왕자는 와브바아 왕국의 황제가 되었고, 둘은 만백성의 축복 속에서 결혼을 했답니다.\n공주는 억울했어요.\n저새끼가 가로챘거든요.";
 		}
 		else if (endingNo == 9)
 		{
@@ -278,12 +275,12 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 12)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n난쟁이의 선한 얼굴에 속아 넘어가다";
-			ending =  "잘 모르는 사람은 따라가면 안돼요…";
+			ending = "잘 모르는 사람은 따라가면 안돼요…";
 		}
 		else if (endingNo == 13)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n백종원의 트러플 오일 파스타를 맛보다";
-			ending =  "공주는 진정한 천국이 무엇인지 알게 되었어요. 탈출 안 해~";
+			ending = "공주는 진정한 천국이 무엇인지 알게 되었어요. 탈출 안 해~";
 		}
 		else if (endingNo == 14)
 		{
@@ -293,17 +290,17 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 15)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n독극물의 맛을 알게 되다";
-			ending =  "독극물인 거 알았잖아요..!";
+			ending = "독극물인 거 알았잖아요..!";
 		}
 		else if (endingNo == 16)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n인벤토리에 깔리다";
-			ending =  "엄지공주는 정말 작고 가벼워요!";
+			ending = "엄지공주는 정말 작고 가벼워요!";
 		}
 		else if (endingNo == 17)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n옛날 옛적 도와줬던 제비를 만나다";
-			ending =  "제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
+			ending = "제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
 		}
 		else if (endingNo == 18)
 		{
@@ -313,17 +310,17 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 19)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n스스로 탈출구를 마련하다";
-			ending =  "힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
+			ending = "힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
 		}
 		else if (endingNo == 20)
 		{
 			endingTitle = "흔들리지 않는 편안함을 맛보다";
-			ending =  "공주는 잠에서 헤어나올 수 없었어요. 그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. 너무 달콤해.";
+			ending = "공주는 잠에서 헤어나올 수 없었어요. 그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. 너무 달콤해.";
 		}
 		else if (endingNo == 21)
 		{
-			endingTitle =  "물레의 가시에 손을 찔리다";
-			ending =  "공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
+			endingTitle = "물레의 가시에 손을 찔리다";
+			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
 		Debug.Log("Ending number" + endingNo + "triggered");
 
