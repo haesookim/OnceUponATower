@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +17,9 @@ public class PlayerInventory : MonoBehaviour
 
 	public Image highlight;
 	int currenthighlight;
+
+	public Text itemName;
+	public Text itemDesc;
 
 	public bool inventoryUpdate = false;
 
@@ -38,7 +43,15 @@ public class PlayerInventory : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.LeftShift))
 		{
 			inventoryVisible = !inventoryVisible;
-			currenthighlight = 0;
+			if (currentInventoryCount > 0)
+			{
+				currenthighlight = 0;
+				highlight.gameObject.SetActive(true);
+			}
+			else
+			{
+				highlight.gameObject.SetActive(false);
+			}
 		}
 		if (inventoryVisible)
 		{
@@ -55,6 +68,10 @@ public class PlayerInventory : MonoBehaviour
 				{
 					currenthighlight = (currenthighlight + currentInventoryCount - 1) % currentInventoryCount;
 				}
+
+				string[] keys = inventory.Keys.ToArray();
+				itemName.text = keys[currenthighlight];
+				itemDesc.text = inventory[keys[currenthighlight]];
 			}
 
 			Vector3 newpos = highlight.transform.position;

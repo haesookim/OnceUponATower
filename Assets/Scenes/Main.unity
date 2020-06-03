@@ -2022,7 +2022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527495744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11999,9 +11999,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Name
-
-'
+  m_Text: "\uC778\uBCA4\uD1A0\uB9AC\n"
 --- !u!222 &1751515166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12996,7 +12994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: infoA
+  m_Text: "\uC778\uBCA4\uD1A0\uB9AC\uAC00 \uBE44\uC5B4 \uC788\uB2E4."
 --- !u!222 &1934720054
 CanvasRenderer:
   m_ObjectHideFlags: 0
