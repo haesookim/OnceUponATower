@@ -352,7 +352,10 @@ public class PlayerInteraction : MonoBehaviour
 					{
 						selectedOption = (selectedOption + 1) % coefficient;
 					}
-					selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
+					if (currentNPC.NPCName != "수상한 초상화")
+					{
+						selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
+					}
 
 					if (Input.GetKeyDown(KeyCode.Return))
 					{
