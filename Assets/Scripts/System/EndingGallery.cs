@@ -1,87 +1,70 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace GameData
+public class EndingGallery : MonoBehaviour
 {
+	private int endingNo = 0;
+	private int endingCount = 21;
 
-	public static class DataToSave
+	public Text endingTitle;
+
+	public Image highlight;
+	int highlightXposOffset = 7;
+	int highlightYposOffset = 14;
+
+	int movingOffset = 150;
+
+	GameObject[] GalleryOptions = new GameObject[21];
+	public GameObject galleryParent;
+
+	public Camera Main;
+
+	// Start is called before the first frame update
+	void Start()
 	{
-		public static bool[] endingsToSave = Enumerable.Repeat(false, 21).ToArray();
-
-		public static void SaveGame()
+		for (int i = 0; i < 21; i++)
 		{
-			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Create(Application.persistentDataPath
-						 + "/MySaveData.dat");
-			EndingData data = new EndingData();
-			data.endingSeen = endingsToSave;
-
-			bf.Serialize(file, data);
-			file.Close();
-			Debug.Log("Game data saved!");
-		}
-		public static void LoadGame()
-		{
-			if (File.Exists(Application.persistentDataPath
-						   + "/MySaveData.dat"))
-			{
-				BinaryFormatter bf = new BinaryFormatter();
-				FileStream file =
-						   File.Open(Application.persistentDataPath
-						   + "/MySaveData.dat", FileMode.Open);
-				EndingData data = (EndingData)bf.Deserialize(file);
-				file.Close();
-				endingsToSave = data.endingSeen;
-				Debug.Log("Game data loaded!");
-			}
-			else
-			{
-				//endingsToSave = Enumerable.Repeat(false, 21).ToArray();
-				Debug.LogError("no data to load!");
-			}
-		}
-
-		public static void ResetData()
-		{
-			if (File.Exists(Application.persistentDataPath
-						  + "/MySaveData.dat"))
-			{
-				File.Delete(Application.persistentDataPath
-								  + "/MySaveData.dat");
-				endingsToSave = Enumerable.Repeat(false, 21).ToArray();
-				Debug.Log("Data reset complete!");
-			}
-			else
-				Debug.LogError("No save data to delete.");
+			GalleryOptions[i] = galleryParent.transform.GetChild(i).gameObject;
 		}
 	}
-	[System.Serializable]
-	class EndingData
+
+	// Update is called once per frame
+	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.RightArrow) && endingNo < endingCount - 1)
+		{
+			endingNo++;
+			galleryParent.transform.Translate(new Vector3(-movingOffset, 0, 0));
+		}
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && endingNo > 0)
+		{
+			endingNo--;
+			galleryParent.transform.Translate(new Vector3(movingOffset, 0, 0));
+		}
+		Vector3 newpos = highlight.transform.position;
+		newpos.x = GalleryOptions[endingNo].transform.position.x + highlightXposOffset;
+		newpos.y = GalleryOptions[endingNo].transform.position.y + highlightYposOffset;
+		highlight.transform.position = newpos;
 
-		public bool[] endingSeen;
 
 
-		//public string[] endingTitles = Enumerable.Repeat("?", 21).ToArray();
-
+		endingTitle.text = GameData.DataToSave.endingTitlesToSave[endingNo];
+		if (Input.GetKeyDown(KeyCode.I))
+		{
+			string saveInfo = "Endings seen: [";
+			for (int i = 0; i < 21; i++)
+			{
+				saveInfo = saveInfo + ", " + GameData.DataToSave.endingTitlesToSave[i];
+			}
+			saveInfo += "]";
+			Debug.Log(saveInfo);
+		}
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			SceneManager.LoadScene("StartScene");
+		}
 	}
 }
-// } EndingGallery : MonoBehaviour
-// {
-// 	// Start is called before the first frame update
-// 	void Start()
-// 	{
-
-// 	}
-
-// 	// Update is called once per frame
-// 	void Update()
-// 	{
-
-// 	}
-// }
