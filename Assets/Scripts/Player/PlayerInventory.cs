@@ -74,9 +74,9 @@ public class PlayerInventory : MonoBehaviour
 		{
 
 			int i = 0;
-			for (int j = 0; j < inventorySize; i++)
+			for (int j = 0; j < inventorySize; j++)
 			{
-				inventoryUIImage[i].sprite = null;
+				inventoryUIImage[j].sprite = null;
 			}
 
 			foreach (KeyValuePair<string, string> entry in inventory)
