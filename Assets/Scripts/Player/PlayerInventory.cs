@@ -89,6 +89,7 @@ public class PlayerInventory : MonoBehaviour
 		{
 			inventory.Add(item.itemName, item.infoA);
 			inventoryImage.Add(item.itemName, item.itemSprite);
+			currentInventoryCount++;
 			inventoryUpdate = true;
 		}
 		else
@@ -104,6 +105,7 @@ public class PlayerInventory : MonoBehaviour
 			inventory.Remove(itemName);
 			inventoryImage.Remove(itemName);
 			inventoryUpdate = true;
+			currentInventoryCount--;
 		}
 	}
 	public void replaceItem(string itemName, string infoA, Sprite image)
@@ -111,6 +113,7 @@ public class PlayerInventory : MonoBehaviour
 		inventory.Add(itemName, infoA);
 		inventoryImage.Add(itemName, image);
 		inventoryUpdate = true;
+		currentInventoryCount++;
 	}
 	// check for item
 	public bool contains(string itemName)
