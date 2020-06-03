@@ -34,15 +34,15 @@ public class cameraController : MonoBehaviour
 
 		if (player.GetComponent<PlayerInteraction>().teleported)
 		{
-			//newPos.x = player.transform.position.x;
-			if (interaction.currentDoor.positionInfo == "left")
-			{
-				newPos.x = player.transform.position.x - offset;
-			}
-			else if (interaction.currentDoor.positionInfo == "right")
-			{
-				newPos.x = player.transform.position.x + offset;
-			}
+			newPos.x = 0;
+			// if (interaction.currentDoor.positionInfo == "left")
+			// {
+			// 	newPos.x = player.transform.position.x - offset;
+			// }
+			// else if (interaction.currentDoor.positionInfo == "right")
+			// {
+			// 	newPos.x = player.transform.position.x + offset;
+			// }
 			newPos.y = player.transform.position.y + 1.6f;
 			player.GetComponent<PlayerInteraction>().teleported = false;
 		}
