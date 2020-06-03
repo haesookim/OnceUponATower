@@ -46,31 +46,33 @@ public class potInteraction : NPCInteraction
 			gameObject.GetComponent<SpriteRenderer>().sprite = brokenPot;
 
 
-				infoA = "부서진 항아리다. 두꺼비가 붙어 있다.";
-				hasOptions = true;
-			
-		}
-		if (Player.teleported && !collectedPoison)
-		{
-			System.Random rand = new System.Random();
-			int choice = rand.Next(10);
-			if (choice < 7)
+			infoA = "부서진 항아리다. 두꺼비가 붙어 있다.";
+			hasOptions = true;
+
+			if (Player.teleported && !collectedPoison)
+			{
+				System.Random rand = new System.Random();
+				int choice = rand.Next(10);
+				if (choice < 7)
+				{
+					specialcondition = false;
+				}
+				else
+				{
+					specialcondition = true;
+				}
+			}
+			if (collectedPoison)
 			{
 				specialcondition = false;
 			}
-			else
-			{
-				specialcondition = true;
-			}
-		}
-		else
-		{
-			specialcondition = false;
+
 		}
 	}
 
 	public override string selectOption(int optionNo)
 	{
+		Debug.Log(specialcondition);
 		if (optionNo == 0)
 		{
 			if (specialcondition)
