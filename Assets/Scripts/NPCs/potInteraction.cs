@@ -77,10 +77,17 @@ public class potInteraction : NPCInteraction
 
 	public override string selectOption(int optionNo)
 	{
-		if (optionNo == 0 && specialcondition)
+		if (optionNo == 0)
 		{
-			Inventory.replaceItem("독극물", "두꺼비가 내뱉은 독이다.", poisonSprite);
-			collectedPoison = true;
+			if (specialcondition)
+			{
+				Inventory.replaceItem("독극물", "두꺼비가 내뱉은 독이다.", poisonSprite);
+				collectedPoison = true;
+			}
+			else
+			{
+				hitCount++;
+			}
 		}
 		Player.optionsBox.SetActive(false);
 		return actionText[optionNo];
