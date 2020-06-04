@@ -137,6 +137,7 @@ public class PlayerInteraction : MonoBehaviour
 			NPCActive = true;
 			dialogueCanvas.gameObject.SetActive(true);
 			currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+			currentNPC.active = true;
 
 			GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 			GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;

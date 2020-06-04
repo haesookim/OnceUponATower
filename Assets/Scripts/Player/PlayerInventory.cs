@@ -24,6 +24,7 @@ public class PlayerInventory : MonoBehaviour
 	public bool inventoryUpdate = false;
 
 	public bool inventoryVisible = false;
+	bool componentsreturned = true;
 	public Canvas inventoryCanvas;
 
 	void Start()
@@ -77,12 +78,17 @@ public class PlayerInventory : MonoBehaviour
 			Vector3 newpos = highlight.transform.position;
 			newpos.x = inventoryUIImage[currenthighlight].transform.position.x;
 			highlight.transform.position = newpos;
+			componentsreturned = false;
 		}
 		else
 		{
 			inventoryCanvas.gameObject.SetActive(false);
-			gameObject.GetComponent<PrincessMove>().enabled = true;
-			gameObject.GetComponent<Animator>().enabled = true;
+			if (!componentsreturned)
+			{
+				gameObject.GetComponent<PrincessMove>().enabled = true;
+				gameObject.GetComponent<Animator>().enabled = true;
+				componentsreturned = true;
+			}
 		}
 
 
