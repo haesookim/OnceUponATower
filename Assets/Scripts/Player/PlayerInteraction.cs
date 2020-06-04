@@ -53,7 +53,7 @@ public class PlayerInteraction : MonoBehaviour
 		{7, false},
 		};
 
-	public Dictionary<int,int> fireConditions = new Dictionary<int,int>{
+	public Dictionary<int, int> fireConditions = new Dictionary<int, int>{
 		{100, 0},{101, 0},{102, 0},{103, 0},{104, 0},
 		{110, 0},{111, 0},{112, 0},{113, 0},{114, 0},
 		{120, 0},{121, 0},{122, 0},{123, 0},{124, 0}
@@ -385,7 +385,7 @@ public class PlayerInteraction : MonoBehaviour
 						selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
 					}
 
-					if (Input.GetKeyDown(KeyCode.Return))
+					if (Input.GetKeyDown(KeyCode.LeftControl))
 					{
 						string temp = currentNPC.selectOption(selectedOption);
 						GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
@@ -421,7 +421,7 @@ public class PlayerInteraction : MonoBehaviour
 						selectedOption = (selectedOption + 1) % coefficient;
 					}
 					selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
-					if (Input.GetKeyDown(KeyCode.Return))
+					if (Input.GetKeyDown(KeyCode.LeftControl))
 					{
 						GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption);
 						GameObject.Find("infoB").GetComponent<Text>().text = "";
@@ -438,7 +438,7 @@ public class PlayerInteraction : MonoBehaviour
 
 
 
-				if (Input.GetKeyDown(KeyCode.Q))
+				if (Input.GetKeyDown(KeyCode.Z))
 				{
 					inventory.addItem(currentObj);
 					Destroy(currentObj.gameObject);
@@ -462,7 +462,7 @@ public class PlayerInteraction : MonoBehaviour
 			}
 			selectorPos.y = doorParent.transform.GetChild(selectedDoor).transform.position.y;
 
-			if (Input.GetKeyDown(KeyCode.Return))
+			if (Input.GetKeyDown(KeyCode.LeftControl))
 			{
 				teleported = true;
 				this.transform.position = currentDoor.getDestination(currentDoor.goalPosition[selectedDoor]);
