@@ -51,6 +51,7 @@ public class PlayerInteraction : MonoBehaviour
 		{4, false},
 		{6, false},
 		{7, false},
+		{9, false},
 		};
 
 	public Dictionary<int, int> fireConditions = new Dictionary<int, int>{
@@ -343,10 +344,25 @@ public class PlayerInteraction : MonoBehaviour
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n물레의 가시에 손을 찔리다";
 			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
+		else if (endingNo == 22)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n강아지를 잃다";
+			ending = "강아지에게 사과 씨앗을 주면 안돼요… 사과 씨앗에는 중독 증상을 유발하는 성분이 있어요. 강아지를 해쳤다는 사실에 낙담한 공주는 삶의 의욕을 잃었어요.";
+		}
+		else if (endingNo == 23)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n퍼피랜드로 향하다";
+			ending = "공주의 관심에 즐거워진 멍멍이가 꼬리를 힘차게 흔들었어요. 멍멍이의 꼬리가 헬리콥터 날개처럼 돌아가면서, 공주와 댕댕이는 퍼피랜드로 날아갈 수 있었답니다.";
+		}
 		else if (endingNo == 24)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n개가 되다";
 			ending = "말 그대로 개가 되었어요. 『멍멍!』";
+		}
+		else
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n안채워졌네요 채워주세요";
+			ending = "코드 확인용~";
 		}
 		Debug.Log("Ending number" + endingNo + "triggered");
 
