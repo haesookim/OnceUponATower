@@ -131,7 +131,7 @@ public class PlayerInteraction : MonoBehaviour
 			currentNPC = col.gameObject.GetComponent<NPCInteraction>();
 			//GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 		}
-		else if (col.tag == "dragon")
+		else if (col.tag == "dragon" || col.tag == "NPC_dwarf")
 		{
 			dialogueActive = true;
 			NPCActive = true;
@@ -153,7 +153,16 @@ public class PlayerInteraction : MonoBehaviour
 				}
 			}
 
-			if (!actionConditions[2])
+			if (col.tag == "dragon")
+			{
+				if (!actionConditions[2])
+				{
+					gameObject.GetComponent<PrincessMove>().enabled = false;
+					gameObject.GetComponent<Animator>().enabled = false;
+				}
+			}
+
+			if (col.tag == "NPC_dwarf")
 			{
 				gameObject.GetComponent<PrincessMove>().enabled = false;
 				gameObject.GetComponent<Animator>().enabled = false;
