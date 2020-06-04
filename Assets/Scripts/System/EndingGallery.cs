@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndingGallery : MonoBehaviour
 {
 	private int endingNo = 0;
-	private int endingCount = 21;
+	private int endingCount = 27;
 
 	public Text endingTitle;
 
@@ -17,7 +17,7 @@ public class EndingGallery : MonoBehaviour
 
 	int movingOffset = 150;
 
-	GameObject[] GalleryOptions = new GameObject[21];
+	GameObject[] GalleryOptions;
 	public GameObject galleryParent;
 
 	public Camera Main;
@@ -25,7 +25,8 @@ public class EndingGallery : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		for (int i = 0; i < 21; i++)
+		GalleryOptions = new GameObject[endingCount];
+		for (int i = 0; i < endingCount; i++)
 		{
 			GalleryOptions[i] = galleryParent.transform.GetChild(i).gameObject;
 		}
@@ -55,7 +56,7 @@ public class EndingGallery : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.I))
 		{
 			string saveInfo = "Endings seen: [";
-			for (int i = 0; i < 21; i++)
+			for (int i = 0; i < endingCount; i++)
 			{
 				saveInfo = saveInfo + ", " + GameData.DataToSave.endingTitlesToSave[i];
 			}

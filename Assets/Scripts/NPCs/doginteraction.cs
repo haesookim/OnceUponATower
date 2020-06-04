@@ -57,7 +57,7 @@ public class doginteraction : NPCInteraction
 			}
 			return actionText[optionNo];
 		}
-		if (optionNo == options.indexOf("사료를 먹인다"))
+		if (optionNo == options.IndexOf("사료를 먹인다"))
 		{
 			Inventory.removeItem("사료");
 			Inventory.replaceItem("송로버섯", "자연산 송로버섯이다. 멍멍이가 파주었다..", mushroomSprite);
@@ -65,7 +65,7 @@ public class doginteraction : NPCInteraction
 			actionText.RemoveAt(optionNo);
 			return "멍멍이가 송로버섯을 찾았다.";
 		}
-		if (optionNo == options.indexOf("사과를 먹인다"))
+		if (optionNo == options.IndexOf("사과를 먹인다"))
 		{
 			Player.TriggerEnding(22);
 		}
