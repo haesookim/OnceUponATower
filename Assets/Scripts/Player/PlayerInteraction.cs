@@ -333,6 +333,11 @@ public class PlayerInteraction : MonoBehaviour
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n물레의 가시에 손을 찔리다";
 			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
+		else if (endingNo == 24)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n개가 되다";
+			ending = "말 그대로 개가 되었어요. 『멍멍!』";
+		}
 		Debug.Log("Ending number" + endingNo + "triggered");
 
 		GameData.DataToSave.endingsToSave[endingNo - 1] = true;
