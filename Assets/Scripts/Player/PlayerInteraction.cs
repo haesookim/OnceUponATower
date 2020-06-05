@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
 	private InteractableObject currentObj;
 	private NPCInteraction currentNPC;
 
-	public GameObject soundManager;
+
 
 	// for moving across Rooms
 	public Canvas doorCanvas;
@@ -45,7 +45,6 @@ public class PlayerInteraction : MonoBehaviour
 
 	public Canvas constCanvas;
 
-	public AudioSource bgmplayer;
 
 	//conditions checker;
 	public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
@@ -73,8 +72,7 @@ public class PlayerInteraction : MonoBehaviour
 		EndingCanvas = GameObject.Find("EndingCanvas").GetComponent<Canvas>();
 		constCanvas = GameObject.Find("ConstCanvas").GetComponent<Canvas>();
 
-		soundManager = GameObject.Find("SoundManager");
-		bgmplayer = soundManager.GetComponent<SoundManager>().backgroundPlayer;
+
 
 		inventory = gameObject.GetComponent<PlayerInventory>();
 

@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class wallinteraction : NPCInteraction
 {
+  public bool itemAdded = false;
     // Start is called before the first frame update
     void Start()
     {
       NPCName = "벽";
       infoA = "부서질 것 같다";
 
-      hasOptions = true;
-
-      options = new List<string>{"부순다!"};
+      hasOptions = false;
+      options = new List<string>{};
 
 
       Player = PlayerObject.GetComponent<PlayerInteraction>();
 
 
+
+    }
+    void Update(){
+
+      if (Player.actionConditions[7] && !itemAdded){
+        addOption("부순다!", "");
+        itemAdded = true;
+        hasOptions = true;
+      }
     }
 
     public override string selectOption(int optionNo){
