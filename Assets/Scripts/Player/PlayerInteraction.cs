@@ -20,6 +20,8 @@ public class PlayerInteraction : MonoBehaviour
 	private InteractableObject currentObj;
 	private NPCInteraction currentNPC;
 
+	public GameObject soundManager;
+
 	// for moving across Rooms
 	public Canvas doorCanvas;
 	public GameObject doorParent;
@@ -42,6 +44,8 @@ public class PlayerInteraction : MonoBehaviour
 	public string endingTitle;
 
 	public Canvas constCanvas;
+
+	public AudioSource bgmplayer;
 
 	//conditions checker;
 	public Dictionary<int, bool> actionConditions = new Dictionary<int, bool>{
@@ -68,6 +72,9 @@ public class PlayerInteraction : MonoBehaviour
 		doorCanvas = GameObject.Find("DoorCanvas").GetComponent<Canvas>();
 		EndingCanvas = GameObject.Find("EndingCanvas").GetComponent<Canvas>();
 		constCanvas = GameObject.Find("ConstCanvas").GetComponent<Canvas>();
+
+		soundManager = GameObject.Find("SoundManager");
+		bgmplayer = soundManager.GetComponent<SoundManager>().backgroundPlayer;
 
 		inventory = gameObject.GetComponent<PlayerInventory>();
 
@@ -244,6 +251,7 @@ public class PlayerInteraction : MonoBehaviour
 		dialogueCanvas.gameObject.SetActive(false);
 		inventoryCanvas.gameObject.SetActive(false);
 		constCanvas.gameObject.SetActive(false);
+
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending

@@ -16,15 +16,17 @@ public class SoundManager : MonoBehaviour
 {
 	public Text Location;
 	public string currentLocation;
-	private int backgroundNum;
+	public int backgroundNum;
 	public bool isPlay = false;
+	public int backNumBefore = 5;
+	public bool isChanged;
 
 
 	[Header("사운드 등록")]
-	[SerializeField] Sound[] backgroundSounds;
+	public Sound[] backgroundSounds;
 
 	[Header("브금 플레이어")]
-	[SerializeField] AudioSource backgroundPlayer;
+	public AudioSource backgroundPlayer;
 
 	// Start is called before the first frame update
 	void Start()
@@ -35,8 +37,9 @@ public class SoundManager : MonoBehaviour
 
 	void Update()
 	{
+		backNumBefore = backgroundNum;
 		currentLocation = Location.text;
-		Debug.Log(currentLocation);
+
 
 
 		if (currentLocation == "어두운 숲 속")
@@ -70,11 +73,14 @@ public class SoundManager : MonoBehaviour
 			isPlay = false;
 		}
 
-		Debug.Log(backgroundNum);
+
+		if (backNumBefore != backgroundNum){
+			PlayBackground(backgroundNum, isPlay);
+		}
 
 
 
-		PlayBackground(backgroundNum, isPlay);
+
 
 	}
 
@@ -85,9 +91,11 @@ public class SoundManager : MonoBehaviour
 		if (Playing)
 		{
 			backgroundPlayer.clip = backgroundSounds[Num].clip;
-			Debug.Log("Play");
 			backgroundPlayer.Play();
-			Debug.Log("소리");
+
+		}
+		else{
+			backgroundPlayer.Stop();
 		}
 
 

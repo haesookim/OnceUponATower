@@ -1734,7 +1734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &463609701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1845,7 +1845,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Location: {fileID: 2120822608}
   currentLocation: 
+  backgroundNum: 0
   isPlay: 0
+  backNumBefore: 5
+  isChanged: 0
   backgroundSounds:
   - soundName: "\uC5B4\uB450\uC6B4 \uC232 \uC18D"
     clip: {fileID: 8300000, guid: 4da8a917c4c3d4f61965cc9bfb121ca3, type: 3}
@@ -6932,6 +6935,7 @@ MonoBehaviour:
   optionsBox: {fileID: 1442539490}
   optionSelector: {fileID: 378947349}
   doorText: {fileID: 2120822608}
+  soundManager: {fileID: 0}
   doorCanvas: {fileID: 2132764557}
   doorParent: {fileID: 1114231510}
   doorBox: {fileID: 98247084}
@@ -6944,6 +6948,7 @@ MonoBehaviour:
   ending: 
   endingTitle: 
   constCanvas: {fileID: 1793285968}
+  bgmplayer: {fileID: 0}
 --- !u!61 &1098446231
 BoxCollider2D:
   m_ObjectHideFlags: 0
