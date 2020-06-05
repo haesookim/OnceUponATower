@@ -1747,7 +1747,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.49
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2166,6 +2166,7 @@ MonoBehaviour:
   activeSprite: {fileID: 0}
   active: 0
   actionText: []
+  itemAdded: 0
 --- !u!61 &505709955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3537,7 +3538,7 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionName
-      value: "\uC9C0\uD558\uAE08\uACE0"
+      value: "\uC9C0\uD558\uAC10"
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -6810,6 +6811,7 @@ GameObject:
   - component: {fileID: 1098446226}
   - component: {fileID: 1098446231}
   - component: {fileID: 1098446232}
+  - component: {fileID: 1098446234}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Player
@@ -6852,6 +6854,22 @@ MonoBehaviour:
   walkCount: 10
   canMove: 1
   coroutineActive: 1
+  walkingSound:
+  - soundName: "\uC77C\uBC18"
+    clip: {fileID: 8300000, guid: ba5523295a6b74db6960436432c56da1, type: 3}
+  - soundName: "\uC5D0\uCF54"
+    clip: {fileID: 8300000, guid: 63498e53443a145fa8eee94c89a62834, type: 3}
+  - soundName: "\uB208\uBC1F\uB294 \uC18C\uB9AC"
+    clip: {fileID: 8300000, guid: 4c84006abfe4f40d4a3f63461b87884e, type: 3}
+  - soundName: "\uD759\uBC14\uB2E5 \uBC1C\uC18C\uB9AC"
+    clip: {fileID: 8300000, guid: 1d2d5a4ce92984bc4ae99dab50b653f1, type: 3}
+  walkPlayer: {fileID: 1098446234}
+  Location: {fileID: 2120822608}
+  currentLocation: 
+  backgroundNum: 6
+  isPlay: 0
+  backNumBefore: 0
+  isChanged: 0
 --- !u!212 &1098446228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6935,7 +6953,6 @@ MonoBehaviour:
   optionsBox: {fileID: 1442539490}
   optionSelector: {fileID: 378947349}
   doorText: {fileID: 2120822608}
-  soundManager: {fileID: 0}
   doorCanvas: {fileID: 2132764557}
   doorParent: {fileID: 1114231510}
   doorBox: {fileID: 98247084}
@@ -6948,7 +6965,6 @@ MonoBehaviour:
   ending: 
   endingTitle: 
   constCanvas: {fileID: 1793285968}
-  bgmplayer: {fileID: 0}
 --- !u!61 &1098446231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7017,6 +7033,102 @@ MonoBehaviour:
   inventoryUpdate: 0
   inventoryVisible: 0
   inventoryCanvas: {fileID: 1021084604}
+--- !u!82 &1098446234
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098446225}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.49
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1114231510
 GameObject:
   m_ObjectHideFlags: 0

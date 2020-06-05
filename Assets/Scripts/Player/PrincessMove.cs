@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class WalkSound{
+	public string soundName;
+	public AudioClip clip;
+}
+
 public class PrincessMove : MonoBehaviour
 {
   //Basic Movement
@@ -18,6 +24,17 @@ public class PrincessMove : MonoBehaviour
 
 	private Animator animator;
 
+	public WalkSound[] walkingSound;
+	public AudioSource walkPlayer;
+
+	public Text Location;
+	public string currentLocation;
+	public int backgroundNum = 0;
+	public bool isPlay = false;
+	public int backNumBefore = 0;
+	public bool isChanged;
+
+
 
 	// Freeze rotation
 	Rigidbody2D rb;
@@ -30,8 +47,30 @@ public class PrincessMove : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 
 		rb.freezeRotation = true;
+		backgroundNum = 0;
+
 
 	}
+
+	void Update(){
+
+	currentLocation = Location.text;
+
+
+	if (currentLocation == "어두운 숲 속"){
+			backgroundNum = 2;
+	}
+	else if (currentLocation == "정원"){
+			backgroundNum = 3;
+	}
+	else if(currentLocation=="1층 복도" || currentLocation=="2층 복도" || currentLocation=="0층 복도" ||currentLocation == "지하감옥"){
+		backgroundNum =1;
+	}
+	else{
+		backgroundNum=0;
+	}
+	walkPlayer.clip = walkingSound[backgroundNum].clip;
+}
 
 	IEnumerator MoveCoroutine()
 	{
@@ -39,8 +78,12 @@ public class PrincessMove : MonoBehaviour
 		animator.SetFloat("DirX", vector.x);
 
 
+
+
+		walkPlayer.Play();
 		while (currentWalkCount < walkCount)
 		{
+
 
 			transform.Translate(vector.x * speed, 0, 0);
 			animator.SetBool("Walking", true);
@@ -48,11 +91,15 @@ public class PrincessMove : MonoBehaviour
 			yield return new WaitForSeconds(0.01f);
 
 
+
 		}
+		walkPlayer.Stop();
 
 		currentWalkCount = 0;
 		coroutineActive = true;
 	}
+
+
 
 	void FixedUpdate()
 	{

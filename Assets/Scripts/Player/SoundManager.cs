@@ -42,6 +42,7 @@ public class SoundManager : MonoBehaviour
 
 
 
+
 		if (currentLocation == "어두운 숲 속")
 		{
 			backgroundNum = 0;
