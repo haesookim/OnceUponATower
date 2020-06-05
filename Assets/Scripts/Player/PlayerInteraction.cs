@@ -334,7 +334,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 18)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n맥시무스의 말발굽에 치이다";
-			ending = "거대해진 맥시무스가 용을 물리쳤어요. 하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
+			ending = "거대해진 맥시무스가 용을 물리쳤어요. \n하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
 		}
 		else if (endingNo == 19)
 		{
@@ -344,27 +344,42 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 20)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n흔들리지 않는 편안함을 맛보다";
-			ending = "공주는 잠에서 헤어나올 수 없었어요. 그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. 너무 달콤해.";
+			ending = "공주는 잠에서 헤어나올 수 없었어요. \n그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. \n너무 달콤해.";
 		}
 		else if (endingNo == 21)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n물레의 가시에 손을 찔리다";
-			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. 이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
+			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. \n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
 		}
 		else if (endingNo == 22)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n강아지를 잃다";
-			ending = "강아지에게 사과 씨앗을 주면 안돼요… 사과 씨앗에는 중독 증상을 유발하는 성분이 있어요. 강아지를 해쳤다는 사실에 낙담한 공주는 삶의 의욕을 잃었어요.";
+			ending = "강아지에게 사과 씨앗을 주면 안돼요… \n사과 씨앗에는 중독 증상을 유발하는 성분이 있어요. \n강아지를 해쳤다는 사실에 낙담한 공주는 삶의 의욕을 잃었어요.";
 		}
 		else if (endingNo == 23)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n퍼피랜드로 향하다";
-			ending = "공주의 관심에 즐거워진 멍멍이가 꼬리를 힘차게 흔들었어요. 멍멍이의 꼬리가 헬리콥터 날개처럼 돌아가면서, 공주와 댕댕이는 퍼피랜드로 날아갈 수 있었답니다.";
+			ending = "공주의 관심에 즐거워진 멍멍이가 꼬리를 힘차게 흔들었어요. \n멍멍이의 꼬리가 헬리콥터 날개처럼 돌아가면서, \n공주와 댕댕이는 퍼피랜드로 날아갈 수 있었답니다.";
 		}
 		else if (endingNo == 24)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n개가 되다";
 			ending = "말 그대로 개가 되었어요. 『멍멍!』";
+		}
+		else if (endingNo == 25)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n용감한 시민상을 받다";
+			ending = "막대기로 용을 찌르다니, 너무나 용감해요. \n비록 공주는 용에게 밟혀 죽었지만 \n소식을 전해 들은 옆나라 코가제 왕국에서 \n공주에게 ‘올해의 용감한 시민상’을 수여했어요.";
+		}
+		else if (endingNo == 26)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n용이 불을 뿜다";
+			ending = "용은 근육을 좋아해요. \n간에 기별도 안 가는 스테로이드에 너무나 실망했어요.";
+		}
+		else if (endingNo == 27)
+		{
+			endingTitle = "Ending NO." + endingNo.ToString() + "\n탈출에 성공하다";
+			ending = "공주는 고소공포증을 이겨내고 무사히 땅에 내려올 수 있었어요. \n가시덩굴을 피해 와브바아 왕국에 돌아간 공주는 \n최정예 군사를 휘동하여 용을 물리쳤답니다.";
 		}
 		else
 		{
