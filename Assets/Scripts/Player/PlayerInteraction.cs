@@ -250,6 +250,7 @@ public class PlayerInteraction : MonoBehaviour
 		inventoryCanvas.gameObject.SetActive(false);
 		constCanvas.gameObject.SetActive(false);
 
+		GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = false;
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending
