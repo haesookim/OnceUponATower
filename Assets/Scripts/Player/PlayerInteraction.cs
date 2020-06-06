@@ -137,7 +137,7 @@ public class PlayerInteraction : MonoBehaviour
 			currentNPC = col.gameObject.GetComponent<NPCInteraction>();
 			//GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 		}
-		else if (col.tag == "dragon" || col.tag == "NPC_dwarf")
+		else if (col.tag == "dragon" || col.tag == "NPC_dwarf" || col.tag == "BasementTrigger")
 		{
 			dialogueActive = true;
 			NPCActive = true;
@@ -168,7 +168,7 @@ public class PlayerInteraction : MonoBehaviour
 				}
 			}
 
-			if (col.tag == "NPC_dwarf")
+			if (col.tag == "NPC_dwarf" || col.tag == "BasementTrigger")
 			{
 				gameObject.GetComponent<PrincessMove>().enabled = false;
 				gameObject.GetComponent<Animator>().enabled = false;
@@ -349,7 +349,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 21)
 		{
 			endingTitle = "Ending NO." + endingNo.ToString() + "\n물레의 가시에 손을 찔리다";
-			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. \n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 100년인가 잤대요.";
+			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. \n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 \n100년인가 잤대요.";
 		}
 		else if (endingNo == 22)
 		{

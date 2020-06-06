@@ -13,7 +13,8 @@ public class pillowinteraction : NPCInteraction
 		hasOptions = true;
 		options = new List<string> { "베개를 베고 눕는다." };
 
-		actionText = new List<string> { "드론에 관한 논문을 읽었다. 금새 드론 척척박사가 되었다." };
+		actionText = new List<string> { "" };
+		Player = PlayerObject.GetComponent<PlayerInteraction>();
 	}
 
 

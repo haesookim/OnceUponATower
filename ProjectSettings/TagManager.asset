@@ -11,6 +11,7 @@ TagManager:
   - NPC_dwarf
   - NPC_portrait
   - thing
+  - BasementTrigger
   layers:
   - Default
   - TransparentFX
