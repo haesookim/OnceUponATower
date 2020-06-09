@@ -5,7 +5,8 @@ using UnityEngine;
 public class dragonInteraction : NPCInteraction
 {
 	private bool isSleeping;
-	private bool[] conditionList = new bool[] { false, false,false,false };
+	private bool[] conditionList = new bool[] { false, false, false, false };
+	public Sprite sleeping_H;
 	void Start()
 	{
 		NPCName = "용";
@@ -14,7 +15,7 @@ public class dragonInteraction : NPCInteraction
 
 		hasOptions = true;
 
-		options = new List<string> { "용에게 맞선다.","왕자에게 도움을 청한다." };
+		options = new List<string> { "용에게 맞선다.", "왕자에게 도움을 청한다." };
 
 		Player = PlayerObject.GetComponent<PlayerInteraction>();
 		Inventory = PlayerObject.GetComponent<PlayerInventory>();
@@ -22,7 +23,7 @@ public class dragonInteraction : NPCInteraction
 
 	void Update()
 	{
-		//changeSprite();
+		changeSprite();
 
 		if (!isSleeping)
 		{
@@ -30,7 +31,8 @@ public class dragonInteraction : NPCInteraction
 			{
 				isSleeping = true;
 				gameObject.GetComponent<BoxCollider2D>().enabled = false;
-				gameObject.GetComponent<Animator>().enabled = true;
+				gameObject.GetComponent<Animator>().SetBool("dragonsleeping", true);
+				//activeSprite = sleeping_H;
 				gameObject.transform.position -= new Vector3(0, 0.17f, 0);
 				hasOptions = false;
 			}
@@ -48,13 +50,15 @@ public class dragonInteraction : NPCInteraction
 					conditionList[1] = true;
 				}
 			}
-			if(Inventory.contains("막대기") && !conditionList[2]){
+			if (Inventory.contains("막대기") && !conditionList[2])
+			{
 				addOption("막대기로 찌른다.", "죽어라");
 				conditionList[2] = true;
 			}
-			if (Inventory.contains("스테로이드") && !conditionList[3]){
-				addOption("스테로이드를 준다.","용에게 이정도 복용량은 아무 소용이 없다. 용이 실망한 눈치다.");
-				conditionList[3] =true;
+			if (Inventory.contains("스테로이드") && !conditionList[3])
+			{
+				addOption("스테로이드를 준다.", "용에게 이정도 복용량은 아무 소용이 없다. 용이 실망한 눈치다.");
+				conditionList[3] = true;
 
 			}
 		}
@@ -68,7 +72,8 @@ public class dragonInteraction : NPCInteraction
 			Player.TriggerEnding(6);
 			return null;
 		}
-		else if(optionNo ==1){
+		else if (optionNo == 1)
+		{
 			Player.TriggerEnding(8);
 			return @"『공주님! 무사하셨군요. 아아… 정말 다행입니다.
 						용맹한 제가 용을 무찔렀어요. 이제 안심하셔도 됩니다.
@@ -93,11 +98,13 @@ public class dragonInteraction : NPCInteraction
 			Player.TriggerEnding(7);
 			return null;
 		}
-		else if(optionNo == options.IndexOf("막대기로 찌른다.")){
+		else if (optionNo == options.IndexOf("막대기로 찌른다."))
+		{
 			Player.TriggerEnding(25);
 			return null;
 		}
-		else if(optionNo == options.IndexOf("스테로이드를 준다.")){
+		else if (optionNo == options.IndexOf("스테로이드를 준다."))
+		{
 			Player.TriggerEnding(26);
 			return null;
 		}
