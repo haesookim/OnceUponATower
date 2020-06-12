@@ -16,8 +16,8 @@ public class PlayerInteraction : MonoBehaviour
 
 	public Text doorText;
 
-	private bool dialogueActive;
-	private bool NPCActive;
+	public bool dialogueActive;
+	public bool NPCActive;
 
 	private InteractableObject currentObj;
 	private NPCInteraction currentNPC;
@@ -457,8 +457,6 @@ public class PlayerInteraction : MonoBehaviour
 				{
 					optionsBox.SetActive(false);
 				}
-
-
 			}
 			else
 			{
@@ -500,6 +498,10 @@ public class PlayerInteraction : MonoBehaviour
 					Destroy(currentObj.gameObject);
 				}
 			}
+		}
+		else
+		{
+			dialogueCanvas.gameObject.SetActive(false);
 		}
 
 
