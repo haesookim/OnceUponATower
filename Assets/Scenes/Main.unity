@@ -6119,6 +6119,7 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: 7166f30f079f74e19860c2dd9f2bd7cb, type: 3}
   active: 0
   actionText: []
+  snowWhitecontroller: {fileID: 9100000, guid: 53e3a9594290c4ffa80a96234ed2478c, type: 2}
 --- !u!4 &897026393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5859758646844298622, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,

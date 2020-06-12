@@ -5,6 +5,7 @@ using UnityEngine;
 public class mirrorinteraction : NPCInteraction
 {
 	private bool Added = false;
+	public RuntimeAnimatorController snowWhitecontroller;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -47,6 +48,8 @@ public class mirrorinteraction : NPCInteraction
 			if (Inventory.contains("사과"))
 			{
 				Player.actionConditions[3] = true;
+				Player.GetComponent<Animator>().runtimeAnimatorController = snowWhitecontroller;
+				Inventory.removeItem("백설공주의 옷");
 				return actionText[optionNo];
 			}
 			else
