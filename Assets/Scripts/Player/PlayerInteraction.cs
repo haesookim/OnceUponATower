@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 	public GameObject optionsBox;
 	public GameObject optionSelector;
 
+	public GameObject infoB;
+
 	public Text doorText;
 
 	private bool dialogueActive;
@@ -98,7 +100,8 @@ public class PlayerInteraction : MonoBehaviour
 				currentObj.active = true;
 				GameObject.Find("ObjName").GetComponent<Text>().text = currentObj.itemName;
 				GameObject.Find("infoA").GetComponent<Text>().text = currentObj.infoA;
-				GameObject.Find("infoB").GetComponent<Text>().text = currentObj.infoB;
+				infoB.SetActive(true);
+				infoB.GetComponent<Text>().text = currentObj.infoB;
 
 				if (currentObj.hasOptions)
 				{
@@ -117,7 +120,7 @@ public class PlayerInteraction : MonoBehaviour
 				currentNPC.active = true;
 				GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 				GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
-				GameObject.Find("infoB").GetComponent<Text>().text = "";
+				infoB.SetActive(false);
 
 				if (currentNPC.hasOptions)
 				{

@@ -21,16 +21,16 @@ public class cameraController : MonoBehaviour
 
 		float positionOffset = this.transform.position.x - player.transform.position.x;
 
-		if (positionOffset > offset)
-		{
-			newPos.x = player.transform.position.x + offset;
+		// if (positionOffset > offset)
+		// {
+		// 	newPos.x = player.transform.position.x + offset;
 
-			//newpos =Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-		}
-		else if (positionOffset < -offset)
-		{
-			newPos.x = player.transform.position.x - offset;
-		}
+		// 	//newpos =Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+		// }
+		// else if (positionOffset < -offset)
+		// {
+		// 	newPos.x = player.transform.position.x - offset;
+		// }
 
 		if (player.GetComponent<PlayerInteraction>().teleported)
 		{
