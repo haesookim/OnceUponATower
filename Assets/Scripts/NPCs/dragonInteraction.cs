@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dragonInteraction : NPCInteraction
 {
-	private bool isSleeping;
+	public bool isSleeping = false;
 	private bool[] conditionList = new bool[] { false, false, false, false };
 	public Sprite sleeping_H;
 	void Start()
@@ -30,10 +30,14 @@ public class dragonInteraction : NPCInteraction
 			if (Player.actionConditions[2])
 			{
 				isSleeping = true;
-				gameObject.GetComponent<BoxCollider2D>().enabled = false;
+				if (gameObject.GetComponent<BoxCollider2D>())
+				{
+					gameObject.GetComponent<BoxCollider2D>().enabled = false;
+					gameObject.transform.position += new Vector3(0, 0.7f, 0);
+				}
 				gameObject.GetComponent<Animator>().SetBool("dragonsleeping", true);
 				//activeSprite = sleeping_H;
-				gameObject.transform.position -= new Vector3(0, 0.17f, 0);
+
 				hasOptions = false;
 			}
 
