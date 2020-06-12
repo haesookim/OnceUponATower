@@ -84,7 +84,6 @@ public class potInteraction : NPCInteraction
 				hitCount++;
 			}
 		}
-		Player.optionsBox.SetActive(false);
 		return actionText[optionNo];
 	}
 }
