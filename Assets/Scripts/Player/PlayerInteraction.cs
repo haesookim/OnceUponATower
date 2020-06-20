@@ -217,6 +217,11 @@ public class PlayerInteraction : MonoBehaviour
 						currentObj.optionsVisible = true;
 					}
 				}
+				if (currentObj.itemName == "막대기")
+				{
+					if (currentObj.gameObject.GetComponent<stickInteraction>().optionselected)
+						Destroy(currentObj.gameObject);
+				}
 			}
 
 			if (col.tag == "NPC")
@@ -391,7 +396,7 @@ public class PlayerInteraction : MonoBehaviour
 		Debug.Log("Ending number" + endingNo + "triggered");
 
 		GameData.DataToSave.endingsToSave[endingNo - 1] = true;
-		GameData.DataToSave.endingTitlesToSave[endingNo - 1] = endingTitle.Split('\n')[1];
+		GameData.DataToSave.endingTitlesToSave[endingNo - 1] = endingTitle;
 		GameData.DataToSave.SaveGame();
 
 

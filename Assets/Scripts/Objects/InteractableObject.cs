@@ -8,6 +8,7 @@ public class InteractableObject : MonoBehaviour
 	// for inventory
 	public GameObject PlayerObject;
 	public PlayerInteraction Player;
+	public PlayerInventory Inventory;
 
 	public string itemName;
 

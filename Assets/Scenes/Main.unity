@@ -2594,6 +2594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 0}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 6d9975c68558c4666a0731d1f986e411, type: 3}
   activeSprite: {fileID: 21300000, guid: 7630ff72ee42d4a8d91827fde8e62973, type: 3}
@@ -3423,6 +3424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 1d8d45df3194943ba999276d56dbd477, type: 3}
   activeSprite: {fileID: 21300000, guid: 50998e877e1274fb5a0a1a8de0a0a38a, type: 3}
@@ -4599,6 +4601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 0}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 0c932ca9a2f2d4e02bbe35dce297875c, type: 3}
   activeSprite: {fileID: 21300000, guid: 97c35b4dfe69f4bd881033d0e1f7baef, type: 3}
@@ -6765,8 +6768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ed94b8b5854196b59a8c5f2e19be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 0}
+  PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 442ad1833c88a48859d3646d04e2983a, type: 3}
   activeSprite: {fileID: 21300000, guid: a005745af1553458890bc10cb9beedbd, type: 3}
@@ -6777,6 +6781,8 @@ MonoBehaviour:
   optionsVisible: 1
   options: []
   actionText: []
+  pieces: {fileID: 21300000, guid: ff53a063955594d7daaaf7d7189fa661, type: 3}
+  optionselected: 0
 --- !u!212 &982637236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13074,6 +13080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 4fc15239663d44f93b45d9fc4c799f07, type: 3}
   activeSprite: {fileID: 21300000, guid: 139550477bb1f45888e7bef5fdd33072, type: 3}
@@ -15846,6 +15853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 67ad781a770fc4b5e9908be0329989e0, type: 3}
   activeSprite: {fileID: 21300000, guid: e538a0faf78954476b181831f2b1a1b6, type: 3}
@@ -16220,6 +16228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
+  Inventory: {fileID: 0}
   itemName: 
   itemSprite: {fileID: 21300000, guid: 9e969726026c2406abc89a3fb58bfe79, type: 3}
   activeSprite: {fileID: 21300000, guid: 3cc98600c01a2470e9f10a33cf8c4367, type: 3}
