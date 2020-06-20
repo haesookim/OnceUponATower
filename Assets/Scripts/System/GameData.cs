@@ -11,8 +11,8 @@ namespace GameData
 
 	public static class DataToSave
 	{
-		public static bool[] endingsToSave = Enumerable.Repeat(false, 27).ToArray();
-		public static string[] endingTitlesToSave = Enumerable.Repeat("?", 27).ToArray();
+		public static bool[] endingsToSave = Enumerable.Repeat(false, 24).ToArray();
+		public static string[] endingTitlesToSave = Enumerable.Repeat("?", 24).ToArray();
 
 		public static void SaveGame()
 		{
@@ -46,8 +46,8 @@ namespace GameData
 			{
 				//endingsToSave = Enumerable.Repeat(false, 21).ToArray();
 				//Debug.LogError("no data to load!");
-				endingsToSave = Enumerable.Repeat(false, 27).ToArray();
-				endingTitlesToSave = Enumerable.Repeat("?", 27).ToArray();
+				endingsToSave = Enumerable.Repeat(false, 24).ToArray();
+				endingTitlesToSave = Enumerable.Repeat("?", 24).ToArray();
 			}
 		}
 

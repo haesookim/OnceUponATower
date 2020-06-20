@@ -45,6 +45,8 @@ public class PlayerInteraction : MonoBehaviour
 	public string ending;
 	public string endingTitle;
 
+	//public 
+
 	public Canvas constCanvas;
 
 

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndingGallery : MonoBehaviour
 {
 	private int endingNo = 0;
-	private int endingCount = 27;
+	private int endingCount = 24;
 
 	public Text endingTitle;
 
@@ -15,10 +15,12 @@ public class EndingGallery : MonoBehaviour
 	int highlightXposOffset = 7;
 	int highlightYposOffset = 14;
 
-	int movingOffset = 150;
+	int movingOffset = 170;
 
 	GameObject[] GalleryOptions;
 	public GameObject galleryParent;
+	public Image[] GalleryImages;
+	public Sprite[] endingImages;
 
 	public Camera Main;
 
@@ -29,6 +31,11 @@ public class EndingGallery : MonoBehaviour
 		for (int i = 0; i < endingCount; i++)
 		{
 			GalleryOptions[i] = galleryParent.transform.GetChild(i).gameObject;
+			//GalleryImages[i] = (Image)GalleryOptions[i].transform.GetChild(0).gameObject;
+			if (GameData.DataToSave.endingsToSave[i])
+			{
+				GalleryImages[i].sprite = endingImages[i];
+			}
 		}
 	}
 
@@ -49,8 +56,6 @@ public class EndingGallery : MonoBehaviour
 		newpos.x = GalleryOptions[endingNo].transform.position.x + highlightXposOffset;
 		newpos.y = GalleryOptions[endingNo].transform.position.y + highlightYposOffset;
 		highlight.transform.position = newpos;
-
-
 
 		endingTitle.text = GameData.DataToSave.endingTitlesToSave[endingNo];
 		if (Input.GetKeyDown(KeyCode.I))
