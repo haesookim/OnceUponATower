@@ -5,6 +5,10 @@ using UnityEngine;
 public class smalldoorinteraction : NPCInteraction
 {
 	private bool isTinkerbell = false;
+	private bool addedStick = false;
+	private bool hasStick = false;
+
+	public Sprite cocoon;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -38,10 +42,18 @@ public class smalldoorinteraction : NPCInteraction
 		{
 			Inventory.removeItem("팅커벨");
 			options.Remove("팅커벨을 내보낸다.");
-			return actionText[optionNo];
 
 		}
-		return null;
+		else if (optionNo == options.IndexOf("열어본다"))
+		{
+			Inventory.replaceItem("누에고치", "단단한 누에고치다.", cocoon);
+		}
+		else if (optionNo == options.IndexOf("나무조각을 밖에 둔다."))
+		{
+			Inventory.removeItem("나무조각");
+			Player.actionConditions[9] = true;
+		}
+		return actionText[optionNo]; ;
 	}
 	void Update()
 	{
@@ -51,6 +63,16 @@ public class smalldoorinteraction : NPCInteraction
 		{
 			addOption("팅커벨을 내보낸다.", "팅커벨이 사라졌다. 곧 에버랜드 개장 시간이라고 한다.");
 			isTinkerbell = true;
+		}
+		if (Player.actionConditions[9] && !addedStick)
+		{
+			addOption("열어본다.", "문 밖에 누에고치가 있다.");
+			addedStick = true;
+		}
+		if (Inventory.contains("나무조각") && !hasStick)
+		{
+			addOption("나무조각을 밖에 둔다.", "제비가 나무조각을 물어갔다.");
+			hasStick = true;
 		}
 	}
 }

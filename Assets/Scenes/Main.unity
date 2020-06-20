@@ -11068,6 +11068,7 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: 098faec40430e4db9ac6855b3abe966f, type: 3}
   active: 0
   actionText: []
+  cocoon: {fileID: 21300000, guid: 76c279377a2b7456c819f2a0eb407761, type: 3}
 --- !u!1001 &1363526992
 PrefabInstance:
   m_ObjectHideFlags: 0
