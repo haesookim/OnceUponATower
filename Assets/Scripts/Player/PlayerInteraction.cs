@@ -45,7 +45,7 @@ public class PlayerInteraction : MonoBehaviour
 	public string ending;
 	public string endingTitle;
 
-	//public 
+	public Image endingImage;
 
 	public Canvas constCanvas;
 
@@ -406,6 +406,7 @@ public class PlayerInteraction : MonoBehaviour
 
 		GameObject.Find("EndingText").GetComponent<Text>().text = ending;
 		GameObject.Find("EndingTitle").GetComponent<Text>().text = endingTitle;
+		endingImage.sprite = gameObject.GetComponent<EndingManager>().loadEnding(endingNo);
 
 	}
 
