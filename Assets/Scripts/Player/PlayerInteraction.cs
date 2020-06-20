@@ -447,19 +447,27 @@ public class PlayerInteraction : MonoBehaviour
 
 					if (Input.GetKeyDown(KeyCode.LeftControl))
 					{
+
 						string temp = currentNPC.selectOption(selectedOption);
 						GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
 
-						GameObject.Find("infoB").GetComponent<Text>().text = "";
+						//GameObject.Find("infoB").GetComponent<Text>().text = "";
 						optionsBox.SetActive(false);
 						selectorPos.y = optionsParent.transform.position.y;
 						currentNPC.optionsVisible = false;
+
 					}
 					optionSelector.transform.position = selectorPos;
 				}
 				else
 				{
 					optionsBox.SetActive(false);
+					if (Input.GetKeyDown(KeyCode.LeftControl))
+					{
+						dialogueActive = false;
+						dialogueCanvas.gameObject.SetActive(false);
+						currentNPC.active = false;
+					}
 				}
 			}
 			else
@@ -492,9 +500,13 @@ public class PlayerInteraction : MonoBehaviour
 				else
 				{
 					optionsBox.SetActive(false);
+					if (Input.GetKeyDown(KeyCode.LeftControl))
+					{
+						dialogueActive = false;
+						dialogueCanvas.gameObject.SetActive(false);
+						currentObj.active = false;
+					}
 				}
-
-
 
 				if (Input.GetKeyDown(KeyCode.Z))
 				{
