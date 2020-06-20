@@ -209,6 +209,7 @@ public class PlayerInteraction : MonoBehaviour
 			if (col.tag == "interactableObject")
 			{
 				currentObj.active = false;
+				infoB.SetActive(false);
 				if (currentObj.hasOptions)
 				{
 					for (int i = 0; i < optionsParent.transform.childCount; i++)
@@ -450,8 +451,7 @@ public class PlayerInteraction : MonoBehaviour
 
 						string temp = currentNPC.selectOption(selectedOption);
 						GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
-
-						//GameObject.Find("infoB").GetComponent<Text>().text = "";
+						infoB.SetActive(false);
 						optionsBox.SetActive(false);
 						selectorPos.y = optionsParent.transform.position.y;
 						currentNPC.optionsVisible = false;
@@ -490,7 +490,7 @@ public class PlayerInteraction : MonoBehaviour
 					if (Input.GetKeyDown(KeyCode.LeftControl))
 					{
 						GameObject.Find("infoA").GetComponent<Text>().text = currentObj.selectOption(selectedOption);
-						GameObject.Find("infoB").GetComponent<Text>().text = "";
+						infoB.SetActive(false);
 						selectorPos.y = optionsParent.transform.position.y;
 						optionsBox.SetActive(false);
 						currentObj.optionsVisible = false;
