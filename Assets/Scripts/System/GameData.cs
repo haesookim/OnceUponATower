@@ -13,6 +13,7 @@ namespace GameData
 	{
 		public static bool[] endingsToSave = Enumerable.Repeat(false, 24).ToArray();
 		public static string[] endingTitlesToSave = Enumerable.Repeat("?", 24).ToArray();
+		public static int lastSeenEnding = 0;
 
 		public static void SaveGame()
 		{
@@ -22,6 +23,7 @@ namespace GameData
 			EndingData data = new EndingData();
 			data.endingSeen = endingsToSave;
 			data.endingTitles = endingTitlesToSave;
+			data.lastSeen = lastSeenEnding;
 
 			bf.Serialize(file, data);
 			file.Close();
@@ -40,6 +42,7 @@ namespace GameData
 				file.Close();
 				endingsToSave = data.endingSeen;
 				endingTitlesToSave = data.endingTitles;
+				lastSeenEnding = data.lastSeen;
 				Debug.Log("Game data loaded!");
 			}
 			else
@@ -48,6 +51,7 @@ namespace GameData
 				//Debug.LogError("no data to load!");
 				endingsToSave = Enumerable.Repeat(false, 24).ToArray();
 				endingTitlesToSave = Enumerable.Repeat("?", 24).ToArray();
+				lastSeenEnding = 0;
 			}
 		}
 
@@ -70,6 +74,8 @@ namespace GameData
 
 		public bool[] endingSeen; //= Enumerable.Repeat(false, 21).ToArray();
 		public string[] endingTitles; //= Enumerable.Repeat("?", 21).ToArray();
+
+		public int lastSeen;
 
 	}
 }

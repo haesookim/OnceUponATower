@@ -16,6 +16,7 @@ public class EndingGallery : MonoBehaviour
 	int highlightYposOffset = 14;
 
 	int movingOffset = 170;
+	int seenCount = 0;
 
 	GameObject[] GalleryOptions;
 	public GameObject galleryParent;
@@ -23,6 +24,7 @@ public class EndingGallery : MonoBehaviour
 	public Sprite[] endingImages;
 
 	public Camera Main;
+	public Text count;
 
 	// Start is called before the first frame update
 	void Start()
@@ -34,9 +36,13 @@ public class EndingGallery : MonoBehaviour
 			//GalleryImages[i] = (Image)GalleryOptions[i].transform.GetChild(0).gameObject;
 			if (GameData.DataToSave.endingsToSave[i])
 			{
+				seenCount++;
 				GalleryImages[i].sprite = endingImages[i];
 			}
 		}
+		endingNo = GameData.DataToSave.lastSeenEnding;
+		count.text = seenCount + count.text;
+		galleryParent.transform.Translate(new Vector3(-movingOffset * endingNo, 0, 0));
 	}
 
 	// Update is called once per frame

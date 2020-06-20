@@ -399,6 +399,7 @@ public class PlayerInteraction : MonoBehaviour
 		Debug.Log("Ending number" + endingNo + "triggered");
 
 		GameData.DataToSave.endingsToSave[endingNo - 1] = true;
+		GameData.DataToSave.lastSeenEnding = endingNo - 1;
 		GameData.DataToSave.endingTitlesToSave[endingNo - 1] = endingTitle;
 		GameData.DataToSave.SaveGame();
 
