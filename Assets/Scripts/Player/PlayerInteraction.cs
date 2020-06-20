@@ -150,7 +150,6 @@ public class PlayerInteraction : MonoBehaviour
 
 			GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 			GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
-			GameObject.Find("infoB").GetComponent<Text>().text = "";
 
 			if (currentNPC.hasOptions)
 			{
