@@ -4109,7 +4109,7 @@ MonoBehaviour:
   active: 0
   actionText: []
   itemAdded: 0
-  thread: {fileID: 0}
+  thread: {fileID: 21300000, guid: 02dfa4627319a49deaf4266eefbc4a72, type: 3}
 --- !u!61 &641784870
 BoxCollider2D:
   m_ObjectHideFlags: 0
