@@ -12,6 +12,7 @@ TagManager:
   - NPC_portrait
   - thing
   - BasementTrigger
+  - NPC_fire
   layers:
   - Default
   - TransparentFX

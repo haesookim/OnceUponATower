@@ -8072,13 +8072,13 @@ MonoBehaviour:
   walkingSound:
   - soundName: 
     clip: {fileID: 8300000, guid: 105ba0a4df4494773be21bac90152702, type: 3}
+    walkVolume: 0.2
+  - soundName: 
+    clip: {fileID: 8300000, guid: 21adecdf623ce44d7aef5ef7cbebe490, type: 3}
+    walkVolume: 1
+  - soundName: 
+    clip: {fileID: 8300000, guid: 34dd51ad9ff8443519a420d958efb5b3, type: 3}
     walkVolume: 0.3
-  - soundName: 
-    clip: {fileID: 8300000, guid: 63498e53443a145fa8eee94c89a62834, type: 3}
-    walkVolume: 3
-  - soundName: 
-    clip: {fileID: 8300000, guid: 4c84006abfe4f40d4a3f63461b87884e, type: 3}
-    walkVolume: 0.06
   - soundName: 
     clip: {fileID: 8300000, guid: 1dff5ec1475d7472abf5bfa61a9e77a4, type: 3}
     walkVolume: 0.8
@@ -8269,7 +8269,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.98
-  m_Pitch: 1.1
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -13761,7 +13761,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687873651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deaee244e3bcd4976bc77915556dd984, type: 3}
+  m_Script: {fileID: 11500000, guid: 10823e67195be4a968e19fd34003b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPCName: 
@@ -13772,10 +13772,11 @@ MonoBehaviour:
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
-  npcSprite: {fileID: 21300000, guid: efb1dc06a3f644a0fa967b56e5a86591, type: 3}
-  activeSprite: {fileID: 21300000, guid: 34baa5dd510a24a20b4df13b2a1f415c, type: 3}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
   active: 0
   actionText: []
+  fireNo: 100
   fire00A: {fileID: 21300000, guid: efb1dc06a3f644a0fa967b56e5a86591, type: 3}
   fire00B: {fileID: 21300000, guid: 0ce24fa1551a74066a3d2a832392a888, type: 3}
   fire00C: {fileID: 21300000, guid: 79d33a29eb6a140f78ebbb21985f341b, type: 3}
