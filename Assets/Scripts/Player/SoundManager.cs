@@ -68,9 +68,14 @@ public class SoundManager : MonoBehaviour
 			backgroundNum = 4;
 			isPlay = true;
 		}
-		else
+		else if (currentLocation == "음악실과 갤러리")
 		{
 			backgroundNum = 5;
+			isPlay = true;
+		}
+		else
+		{
+			backgroundNum = 6;
 			isPlay = false;
 		}
 

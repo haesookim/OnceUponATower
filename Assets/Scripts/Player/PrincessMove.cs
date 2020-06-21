@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class WalkSound{
 	public string soundName;
 	public AudioClip clip;
+	public float walkVolume;
 }
 
 public class PrincessMove : MonoBehaviour
@@ -36,6 +37,7 @@ public class PrincessMove : MonoBehaviour
 
 
 
+
 	// Freeze rotation
 	Rigidbody2D rb;
 
@@ -48,6 +50,7 @@ public class PrincessMove : MonoBehaviour
 
 		rb.freezeRotation = true;
 		backgroundNum = 0;
+
 
 
 	}
@@ -70,6 +73,7 @@ public class PrincessMove : MonoBehaviour
 		backgroundNum=0;
 	}
 	walkPlayer.clip = walkingSound[backgroundNum].clip;
+	walkPlayer.volume = walkingSound[backgroundNum].walkVolume;
 }
 
 	IEnumerator MoveCoroutine()

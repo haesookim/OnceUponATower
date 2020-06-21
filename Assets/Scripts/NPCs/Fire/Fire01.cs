@@ -14,11 +14,6 @@ public class Fire01 : NPCInteraction
     // Start is called before the first frame update
     void Start()
     {
-      NPCName = "횃불 00";
-      infoA = "꺼진 횃불이다.";
-
-      hasOptions = false;
-      options = new List<string> {};
 
       fire00A = gameObject.GetComponent<SpriteRenderer>().sprite;
 
