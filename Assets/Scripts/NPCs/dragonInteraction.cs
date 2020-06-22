@@ -78,11 +78,8 @@ public class dragonInteraction : NPCInteraction
 		}
 		else if (optionNo == 1)
 		{
-			Player.TriggerEnding(8);
-			return @"『공주님! 무사하셨군요. 아아… 정말 다행입니다.
-						용맹한 제가 용을 무찔렀어요. 이제 안심하셔도 됩니다.
-						일단 이곳을 빠져나가요. 맥시무스, 공주님을 도와드려.』";
-
+			Player.TriggerEnding(6);
+			return null;
 		}
 		else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다."))
 		{
@@ -104,12 +101,12 @@ public class dragonInteraction : NPCInteraction
 		}
 		else if (optionNo == options.IndexOf("막대기로 찌른다."))
 		{
-			Player.TriggerEnding(25);
+			Player.TriggerEnding(3);
 			return null;
 		}
 		else if (optionNo == options.IndexOf("스테로이드를 준다."))
 		{
-			Player.TriggerEnding(26);
+			Player.TriggerEnding(10);
 			return null;
 		}
 		return null;
