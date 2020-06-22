@@ -46,6 +46,7 @@ public class PlayerInteraction : MonoBehaviour
 	public string endingTitle;
 
 	public Image endingImage;
+	public Image endingbg;
 
 	public Canvas constCanvas;
 
@@ -265,7 +266,6 @@ public class PlayerInteraction : MonoBehaviour
 		dialogueCanvas.gameObject.SetActive(false);
 		inventoryCanvas.gameObject.SetActive(false);
 		constCanvas.gameObject.SetActive(false);
-
 		GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = false;
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
@@ -285,16 +285,22 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			endingTitle = "욕쟁이 할머니에게 호되게 혼나다";
 			ending = "어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
+			endingImage.GetComponent<Animator>().enabled = true;
+			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 		else if (endingNo == 5)
 		{
 			endingTitle = "드론의 파편에 급소를 찔리다";
 			ending = "싸늘하다.. 드론이 미간에 날아와 꽂힌다...";
+			endingImage.GetComponent<Animator>().enabled = true;
+			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 		else if (endingNo == 6)
 		{
 			endingTitle = "맛있는 통구이가 되다";
 			ending = "『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
+			endingImage.GetComponent<Animator>().enabled = true;
+			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 		else if (endingNo == 7)
 		{
@@ -310,6 +316,9 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			endingTitle = "지하감옥에 갇혀있던 공주들을 탈출시키다";
 			ending = "모든 공주들은 와브바아 왕국으로 향했어요.\n『안녕히 계세요 여러분~! 우리는 이 세상의 모든 굴레와 속박을 벗어던지고 우리의 행복을 찾아 떠납니다.』\n『여러분도 행복하세요~~~~~』";
+			endingImage.GetComponent<Animator>().enabled = true;
+			endingbg.GetComponent<Image>().enabled = true;
+			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 
 		else if (endingNo == 11)
@@ -366,6 +375,8 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			endingTitle = "물레의 가시에 손을 찔리다";
 			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. \n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 \n100년인가 잤대요.";
+			endingImage.GetComponent<Animator>().enabled = true;
+			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 		else if (endingNo == 22)
 		{
