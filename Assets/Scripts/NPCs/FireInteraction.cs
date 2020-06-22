@@ -26,6 +26,13 @@ public class FireInteraction : NPCInteraction
 		options = new List<string> { "" };
 		animator = gameObject.GetComponent<Animator>();
 
+    public Dictionary<int, int> answerConditions = new Dictionary<int, int>{
+      {100, 1},{101, 1},{102, 1},{103, 0},{104, 0},
+      {110, 2},{111, 2},{112, 2},{113, 0},{114, 0},
+      {120, 1},{121, 1},{122, 1},{123, 0},{124, 0}
+
+    };
+
 	}
 
 	// Update is called once per frame
