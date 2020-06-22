@@ -47,6 +47,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	public Image endingImage;
 	public Image endingbg;
+	private bool endingTriggered = false;
 
 	public Canvas constCanvas;
 
@@ -267,6 +268,7 @@ public class PlayerInteraction : MonoBehaviour
 		inventoryCanvas.gameObject.SetActive(false);
 		constCanvas.gameObject.SetActive(false);
 		GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = false;
+		endingTriggered = true;
 
 		//endingText.text="Ending number "+ endingNo+ " triggered\n";
 		// move to scene No. of ending
@@ -423,7 +425,8 @@ public class PlayerInteraction : MonoBehaviour
 
 		GameObject.Find("EndingText").GetComponent<Text>().text = ending;
 		GameObject.Find("EndingTitle").GetComponent<Text>().text = endingTitle;
-		endingImage.sprite = gameObject.GetComponent<EndingManager>().loadEnding(endingNo);
+		if (endingNo != 4 && endingNo != 5 && endingNo != 6 && endingNo != 9 && endingNo != 21)
+			endingImage.sprite = gameObject.GetComponent<EndingManager>().loadEnding(endingNo);
 
 	}
 
@@ -469,9 +472,8 @@ public class PlayerInteraction : MonoBehaviour
 
 					if (Input.GetKeyDown(KeyCode.LeftControl))
 					{
-
 						string temp = currentNPC.selectOption(selectedOption);
-						GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
+						if (!endingTriggered) GameObject.Find("infoA").GetComponent<Text>().text = temp; // code in individual Objects
 						infoB.SetActive(false);
 						optionsBox.SetActive(false);
 						selectorPos.y = optionsParent.transform.position.y;
