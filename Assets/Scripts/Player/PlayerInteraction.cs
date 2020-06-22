@@ -50,6 +50,8 @@ public class PlayerInteraction : MonoBehaviour
 	private bool endingTriggered = false;
 
 	public Canvas constCanvas;
+	public GameObject keyguide;
+	bool keyguideOpen = false;
 
 
 	//conditions checker;
@@ -446,6 +448,22 @@ public class PlayerInteraction : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.O))
 		{
 			GameData.DataToSave.ResetData();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (!keyguideOpen)
+			{
+				keyguide.SetActive(true);
+				keyguideOpen = true;
+				gameObject.GetComponent<PrincessMove>().enabled = false;
+			}
+			else
+			{
+				keyguide.SetActive(false);
+				keyguideOpen = false;
+				gameObject.GetComponent<PrincessMove>().enabled = true;
+			}
 		}
 
 		if (dialogueActive)
