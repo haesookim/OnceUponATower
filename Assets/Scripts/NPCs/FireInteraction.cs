@@ -5,97 +5,61 @@ using UnityEngine;
 public class FireInteraction : NPCInteraction
 {
 
-    private bool[] optionsAdded = new bool[]{false, false, false};
-    public int fireNo;
+	private bool[] optionsAdded = new bool[] { false, false, false };
+	public int fireNo;
+	public int fireState = 0;
 
-    public Sprite fire00A;
-    public Sprite fire00B;
-    public Sprite fire00C;
+	public Sprite fire00A;
+	public Sprite fire00B;
+	public Sprite fire00C;
 
+	Animator animator;
+	// Start is called before the first frame update
+	void Start()
+	{
+		NPCName = "횃불";
+		hasOptions = true;
+		optionsVisible = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-      NPCName = "횃불";
-      hasOptions = false;
+		Player = PlayerObject.GetComponent<PlayerInteraction>();
+		Inventory = PlayerObject.GetComponent<PlayerInventory>();
+		options = new List<string> { "" };
+		animator = gameObject.GetComponent<Animator>();
 
-      Player = PlayerObject.GetComponent<PlayerInteraction>();
-      Inventory = PlayerObject.GetComponent<PlayerInventory>();
-      options = new List<string>{};
+	}
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      if(Player.actionConditions[4]){
-        Player.TriggerEnding(14);
-      }
-      else if(Player.fireConditions[fireNo]==0){
-        gameObject.GetComponent<SpriteRenderer>().sprite = fire00A;
-
-        if(Inventory.contains("성냥")&& !optionsAdded[0]){
-          infoA = "꺼진 횃불이다.";
-          hasOptions = true;
-          addOption("불을 켠다.", "");
-          optionsAdded[0]=true;
-        }
-
-      }
-      else if(Player.fireConditions[fireNo]==1 && !optionsAdded[1]){
-
-        infoA = "불에 타고 있다.";
-        hasOptions = true;
-        addOption("불을 더 붙인다.", "");
-
-        optionsAdded[1] = true;
-      }
-      else if(Player.fireConditions[fireNo]==2 && !optionsAdded[2]){
-        gameObject.GetComponent<SpriteRenderer>().sprite = fire00C;
-        infoA = "뜨거워보인다.";
-        hasOptions = true;
-        addOption("불을 끈다.", "");
-
-        optionsAdded[2] = true;
-      }
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (Inventory.contains("성냥"))
+		{
+			hasOptions = true;
+		}
+	}
 
 
-    public override string selectOption(int optionNo)
-    {
-      Player.optionsBox.SetActive(false);
+	public override string selectOption(int optionNo)
+	{
+		Debug.Log("?");
 
-      if (optionNo == options.IndexOf("불을 켠다.")){
-        Player.fireConditions[fireNo]=1;
+		if (fireState == 0)
+		{
+			fireState = 1;
+			Player.fireConditions[fireNo] = 1;
+		}
 
-          options = new List<string> {};
-          gameObject.GetComponent<SpriteRenderer>().sprite = fire00B;
-          optionsAdded[1]=false;
-          return "불을 켰다.";
+		else if (fireState == 1)
+		{
+			fireState = 2;
+			Player.fireConditions[fireNo] = 2;
+		}
+		else if (fireState == 2)
+		{
+			fireState = 0;
+			Player.fireConditions[fireNo] = 0;
+		}
+		animator.SetInteger("FireState", fireState);
 
-
-      }
-
-      else if (optionNo == options.IndexOf("불을 더 붙인다.")){
-        Player.fireConditions[fireNo]=2;
-
-          options = new List<string> {};
-          gameObject.GetComponent<SpriteRenderer>().sprite = fire00C;
-          optionsAdded[2]=false;
-          return "더 밝아졌다.";
-
-      }
-
-      else if (optionNo == options.IndexOf("불을 끈다.")){
-        Player.fireConditions[fireNo]=0;
-
-          options = new List<string> {};
-          gameObject.GetComponent<SpriteRenderer>().sprite = fire00A;
-          optionsAdded[0] = false;
-          return "불이 꺼졌다.";
-
-      }
-
-      return null;
-    }
+		return null;
+	}
 }

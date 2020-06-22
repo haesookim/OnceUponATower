@@ -142,6 +142,12 @@ public class PlayerInteraction : MonoBehaviour
 			currentNPC = col.gameObject.GetComponent<NPCInteraction>();
 			//GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 		}
+		else if (col.tag == "NPC_fire")
+		{
+			dialogueActive = true;
+			NPCActive = true;
+			currentNPC = col.gameObject.GetComponent<NPCInteraction>();
+		}
 		else if (col.tag == "dragon" || col.tag == "NPC_dwarf" || col.tag == "BasementTrigger")
 		{
 			dialogueActive = true;
@@ -203,7 +209,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.tag == "interactableObject" || col.tag == "NPC" || col.tag == "NPC_portrait" || col.tag == "dragon")
+		if (col.tag == "interactableObject" || col.tag == "NPC" || col.tag == "NPC_portrait" || col.tag == "dragon" || col.tag == "NPC_fire")
 		{
 			dialogueActive = false;
 			dialogueCanvas.gameObject.SetActive(false);
@@ -445,7 +451,7 @@ public class PlayerInteraction : MonoBehaviour
 					{
 						selectedOption = (selectedOption + 1) % coefficient;
 					}
-					if (currentNPC.NPCName != "수상한 초상화")
+					if (currentNPC.NPCName != "수상한 초상화" && currentNPC.NPCName != "횃불")
 					{
 						selectorPos.y = optionsParent.transform.GetChild(selectedOption).transform.position.y;
 					}

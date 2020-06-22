@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4933392838133974632}
   - component: {fileID: 7017837790429140835}
+  - component: {fileID: 3606419837010681453}
   m_Layer: 0
   m_Name: light2
   m_TagString: Untagged
@@ -81,6 +82,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3606419837010681453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324366538021796380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10823e67195be4a968e19fd34003b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: 
+  infoA: 
+  hasOptions: 0
+  optionsVisible: 1
+  options: []
+  PlayerObject: {fileID: 0}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
+  npcSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  active: 0
+  actionText: []
+  fireNo: 0
+  fire00A: {fileID: 0}
+  fire00B: {fileID: 0}
+  fire00C: {fileID: 0}
 --- !u!1 &1725266749985272663
 GameObject:
   m_ObjectHideFlags: 0
