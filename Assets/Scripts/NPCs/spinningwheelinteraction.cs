@@ -15,7 +15,7 @@ public class spinningwheelinteraction : NPCInteraction
 
 		hasOptions = true;
 		options = new List<string> { "살펴본다." };
-		actionText = new List<string> { "아얏" };
+		actionText = new List<string> { "아얏!!!" };
 
 		Player = PlayerObject.GetComponent<PlayerInteraction>();
 		Inventory = PlayerObject.GetComponent<PlayerInventory>();
@@ -47,7 +47,7 @@ public class spinningwheelinteraction : NPCInteraction
 		changeSprite();
 		if (Inventory.contains("누에고치") && !itemAdded)
 		{
-			addOption("고치로 실을 뽑는다.", "윤기가 자르르한 명주실이 만들어졌다. 마치… 라푼젤의 머리 같다.");
+			addOption("고치로 실을 뽑는다.", "윤기가 자르르한 명주실이 만들어졌다.\n마치… 라푼젤의 머리 같다.");
 			itemAdded = true;
 		}
 

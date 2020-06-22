@@ -282,13 +282,13 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 2)
 		{
 			endingTitle = "프로게이머의 꿈을 키우다";
-			ending = "공주는 승부욕이 강하다!! 마스터 티어를 찍으려면 성을 떠날 수 없어요.";
+			ending = "공주는 승부욕이 강하다!!\n마스터 티어를 찍으려면 성을 떠날 수 없어요.";
 		}
 
 		else if (endingNo == 4)
 		{
 			endingTitle = "욕쟁이 할머니에게 호되게 혼나다";
-			ending = "어른에게 장난 치면 안돼요. 욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
+			ending = "어른에게 장난 치면 안돼요.\n욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
@@ -343,7 +343,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 14)
 		{
 			endingTitle = "어린왕자와 여생을 함께하다";
-			ending = "『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이지.』 \n『너를 구하러 왔어. 이제 나와 함께 가자.』 \n\n공주의 SOS 신호를 포착한 어린왕자가 소행성 B612에서 지구로 내려왔어요.\n공주는 그렇게 태양계를 벗어났어요.";
+			ending = "『성이 아름다운 것은... 그것이 어딘가에 공주를 감추고 있기 때문이지.』\n『너를 구하러 왔어. 이제 나와 함께 가자.』 \n\n공주의 SOS 신호를 포착한 어린왕자가 소행성 B612에서 지구로 내려왔어요.\n공주는 그렇게 태양계를 벗어났어요.";
 		}
 		else if (endingNo == 15)
 		{
@@ -363,7 +363,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 18)
 		{
 			endingTitle = "맥시무스의 말발굽에 치이다";
-			ending = "거대해진 맥시무스가 용을 물리쳤어요. \n하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
+			ending = "거대해진 맥시무스가 용을 물리쳤어요.\n하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
 		}
 		else if (endingNo == 19)
 		{
@@ -378,19 +378,19 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 21)
 		{
 			endingTitle = "물레의 가시에 손을 찔리다";
-			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요. \n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 \n100년인가 잤대요.";
+			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요.\n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 \n100년인가 잤대요.";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
 		else if (endingNo == 22)
 		{
 			endingTitle = "강아지를 잃다";
-			ending = "강아지에게 사과 씨앗을 주면 안돼요… \n사과 씨앗에는 중독 증상을 유발하는 성분이 있어요. \n강아지를 해쳤다는 사실에 낙담한 공주는 삶의 의욕을 잃었어요.";
+			ending = "강아지에게 사과 씨앗을 주면 안돼요…\n사과 씨앗에는 중독 증상을 유발하는 성분이 있어요.\n강아지를 해쳤다는 사실에 낙담한 공주는 삶의 의욕을 잃었어요.";
 		}
 		else if (endingNo == 23)
 		{
 			endingTitle = "퍼피랜드로 향하다";
-			ending = "공주의 관심에 즐거워진 멍멍이가 꼬리를 힘차게 흔들었어요. \n멍멍이의 꼬리가 헬리콥터 날개처럼 돌아가면서, \n공주와 댕댕이는 퍼피랜드로 날아갈 수 있었답니다.";
+			ending = "공주의 관심에 즐거워진 멍멍이가 꼬리를 힘차게 흔들었어요.\n멍멍이의 꼬리가 헬리콥터 날개처럼 돌아가면서,\n공주와 댕댕이는 퍼피랜드로 날아갈 수 있었답니다.";
 		}
 		else if (endingNo == 24)
 		{
@@ -410,7 +410,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 18)
 		{
 			endingTitle = "탈출에 성공하다";
-			ending = "공주는 고소공포증을 이겨내고 무사히 땅에 내려올 수 있었어요. \n가시덩굴을 피해 와브바아 왕국에 돌아간 공주는 \n최정예 군사를 휘동하여 용을 물리쳤답니다.";
+			ending = "공주는 고소공포증을 이겨내고 무사히 땅에 내려올 수 있었어요.\n가시덩굴을 피해 와브바아 왕국에 돌아간 공주는 \n최정예 군사를 휘동하여 용을 물리쳤답니다.";
 		}
 		else
 		{

@@ -16,7 +16,7 @@ public class compressorInteraction : NPCInteraction
 
 		hasOptions = true;
 		options = new List<string> { "살펴본다." };
-		actionText = new List<string> { "작동이 되는 것 같다" };
+		actionText = new List<string> { "작동이 되는 것 같다." };
 
 		Player = PlayerObject.GetComponent<PlayerInteraction>();
 		Inventory = PlayerObject.GetComponent<PlayerInventory>();
@@ -50,7 +50,7 @@ public class compressorInteraction : NPCInteraction
 			Inventory.replaceItem("사과즙", "사과를 갈아서 만든 즙이다.", applejuiceSprite);
 			options.Remove("사과를 집어넣는다.");
 			actionText.RemoveAt(optionNo);
-			return "사과즙을 얻었다";
+			return "사과즙을 얻었다.";
 		}
 		else if (optionNo == options.IndexOf("송로버섯을 집어넣는다."))
 		{

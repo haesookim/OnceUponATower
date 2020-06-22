@@ -31,7 +31,7 @@ public class doginteraction : NPCInteraction
 		{
 			if (!optionsAdded[0])
 			{
-				addOption("사료를 먹인다", "");
+				addOption("사료를 먹인다.", "");
 				optionsAdded[0] = true;
 			}
 		}
@@ -39,7 +39,7 @@ public class doginteraction : NPCInteraction
 		{
 			if (!optionsAdded[1])
 			{
-				addOption("사과를 먹인다", "");
+				addOption("사과를 먹인다.", "");
 				optionsAdded[1] = true;
 			}
 		}
@@ -57,15 +57,15 @@ public class doginteraction : NPCInteraction
 			}
 			return actionText[optionNo];
 		}
-		if (optionNo == options.IndexOf("사료를 먹인다"))
+		if (optionNo == options.IndexOf("사료를 먹인다."))
 		{
 			Inventory.removeItem("사료");
-			Inventory.replaceItem("송로버섯", "자연산 송로버섯이다. 멍멍이가 파주었다..", mushroomSprite);
+			Inventory.replaceItem("송로버섯", "자연산 송로버섯이다. 멍멍이가 파주었다...", mushroomSprite);
 			options.RemoveAt(optionNo);
 			actionText.RemoveAt(optionNo);
 			return "멍멍이가 송로버섯을 찾았다.";
 		}
-		if (optionNo == options.IndexOf("사과를 먹인다"))
+		if (optionNo == options.IndexOf("사과를 먹인다."))
 		{
 			Player.TriggerEnding(22);
 		}

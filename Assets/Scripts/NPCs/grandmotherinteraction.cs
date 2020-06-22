@@ -24,7 +24,7 @@ public class grandmotherinteraction : NPCInteraction
 
         if (Inventory.contains("사과") && !itemsAdded[0]){
           hasOptions = true;
-          addOption("사과를 건넨다.", "홀홀홀...이건 먹으면 안돼... 예전에 어느 야윈 처자가 이걸 먹었다가 죽었지...");
+          addOption("사과를 건넨다.", "홀홀홀... 이건 먹으면 안돼...\n예전에 어느 야윈 처자가 이걸 먹었다가 죽었지...");
           itemsAdded[0] = true;
         }
 

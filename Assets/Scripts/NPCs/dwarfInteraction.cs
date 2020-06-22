@@ -8,7 +8,7 @@ public class dwarfInteraction : NPCInteraction
 	void Start()
 	{
 		NPCName = "난쟁이";
-		infoA = "어디에선가 본 것 같은 난쟁이가..";
+		infoA = "어디에선가 본 것 같은 난쟁이가...";
 
 		hasOptions = false; ;
 

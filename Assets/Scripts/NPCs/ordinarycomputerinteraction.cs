@@ -13,7 +13,7 @@ public class ordinarycomputerinteraction : NPCInteraction
         hasOptions = true;
         options = new List<string>{"구동한다."};
 
-        actionText = new List<string>{"드론에 관한 논문을 읽었다. 금새 드론 척척박사가 되었다."};
+        actionText = new List<string>{"드론에 관한 논문을 읽었다.\n금새 드론 척척박사가 되었다."};
 
         Player = PlayerObject.GetComponent<PlayerInteraction>();
     }

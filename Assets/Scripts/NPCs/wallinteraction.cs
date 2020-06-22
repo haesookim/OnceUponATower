@@ -9,7 +9,7 @@ public class wallinteraction : NPCInteraction
     void Start()
     {
       NPCName = "벽";
-      infoA = "부서질 것 같다";
+      infoA = "자세히 보니 부서질 것 같다.";
 
       hasOptions = false;
       options = new List<string>{};

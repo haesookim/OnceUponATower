@@ -11,7 +11,7 @@ public class dragonInteraction : NPCInteraction
 	{
 		NPCName = "용";
 
-		infoA = "용이다";
+		infoA = "나를 가둔... 입냄새가 심한 용이다!";
 
 		hasOptions = true;
 
@@ -56,12 +56,12 @@ public class dragonInteraction : NPCInteraction
 			}
 			if (Inventory.contains("막대기") && !conditionList[2])
 			{
-				addOption("막대기로 찌른다.", "죽어라");
+				addOption("막대기로 찌른다.", "죽어랏!!!");
 				conditionList[2] = true;
 			}
 			if (Inventory.contains("스테로이드") && !conditionList[3])
 			{
-				addOption("스테로이드를 준다.", "용에게 이정도 복용량은 아무 소용이 없다. 용이 실망한 눈치다.");
+				addOption("스테로이드를 준다.", "용에게 이정도 복용량은 아무 소용이 없다.\n용이 실망한 눈치다.");
 				conditionList[3] = true;
 
 			}
@@ -94,7 +94,7 @@ public class dragonInteraction : NPCInteraction
 				return actionText[optionNo];
 			}
 		}
-		else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 부탁한다."))
+		else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 넘긴다."))
 		{
 			Player.TriggerEnding(7);
 			return null;
