@@ -22,7 +22,6 @@ public class FireInteraction : NPCInteraction
 		optionsVisible = true;
 
 
-
 		Player = PlayerObject.GetComponent<PlayerInteraction>();
 		Inventory = PlayerObject.GetComponent<PlayerInventory>();
 		options = new List<string> { "" };
@@ -38,8 +37,14 @@ public class FireInteraction : NPCInteraction
 		if (Inventory.contains("성냥")){
 			hasOptions = true;
 		}
+		if(Player.fireConditions[100]==1 && Player.fireConditions[101]==1 && Player.fireConditions[102]==1 && Player.fireConditions[103]==0 && Player.fireConditions[104]==0){
+			if(Player.fireConditions[110]==2 && Player.fireConditions[111]==2 && Player.fireConditions[112]==2 && Player.fireConditions[113]==0 && Player.fireConditions[114]==0){
+				if(Player.fireConditions[120]==1 && Player.fireConditions[121]==1 && Player.fireConditions[122]==1 && Player.fireConditions[123]==0 && Player.fireConditions[124]==0){
+					Player.TriggerEnding(14);
+				}
+			}
 
-
+		}
 
 
 
