@@ -124,6 +124,7 @@ public class PlayerInteraction : MonoBehaviour
 				NPCActive = true;
 				currentNPC = col.gameObject.GetComponent<NPCInteraction>();
 				currentNPC.active = true;
+				currentNPC.NPCAccessed = true;
 				GameObject.Find("ObjName").GetComponent<Text>().text = currentNPC.NPCName;
 				GameObject.Find("infoA").GetComponent<Text>().text = currentNPC.infoA;
 				infoB.SetActive(false);
