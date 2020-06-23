@@ -189,6 +189,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -374,6 +375,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -1029,6 +1031,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -2834,6 +2837,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -3747,6 +3751,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -4073,6 +4078,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -4132,6 +4138,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -4735,7 +4742,7 @@ PrefabInstance:
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
       propertyPath: positionName
-      value: "\uC9C0\uD558\uAC10"
+      value: "\uC9C0\uD558\uAC10\uC625"
       objectReference: {fileID: 0}
     - target: {fileID: 5859758646844298616, guid: 875f3a67ff5044a9fa78d77fda8a5cc8,
         type: 3}
@@ -5060,6 +5067,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -5219,6 +5227,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -6192,6 +6201,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -6296,6 +6306,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -6637,6 +6648,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -7940,6 +7952,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -8395,6 +8408,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -8453,6 +8467,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -9227,6 +9242,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -9527,6 +9543,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -9716,6 +9733,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -11315,6 +11333,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -11697,6 +11716,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -12989,6 +13009,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -13097,6 +13118,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -14200,6 +14222,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -14409,6 +14432,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -15337,6 +15361,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -15895,6 +15920,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -16538,6 +16564,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
@@ -16912,6 +16939,7 @@ MonoBehaviour:
   infoA: 
   hasOptions: 0
   optionsVisible: 1
+  NPCAccessed: 0
   options: []
   PlayerObject: {fileID: 1098446225}
   Player: {fileID: 0}
