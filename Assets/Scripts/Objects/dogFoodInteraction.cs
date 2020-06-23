@@ -32,6 +32,6 @@ public class dogFoodInteraction : InteractableObject
 		{
 			Player.TriggerEnding(24);
 		}
-		return null;
+		return actionText[0];
 	}
 }

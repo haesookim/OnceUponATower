@@ -36,6 +36,10 @@ public class potInteraction : NPCInteraction
 		if (Inventory.contains("막대기") && hitCount < 4)
 		{
 			hasOptions = true;
+			if (hitCount == 3)
+			{
+				actionText[0] = "항아리가 깨졌다!";
+			}
 		}
 		if (hitCount == 4)
 		{
@@ -47,9 +51,9 @@ public class potInteraction : NPCInteraction
 
 
 			infoA = "부서진 항아리다. 두꺼비가 붙어 있다.";
-			hasOptions = true;
+			//hasOptions = true;
 
-			if (Player.teleported && !collectedPoison)
+			if (NPCAccessed && !collectedPoison)
 			{
 				System.Random rand = new System.Random();
 				int choice = rand.Next(10);
@@ -61,12 +65,20 @@ public class potInteraction : NPCInteraction
 				{
 					specialcondition = true;
 				}
+				NPCAccessed = false;
 			}
 			if (collectedPoison)
 			{
 				specialcondition = false;
 			}
-
+			if (specialcondition)
+			{
+				hasOptions = true;
+			}
+			else
+			{
+				hasOptions = false;
+			}
 		}
 	}
 

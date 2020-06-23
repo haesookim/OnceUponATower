@@ -34,12 +34,12 @@ public class windowInteraction : NPCInteraction
 		{
 			if (!droneOption)
 			{
-				addOption("드론을 날린다", "드론을 어떻게 날리는지 모르겠다.");
+				addOption("드론을 날린다.", "드론을 어떻게 날리는지 모르겠다.");
 				droneOption = true;
 			}
 			if (Player.actionConditions[1])
 			{
-				options[options.IndexOf("드론을 날린다.")] = "잘 날아다닌다.";
+				actionText[options.IndexOf("드론을 날린다.")] = "잘 날아다닌다.";
 			}
 			if (Inventory.contains("사과즙"))
 			{
@@ -55,13 +55,13 @@ public class windowInteraction : NPCInteraction
 		{
 			if (!optionsAdded[1])
 			{
-				addOption("팅커벨에게 사과즙을 뿌려달라고 부탁한다.", "");
+				addOption("팅커벨에게 사과즙을 넘긴다.", "");
 				optionsAdded[1] = true;
 			}
 		}
-		if (Inventory.contains("명주실") && threadAdded)
+		if (Inventory.contains("명주실") && !threadAdded)
 		{
-			addOption("명주실을 타고 내려간다", "");
+			addOption("명주실을 타고 내려간다.", "");
 			threadAdded = true;
 		}
 	}
@@ -73,6 +73,8 @@ public class windowInteraction : NPCInteraction
 		{
 			return actionText[optionNo];
 		}
+		else if (optionNo == options.IndexOf("드론을 날린다."))
+		{ return actionText[optionNo]; }
 		else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다."))
 		{
 			if (Player.actionConditions[1])
@@ -86,7 +88,7 @@ public class windowInteraction : NPCInteraction
 				return actionText[optionNo];
 			}
 		}
-		else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 뿌려달라고 부탁한다."))
+		else if (optionNo == options.IndexOf("팅커벨에게 사과즙을 넘긴다."))
 		{
 			Player.TriggerEnding(7);
 			return null;

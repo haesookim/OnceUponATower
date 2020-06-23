@@ -9,6 +9,7 @@ public class NPCInteraction : MonoBehaviour
 
 	public bool hasOptions;
 	public bool optionsVisible = true;
+	public bool NPCAccessed = false;
 	// list of provided options
 	public List<string> options;
 
