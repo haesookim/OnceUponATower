@@ -289,7 +289,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 4)
 		{
 			endingTitle = "욕쟁이 할머니에게 호되게 혼나다";
-			ending = "어른에게 장난 치면 안돼요.\n욕쟁이 할머니의 찰진 욕을 들은 공주는 너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
+			ending = "어른에게 장난 치면 안돼요.\n욕쟁이 할머니의 찰진 욕을 들은 공주는\n너무 놀란 나머지 심장이 멈춰버리고 말았어요.";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
@@ -303,7 +303,7 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 6)
 		{
 			endingTitle = "맛있는 통구이가 되다";
-			ending = "『앗, 뜨거워!』 공주와 왕자는 노릇노릇하게 구워졌어요.";
+			ending = "『앗, 뜨거워!』\n공주와 왕자는 노릇노릇하게 구워졌어요.";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}
@@ -315,12 +315,12 @@ public class PlayerInteraction : MonoBehaviour
 		else if (endingNo == 8)
 		{
 			endingTitle = "왕자에게 황제 자리를 빼앗기다";
-			ending = "왕자와 공주는 무사히 성을 빠져나갔어요.\n왕자는 와브바아 왕국의 황제가 되었고, 둘은 만백성의 축복 속에서 결혼을 했답니다.\n공주는 억울했어요.\n저새끼가 가로챘거든요.";
+			ending = "왕자와 공주는 무사히 성을 빠져나갔어요.\n왕자는 와브바아 왕국의 황제가 되었고,\n둘은 만백성의 축복 속에서 결혼을 했답니다.\n공주는 억울했어요.\n저새끼가 가로챘거든요.";
 		}
 		else if (endingNo == 9)
 		{
 			endingTitle = "지하감옥에 갇혀있던 공주들을 탈출시키다";
-			ending = "모든 공주들은 와브바아 왕국으로 향했어요.\n『안녕히 계세요 여러분~! 우리는 이 세상의 모든 굴레와 속박을 벗어던지고 우리의 행복을 찾아 떠납니다.』\n『여러분도 행복하세요~~~~~』";
+			ending = "모든 공주들은 와브바아 왕국으로 향했어요.\n『안녕히 계세요 여러분~!\n우리는 이 세상의 모든 굴레와 속박을 벗어던지고\n우리의 행복을 찾아 떠납니다.』\n『여러분도 행복하세요~~~~~』";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingbg.GetComponent<Image>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
@@ -361,25 +361,20 @@ public class PlayerInteraction : MonoBehaviour
 			endingTitle = "옛날 옛적 도와줬던 제비를 만나다";
 			ending = "제비가 엄지공주를 태우고 꽃의 나라로 향합니다.";
 		}
-		else if (endingNo == 18)
-		{
-			endingTitle = "맥시무스의 말발굽에 치이다";
-			ending = "거대해진 맥시무스가 용을 물리쳤어요.\n하지만 너무 커진 맥시무스는 공주와 왕자를 미처 발견하지 못하고…";
-		}
 		else if (endingNo == 19)
 		{
 			endingTitle = "스스로 탈출구를 마련하다";
-			ending = "힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요. 공주는 자유로운 영혼이에요.";
+			ending = "힘세고 강한 스테로이드! 만약 내게 물어보면 나는 공주!\n공주는 벽을 부수고 나갔어요.\n공주는 자유로운 영혼이에요.";
 		}
 		else if (endingNo == 20)
 		{
 			endingTitle = "흔들리지 않는 편안함을 맛보다";
-			ending = "공주는 잠에서 헤어나올 수 없었어요. \n그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요. \n너무 달콤해.";
+			ending = "공주는 잠에서 헤어나올 수 없었어요.\n그 어떤 왕자가 키스를 하더라도 이건 못 깨어나요.\n너무 달콤해.";
 		}
 		else if (endingNo == 21)
 		{
 			endingTitle = "물레의 가시에 손을 찔리다";
-			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요.\n이웃나라 잠자는 숲속의 공주도 물레 한 번 잘못 건드려서 \n100년인가 잤대요.";
+			ending = "공주 세계관에서 물레는... 아주 위험한 물건이에요.\n이웃나라 잠자는 숲속의 공주도\n물레 한 번 잘못 건드려서\n100년인가 잤대요.";
 			endingImage.GetComponent<Animator>().enabled = true;
 			endingImage.GetComponent<Animator>().SetInteger("EndingNo", endingNo);
 		}

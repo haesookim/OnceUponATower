@@ -15,7 +15,7 @@ public class EndingGallery : MonoBehaviour
 	int highlightXposOffset = 7;
 	int highlightYposOffset = 14;
 
-	int movingOffset = 170;
+	int movingOffset = 280;
 	int seenCount = 0;
 
 	GameObject[] GalleryOptions;
