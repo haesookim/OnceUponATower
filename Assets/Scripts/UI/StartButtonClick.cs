@@ -14,4 +14,11 @@ public class StartButtonClick : MonoBehaviour
 		SceneManager.LoadScene(ScreenName);
 
 	}
+	void Update(){
+		if (Input.GetKeyDown(KeyCode.LeftControl))
+		{
+				OnMouseDown();
+		}
+
+	}
 }
