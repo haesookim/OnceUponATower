@@ -44,7 +44,7 @@ public class smalldoorinteraction : NPCInteraction
 			options.Remove("팅커벨을 내보낸다.");
 
 		}
-		else if (optionNo == options.IndexOf("열어본다"))
+		else if (optionNo == options.IndexOf("열어본다."))
 		{
 			Inventory.replaceItem("누에고치", "단단한 누에고치다.", cocoon);
 		}
