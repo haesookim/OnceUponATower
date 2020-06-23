@@ -73,6 +73,8 @@ public class windowInteraction : NPCInteraction
 		{
 			return actionText[optionNo];
 		}
+		else if (optionNo == options.IndexOf("드론을 날린다."))
+		{ return actionText[optionNo]; }
 		else if (optionNo == options.IndexOf("드론으로 사과즙을 뿌린다."))
 		{
 			if (Player.actionConditions[1])
