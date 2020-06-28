@@ -4160,7 +4160,7 @@ MonoBehaviour:
   activeSprite: {fileID: 0}
   active: 0
   actionText: []
-  steroidSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
+  steroidSprite: {fileID: 21300000, guid: 58d871c47ffb64d8494675f5364b423c, type: 3}
   hasSteroid: 0
 --- !u!1 &641784867
 GameObject:
@@ -5313,7 +5313,7 @@ MonoBehaviour:
   collectedPoison: 0
   originalPot: {fileID: 21300000, guid: dc279a72e2f4443e1b18d3d1cb6f95dc, type: 3}
   brokenPot: {fileID: 21300000, guid: 44477eb9102a84113ab6a95a23dcbd23, type: 3}
-  poisonSprite: {fileID: 21300000, guid: 61a9119f656104c11ae2c5490dc3af0f, type: 3}
+  poisonSprite: {fileID: 21300000, guid: b2ce0412724f242a899188b164890360, type: 3}
 --- !u!1 &810118076
 GameObject:
   m_ObjectHideFlags: 0
